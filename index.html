@@ -897,6 +897,70 @@
   @media (max-width:900px){ .vt-poruci{grid-template-columns:1fr} }
   @media (max-width:760px){ .vt-filteri{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;margin:-6px -16px 18px;padding:2px 16px;scrollbar-width:none} .vt-filteri::-webkit-scrollbar{display:none} .vt-f{flex:none} .vt-poruci{padding:20px 16px;margin-top:40px} .vt-poruci-red{grid-template-columns:1fr} }
 </style>
+<style id="welling-ideje">
+/* ===== Ideje sa Welling sajta (28.10.2026): krupniji naslovi, lukovi, OD 1996. ===== */
+  /* Krupniji, hrabriji naslovi: rukopis prelazi preko velikog naslova */
+  .hero h1{font-size:clamp(3.4rem,8.6vw,6.6rem);line-height:.92;letter-spacing:-.02em;margin:0 0 22px}
+  .hero .script{font-size:clamp(2.2rem,3.6vw,3rem)}
+  .glava .script{font-size:clamp(2.6rem,5vw,3.8rem);color:#5aa55f;position:relative;z-index:0;margin-bottom:-.2em}
+  .glava h2{position:relative;z-index:1;font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800;text-transform:uppercase;letter-spacing:.03em;line-height:.95;margin:0 0 16px}
+  .glava p{font-size:1.08rem}
+
+  /* Lukovi: vrste peciva, stepenasto poređane */
+  .lukovi{padding-block:90px 70px;background:var(--svetla);overflow:hidden;position:relative}
+  .lukovi .glava{margin-bottom:96px}
+  .lk-red{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;position:relative}
+  .lk{display:block;text-decoration:none;color:var(--tamna)}
+  .lk:nth-child(2){margin-top:70px}
+  .lk:nth-child(3){margin-top:20px}
+  .lk:nth-child(4){margin-top:96px}
+  .lk-slika{display:block;border-radius:999px 999px 20px 20px;overflow:hidden;aspect-ratio:3/4;background:#fff;box-shadow:0 30px 50px -34px rgba(20,50,25,.75);border:6px solid #fff}
+  .lk-slika img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .lk:hover .lk-slika img{transform:scale(1.05)}
+  .lk-ime{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;font:700 1.35rem/1.15 var(--display)}
+  .lk-ime::after{content:"";flex:none;width:44px;height:1.5px;background:currentColor;transition:width .25s ease}
+  .lk:hover .lk-ime::after{width:64px}
+  .lk small{display:block;color:var(--siva);font-size:.92rem;margin-top:2px}
+  .krug-tekst{position:absolute;width:150px;height:150px;left:calc(25% - 75px);top:-58px;z-index:2;pointer-events:none}
+  .krug-tekst svg{width:100%;height:100%;animation:krugOkret 28s linear infinite}
+  .krug-tekst text{font:700 13.5px/1 var(--body);letter-spacing:.24em;fill:var(--tamna);text-transform:uppercase}
+  .krug-tekst .centar{position:absolute;inset:38px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+  .krug-tekst .centar img{width:70%;height:auto}
+  @keyframes krugOkret{to{transform:rotate(360deg)}}
+
+  /* OD 1996.: fotografija + veliki zeleni blok */
+  .od96{display:grid;grid-template-columns:1fr 1fr;min-height:560px;background:var(--tamna)}
+  .od96 figure{margin:0;position:relative;overflow:hidden}
+  .od96 figure img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+  .od96 .tx{position:relative;padding:76px 110px 70px 72px;color:#dcebd8;display:flex;flex-direction:column;justify-content:center;background-image:var(--vez);background-repeat:repeat-x;background-position:left top;background-size:auto 14px}
+  .od96 .uspravno{position:absolute;right:30px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font:700 .78rem/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:#9fd89f;white-space:nowrap}
+  .od96 .script{color:#9fd89f;font-size:clamp(2.2rem,3.4vw,2.9rem);margin-bottom:-.2em}
+  .od96 h2{font:800 clamp(4rem,9.5vw,8rem)/.9 var(--display);color:#fff;letter-spacing:-.02em;margin:0 0 26px;text-transform:uppercase}
+  .od96 p{max-width:30em;font-size:1.1rem;line-height:1.6}
+  .od96 .btn{margin-top:30px;align-self:flex-start;background:#fff;color:var(--tamna);border-color:#fff}
+  .od96 .btn:hover{background:var(--svetla)}
+
+  @media (max-width:900px){
+    .lk-red{grid-template-columns:repeat(2,1fr);gap:22px 18px}
+    .lk:nth-child(2){margin-top:46px} .lk:nth-child(3){margin-top:-30px} .lk:nth-child(4){margin-top:16px}
+    .krug-tekst{display:none}
+    .od96{grid-template-columns:1fr}
+    .od96 figure{max-height:340px}
+    .od96 .tx{padding:58px 26px 54px}
+    .od96 .uspravno{display:none}
+  }
+  @media (max-width:760px){
+    .hero h1{font-size:clamp(3rem,15vw,4.2rem)}
+    .glava h2{font-size:clamp(2.1rem,10vw,3rem)}
+    .glava .script{font-size:2.4rem}
+    .lukovi{padding-block:60px 50px}
+    .lukovi .glava{margin-bottom:34px}
+    .lk-ime{font-size:1.12rem}
+    .lk-ime::after{width:24px}
+    .lk:hover .lk-ime::after{width:32px}
+  }
+  @media (prefers-reduced-motion:reduce){ .krug-tekst svg{animation:none} .lk-slika img{transition:none} }
+</style>
 </head>
 <body>
 <div id="uvod" aria-hidden="true"><video class="uv-poz" autoplay muted loop playsinline preload="auto" poster="assets/bgposter.jpg" tabindex="-1" disablepictureinpicture><source src="assets/bgvideowebm.webm" type="video/webm"><source src="assets/bgvideo.mp4" type="video/mp4"></video><div class="uv-in"><video id="uvVideo" muted playsinline preload="auto" disablepictureinpicture><source src="assets/uvod.mp4" type="video/mp4"></video><img class="uv-logo" src="assets/logo.png" alt="" width="800" height="605" decoding="async"></div><button type="button" class="uv-preskoci" tabindex="-1">Preskoči</button></div>
@@ -948,6 +1012,26 @@
   </section>
 
   <div class="vez" aria-hidden="true"></div>
+
+  <section class="lukovi" aria-labelledby="lkNaslov">
+    <div class="wrap">
+      <div class="glava">
+        <div class="script">Iz turske peći</div>
+        <h2 id="lkNaslov">Pečemo za vas</h2>
+        <p>Od lepinje za doručak do kolača za slavu. Izaberite šta vas zanima.</p>
+      </div>
+      <div class="lk-red">
+        <div class="krug-tekst" aria-hidden="true">
+          <svg viewBox="0 0 150 150"><defs><path id="lkKrug" d="M75,75 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs><text><textPath href="#lkKrug" textLength="385" lengthAdjust="spacing">Pekara Badem · od 1996 · Leskovac ·</textPath></text></svg>
+          <span class="centar"><img src="assets/logo.png" alt="" width="800" height="605" loading="lazy"></span>
+        </div>
+        <a class="lk" href="#ponuda" data-vt="hleb"><span class="lk-slika"><img src="assets/meni/domaca-lepinja.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></span><span class="lk-ime">Hleb i lepinje</span><small>Iz turske peći, svako jutro</small></a>
+        <a class="lk" href="#ponuda" data-vt="burek"><span class="lk-slika"><img src="assets/meni/burek-meso.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></span><span class="lk-ime">Burek</span><small>Sa mesom, sirom, spanaćem</small></a>
+        <a class="lk" href="#ponuda" data-vt="pite"><span class="lk-slika"><img src="assets/meni/sarajevska-pita.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></span><span class="lk-ime">Pite</span><small>Slane i slatke, domaće</small></a>
+        <a class="lk" href="#ponuda" data-vt="slatko"><span class="lk-slika"><img src="assets/meni/kroasan-krem.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></span><span class="lk-ime">Slatko</span><small>Kroasani, rolovi, štrudle</small></a>
+      </div>
+    </div>
+  </section>
 
   <section class="blok vitrina" id="ponuda" aria-labelledby="vtNaslov">
     <div class="wrap">
@@ -1110,6 +1194,17 @@
     </div>
     <script type="application/json" id="pbFrejmovi">["assets/badem/001.webp", "assets/badem/002.webp", "assets/badem/003.webp", "assets/badem/004.webp", "assets/badem/005.webp", "assets/badem/006.webp", "assets/badem/007.webp", "assets/badem/008.webp", "assets/badem/009.webp", "assets/badem/010.webp", "assets/badem/011.webp", "assets/badem/012.webp", "assets/badem/013.webp", "assets/badem/014.webp", "assets/badem/015.webp", "assets/badem/016.webp", "assets/badem/017.webp", "assets/badem/018.webp", "assets/badem/019.webp", "assets/badem/020.webp", "assets/badem/021.webp", "assets/badem/022.webp", "assets/badem/023.webp", "assets/badem/024.webp", "assets/badem/025.webp", "assets/badem/026.webp", "assets/badem/027.webp", "assets/badem/028.webp", "assets/badem/029.webp", "assets/badem/030.webp", "assets/badem/031.webp", "assets/badem/032.webp", "assets/badem/033.webp", "assets/badem/034.webp", "assets/badem/035.webp", "assets/badem/036.webp", "assets/badem/037.webp", "assets/badem/038.webp", "assets/badem/039.webp", "assets/badem/040.webp", "assets/badem/041.webp", "assets/badem/042.webp", "assets/badem/043.webp", "assets/badem/044.webp", "assets/badem/045.webp", "assets/badem/046.webp", "assets/badem/047.webp", "assets/badem/048.webp", "assets/badem/049.webp", "assets/badem/050.webp", "assets/badem/051.webp", "assets/badem/052.webp", "assets/badem/053.webp", "assets/badem/054.webp", "assets/badem/055.webp", "assets/badem/056.webp", "assets/badem/057.webp", "assets/badem/058.webp", "assets/badem/059.webp", "assets/badem/060.webp", "assets/badem/061.webp", "assets/badem/062.webp", "assets/badem/063.webp", "assets/badem/064.webp", "assets/badem/065.webp", "assets/badem/066.webp", "assets/badem/067.webp", "assets/badem/068.webp", "assets/badem/069.webp", "assets/badem/070.webp", "assets/badem/071.webp", "assets/badem/072.webp", "assets/badem/073.webp", "assets/badem/074.webp", "assets/badem/075.webp", "assets/badem/076.webp", "assets/badem/077.webp", "assets/badem/078.webp", "assets/badem/079.webp", "assets/badem/080.webp", "assets/badem/081.webp", "assets/badem/082.webp", "assets/badem/083.webp", "assets/badem/084.webp", "assets/badem/085.webp", "assets/badem/086.webp", "assets/badem/087.webp", "assets/badem/088.webp", "assets/badem/089.webp", "assets/badem/090.webp", "assets/badem/091.webp", "assets/badem/092.webp", "assets/badem/093.webp", "assets/badem/094.webp", "assets/badem/095.webp", "assets/badem/096.webp", "assets/badem/097.webp", "assets/badem/098.webp", "assets/badem/099.webp", "assets/badem/100.webp", "assets/badem/101.webp", "assets/badem/102.webp", "assets/badem/103.webp", "assets/badem/104.webp", "assets/badem/105.webp", "assets/badem/106.webp", "assets/badem/107.webp", "assets/badem/108.webp", "assets/badem/109.webp", "assets/badem/110.webp", "assets/badem/111.webp", "assets/badem/112.webp", "assets/badem/113.webp", "assets/badem/114.webp", "assets/badem/115.webp", "assets/badem/116.webp", "assets/badem/117.webp", "assets/badem/118.webp", "assets/badem/119.webp", "assets/badem/120.webp", "assets/badem/121.webp", "assets/badem/122.webp", "assets/badem/123.webp", "assets/badem/124.webp", "assets/badem/125.webp", "assets/badem/126.webp", "assets/badem/127.webp", "assets/badem/128.webp", "assets/badem/129.webp", "assets/badem/130.webp", "assets/badem/131.webp", "assets/badem/132.webp", "assets/badem/133.webp", "assets/badem/134.webp", "assets/badem/135.webp", "assets/badem/136.webp", "assets/badem/137.webp", "assets/badem/138.webp", "assets/badem/139.webp", "assets/badem/140.webp", "assets/badem/141.webp", "assets/badem/142.webp", "assets/badem/143.webp", "assets/badem/144.webp", "assets/badem/145.webp", "assets/badem/146.webp", "assets/badem/147.webp", "assets/badem/148.webp", "assets/badem/149.webp", "assets/badem/150.webp", "assets/badem/151.webp", "assets/badem/152.webp", "assets/badem/153.webp", "assets/badem/154.webp", "assets/badem/155.webp", "assets/badem/156.webp", "assets/badem/157.webp", "assets/badem/158.webp", "assets/badem/159.webp", "assets/badem/160.webp", "assets/badem/161.webp", "assets/badem/162.webp", "assets/badem/163.webp", "assets/badem/164.webp", "assets/badem/165.webp", "assets/badem/166.webp", "assets/badem/167.webp", "assets/badem/168.webp", "assets/badem/169.webp", "assets/badem/170.webp", "assets/badem/171.webp", "assets/badem/172.webp", "assets/badem/173.webp", "assets/badem/174.webp", "assets/badem/175.webp", "assets/badem/176.webp", "assets/badem/177.webp", "assets/badem/178.webp", "assets/badem/179.webp", "assets/badem/180.webp", "assets/badem/181.webp", "assets/badem/182.webp", "assets/badem/183.webp", "assets/badem/184.webp", "assets/badem/185.webp", "assets/badem/186.webp", "assets/badem/187.webp", "assets/badem/188.webp", "assets/badem/189.webp", "assets/badem/190.webp", "assets/badem/191.webp", "assets/badem/192.webp", "assets/badem/193.webp", "assets/badem/194.webp", "assets/badem/195.webp", "assets/badem/196.webp", "assets/badem/197.webp", "assets/badem/198.webp", "assets/badem/199.webp", "assets/badem/200.webp", "assets/badem/201.webp", "assets/badem/202.webp", "assets/badem/203.webp", "assets/badem/204.webp", "assets/badem/205.webp", "assets/badem/206.webp", "assets/badem/207.webp", "assets/badem/208.webp", "assets/badem/209.webp", "assets/badem/210.webp", "assets/badem/211.webp", "assets/badem/212.webp", "assets/badem/213.webp", "assets/badem/214.webp", "assets/badem/215.webp", "assets/badem/216.webp", "assets/badem/217.webp", "assets/badem/218.webp", "assets/badem/219.webp", "assets/badem/220.webp", "assets/badem/221.webp", "assets/badem/222.webp", "assets/badem/223.webp", "assets/badem/224.webp", "assets/badem/225.webp", "assets/badem/226.webp", "assets/badem/227.webp", "assets/badem/228.webp", "assets/badem/229.webp", "assets/badem/230.webp", "assets/badem/231.webp", "assets/badem/232.webp", "assets/badem/233.webp", "assets/badem/234.webp", "assets/badem/235.webp", "assets/badem/236.webp", "assets/badem/237.webp", "assets/badem/238.webp", "assets/badem/239.webp", "assets/badem/240.webp", "assets/badem/241.webp", "assets/badem/242.webp", "assets/badem/243.webp", "assets/badem/244.webp", "assets/badem/245.webp", "assets/badem/246.webp", "assets/badem/247.webp", "assets/badem/248.webp", "assets/badem/249.webp", "assets/badem/250.webp", "assets/badem/251.webp", "assets/badem/252.webp", "assets/badem/253.webp", "assets/badem/254.webp", "assets/badem/255.webp", "assets/badem/256.webp"]</script>
     <script type="application/json" id="pbBoje">["#ddccb3","#ddccb3","#ddccb3","#ddccb3","#dccbb2","#dccbb2","#dbcbb1","#dbcab1","#dac9af","#d9c8ad","#d8c7ac","#d7c6ab","#d7c5aa","#d6c3a8","#d4c1a6","#d3c0a5","#d2c0a4","#d0bea1","#cebc9e","#cdba9d","#cbb89a","#c8b597","#c7b496","#c4b092","#c3ae90","#c1ac8e","#bea98a","#bba587","#b8a283","#b69f80","#b39b7c","#b09879","#ad9576","#aa9273","#a68e6f","#a38b6d","#a08769","#9d8467","#988063","#937c60","#90795d","#8b7459","#877156","#836d52","#7e694f","#7a654b","#766148","#725d44","#6f5a42","#69553d","#66523b","#614d38","#5d4934","#594531","#51412d","#473725","#3e301f","#36291a","#312316","#2c1f12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2c1e13","#2d1f14","#322217","#36261a","#3d2c1f","#483525","#584331","#69543d","#7d674f","#967f63","#ac9578","#bfa88a","#cfb99a","#dac7a7","#e4d2b3","#e9d9bc","#ebddc2","#ebddc2","#ebddc3","#ebdec5","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ede0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#eee3cb","#f1e7d1","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f1e8d4","#f0e5d1","#eee3ce","#ece1cb","#ebdfc8","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc6","#ebdec6","#ebdfc7","#ebdec6","#ebdfc6","#ebdec6","#ebdec6","#ebddc5","#eaddc5","#eaddc5","#eaddc5","#eaddc5","#ebe0c7","#f0e7d2","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f3ead8","#f2e9d6","#f0e7d4","#eee5d2","#ede3d0","#ede3cf","#ebe1cd","#eae0cd","#e9dfcb","#e8dec9","#e7ddc8","#e7ddc8","#e8deca","#e9dfcb","#e9e0cb","#e9dfca","#e8dec9","#e7ddc8","#e6dbc7","#e4d9c5","#e2d8c2","#e0d5c0","#e1d6c1","#e1d6c0","#e0d5bf","#e0d4be","#dfd4bd","#dfd2bb","#ded1b8","#dfd0b6","#dfcfb4","#dfceb3","#e0cfb3","#e4d3b6","#e4d4b6","#e3d3b4","#e1d2b2","#dcd0ac","#d9cea9","#d7cda7","#d6cca4","#d4cba1","#d1ca9e","#cfc89b","#d1c89b","#d2c89b","#cfc798","#ccc293","#cec296","#d0c598","#d2c79c","#d4c89e","#d5caa0","#d4c9a0","#d7caa5","#d6c9a5","#d4c7a3","#d3c5a0","#d7c6a6","#dbc8ab","#dac7a9","#d8c5a5","#d5c3a1","#cfc09b","#ccbf96","#cbbe96","#cabe95","#ccc098","#cfc39a","#d0c49c","#d1c49d","#d0c39c","#cfc09a","#cdbd97","#cdbb97","#cebc98","#d2c09d","#d6c4a3","#dac7a7","#dac8a9"]</script>
+  </section>
+
+  <section class="od96" aria-labelledby="od96Naslov">
+    <figure><img src="assets/posao/pekar.webp" alt="Pekar ubacuje lepinje u tursku peć" width="800" height="600" loading="lazy" decoding="async"></figure>
+    <div class="tx">
+      <span class="uspravno" aria-hidden="true">Pekara Badem · Leskovac</span>
+      <div class="script">Isti ukus</div>
+      <h2 id="od96Naslov">Od 1996.</h2>
+      <p>Testo se mesi svakog dana, a vatra se pali pre nego što grad ustane. Od prve pekare do današnjih osam, način rada se nije promenio.</p>
+      <a href="#lokacije" class="btn">Pronađite najbližu pekaru</a>
+    </div>
   </section>
 
   <section class="lok-mapa" id="lokacije">
