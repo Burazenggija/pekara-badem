@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kafana Jedno Mesto Leskovac – leskovačka kuhinja i proslave</title>
+<meta name="description" content="Kafana Jedno Mesto u centru Leskovca, Dimitrija Tucovića 45. Leskovački roštilj, domaća kuhinja i vina, porodični ručkovi i proslave. Isplanirajte svoje veče.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/km/logo_ikona.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Kafana Jedno Mesto">
+<meta property="og:title" content="Kafana Jedno Mesto Leskovac – leskovačka kuhinja i proslave">
+<meta property="og:description" content="Kafana Jedno Mesto u centru Leskovca, Dimitrija Tucovića 45. Leskovački roštilj, domaća kuhinja i vina, porodični ručkovi i proslave. Isplanirajte svoje veče.">
+<meta property="og:image" content="assets/og-kafana.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sala kafane Jedno Mesto sa kariranim stolnjacima i logo kafane">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kafana Jedno Mesto Leskovac – leskovačka kuhinja i proslave">
+<meta name="twitter:description" content="Kafana Jedno Mesto u centru Leskovca, Dimitrija Tucovića 45. Leskovački roštilj, domaća kuhinja i vina, porodični ručkovi i proslave. Isplanirajte svoje veče.">
+<meta name="twitter:image" content="assets/og-kafana.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Kafana Jedno Mesto","alternateName":"Jedno mesto","description":"Kafana u centru Leskovca od 2017. godine: leskovačka kuhinja, roštilj, domaća vina, porodični ručkovi i proslave.","foundingDate":"2017","image":"assets/og-kafana.jpg","telephone":"+381600160080","address":{"@type":"PostalAddress","streetAddress":"Dimitrija Tucovića 45","addressLocality":"Leskovac","postalCode":"16000","addressCountry":"RS"},"servesCuisine":["Srpska kuhinja","Leskovački roštilj"],"acceptsReservations":true,"sameAs":["https://www.facebook.com/kafanajednomestole/"]}</script>
+<meta name="theme-color" content="#2b1d16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Alegreya+Sans:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --vino:#8c1c2b; --vino-t:#6d1420; --krem:#f7f1e6; --papir:#fbf8f2; --drvo:#2b1d16; --drvo2:#3a2a20;
+    --cigla:#b07a4f; --zlato:#e0ad4c; --tekst:#2a211c; --siva:#6d625a; --linija:#e6dccb;
+    --display:Alegreya,Georgia,serif; --body:'Alegreya Sans',system-ui,sans-serif; --ruka:Caveat,cursive;
+    --vez:none;
+  }
+  [hidden]{display:none!important}
+  .preskoci{position:fixed;left:12px;top:-60px;z-index:200;background:var(--vino);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;transition:top .2s}
+  .preskoci:focus{top:12px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--papir);color:var(--tekst);font-family:var(--body);font-size:18px;line-height:1.6;overflow-x:hidden}
+  a{color:inherit}
+  img{max-width:100%;height:auto;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+  h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance}
+  .ruka{font-family:var(--ruka);color:var(--vino);font-size:1.7rem;line-height:1}
+  :focus-visible{outline:3px solid var(--zlato);outline-offset:3px}
+  ::selection{background:var(--vino);color:#fff}
+  input,textarea{caret-color:var(--vino)}
+  a{text-underline-offset:.18em;text-decoration-thickness:from-font}
+  .nav a.logo{display:inline-flex;align-items:center;min-height:44px}
+
+  .vez{height:30px;background:var(--vez) center/auto 100% repeat-x;background-color:var(--krem)}
+  .vez.tamno{background-color:var(--drvo)}
+  .karo{height:16px;background:
+    linear-gradient(90deg,rgba(140,28,43,.55) 50%,transparent 50%) 0 0/16px 16px,
+    linear-gradient(rgba(140,28,43,.55) 50%,transparent 50%) 0 0/16px 16px, #fff}
+
+  /* header */
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(251,248,242,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linija)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+  .nav .logo img{height:40px;width:auto}
+  .nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav ul a{text-decoration:none;font-weight:700;font-size:1rem}
+  .nav ul a:not(.btn):hover{color:var(--vino)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:6px;background:var(--vino);color:#fff;text-decoration:none;font-weight:700;font-size:1rem;border:2px solid var(--vino);font-family:var(--body);cursor:pointer;transition:background .15s,transform .15s}
+  .btn:hover{background:var(--vino-t);border-color:var(--vino-t);transform:translateY(-1px)}
+  .btn.svetlo{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn.svetlo:hover{background:rgba(255,255,255,.12);border-color:#fff}
+  .btn.zlato{background:var(--zlato);border-color:var(--zlato);color:var(--drvo)}
+  .btn.zlato:hover{background:#cf9a37;border-color:#cf9a37}
+  .btn.sm{padding:9px 16px;font-size:.92rem;min-height:44px;display:inline-flex;align-items:center}
+  @media (max-width:900px){ .nav ul .sakrij{display:none} .nav .logo img{height:34px} }
+
+  /* hero */
+  .hero{position:relative;color:#fff;background:var(--drvo) url('assets/km/sala.webp') center 60%/cover no-repeat;overflow:hidden;min-height:min(86vh,760px);display:grid;grid-template-columns:minmax(0,1fr);align-items:center}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:inherit;animation:kenburns 26s ease-in-out infinite alternate;transform-origin:70% 50%}
+  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(28,18,13,.92) 0%,rgba(28,18,13,.72) 48%,rgba(28,18,13,.25) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-block:96px 96px;display:grid;gap:22px;max-width:1180px;width:100%}
+  .info-red{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:8px;font-size:.95rem;color:#e9dfd2}
+  .info-red span{display:inline-flex;align-items:center;gap:8px}
+  .info-red svg{width:18px;height:18px;stroke:var(--zlato);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .skrol{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);width:28px;height:44px;border:2px solid rgba(255,255,255,.6);border-radius:16px}
+  .skrol::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:skrol 1.8s ease-in-out infinite}
+  @keyframes skrol{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+  .hero .glavni-logo{width:min(560px,92%);height:auto}
+  .hero .pod{font-family:var(--ruka);font-size:clamp(1.6rem,3.4vw,2.2rem);color:var(--zlato);line-height:1.1}
+  .hero p{font-size:1.2rem;max-width:31em;opacity:.92}
+  .hero .akcije{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .ocena{display:inline-flex;align-items:center;flex-wrap:wrap;row-gap:4px;gap:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 16px 6px 8px;justify-self:start;max-width:100%;backdrop-filter:blur(4px)}
+  .ocena b{display:grid;place-items:center;background:var(--zlato);color:var(--drvo);font-family:var(--display);font-size:1.1rem;border-radius:999px;min-width:46px;height:34px;padding:0 10px}
+  .zvezde{color:var(--zlato);letter-spacing:2px}
+  .ocena span{font-size:.95rem}
+
+  section.blok{padding-block:90px}
+  .glava{max-width:700px;margin-bottom:44px}
+  .glava.centar{text-align:center;margin-inline:auto}
+  .glava h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--drvo);margin:4px 0 12px}
+  .glava p{color:var(--siva)}
+
+  /* o nama */
+  .onama{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .onama .tekst p{color:var(--siva);margin-bottom:16px;max-width:36em}
+  .onama .tekst p.uvod{font-size:1.25rem;color:var(--tekst);font-weight:500;line-height:1.5}
+  .odlike{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  .odlika{border-top:3px solid var(--vino);padding-top:12px}
+  .odlika b{display:block;font-family:var(--display);font-size:1.15rem;color:var(--drvo)}
+  .odlika span{font-size:.92rem;color:var(--siva);line-height:1.4;display:block}
+  .foto{position:relative;background:#fff;padding:14px;border:2px solid var(--vino);border-radius:6px;box-shadow:0 30px 50px -30px rgba(43,29,22,.6)}
+  .foto::before{content:"";position:absolute;inset:6px;border:1px solid var(--zlato);border-radius:3px;pointer-events:none}
+  .foto img{position:relative;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+  .foto figcaption{font-size:.78rem;color:var(--siva);margin-top:8px;text-align:right}
+  .godina{position:absolute;left:30px;bottom:30px;z-index:1;background:var(--vino);color:#fff;padding:12px 18px;border-radius:4px;border:2px solid var(--zlato);box-shadow:0 12px 24px -12px rgba(0,0,0,.6);text-align:center}
+  .godina b{display:block;font-family:var(--display);font-size:2rem;line-height:1}
+  .godina span{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+  @media (max-width:900px){ .onama{grid-template-columns:1fr;gap:44px} .odlike{grid-template-columns:1fr} }
+  @media (max-width:520px){ .foto{padding:10px} .godina{left:20px;bottom:20px;padding:8px 12px} .godina b{font-size:1.5rem} .godina span{font-size:.76rem} }
+
+  /* kuhinja */
+  .kuhinja{background:var(--drvo);color:var(--krem);position:relative}
+  .kuhinja .glava h2{color:#fff}
+  .kuhinja .glava p{color:#cdbfae}
+  .kuhinja .ruka{color:var(--zlato)}
+  .traka{position:relative;overflow:hidden;margin-inline:calc(50% - 50vw);padding-block:8px 12px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .jela{display:flex;gap:22px;width:max-content;animation:klizi var(--trajanje,60s) linear infinite;will-change:transform}
+  .jela .jelo{width:320px;flex:0 0 auto}
+  @keyframes klizi{from{transform:translateX(calc(-50% - 11px))}to{transform:translateX(0)}}
+  .traka:hover .jela,.traka.stop .jela{animation-play-state:paused}
+  .traka-kontrole{display:flex;justify-content:center;gap:10px;margin-top:18px}
+  .traka-kontrole button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:1.2rem;cursor:pointer}
+  .traka-kontrole button:hover{border-color:var(--zlato);color:var(--zlato)}
+  @media (prefers-reduced-motion:reduce){ .traka{overflow-x:auto} .jela{animation:none} }
+  .jelo{background:var(--drvo2);border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .jelo:hover{border-color:rgba(224,173,76,.55)}
+  .jelo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .jelo .t{padding:16px 18px 20px;display:grid;gap:4px}
+  .jelo h3{font-size:1.35rem;color:#fff}
+  .jelo p{font-size:.95rem;color:#cdbfae;line-height:1.45}
+  .jelo .vrsta{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--zlato);font-weight:700}
+  .kuhinja .napomena{margin-top:30px;text-align:center;color:#cdbfae;font-size:.95rem}
+  @media (max-width:560px){ .jela .jelo{width:250px} .jela{gap:14px} @keyframes klizi{from{transform:translateX(calc(-50% - 7px))}to{transform:translateX(0)}} }
+
+  /* atmosfera */
+  .atmo{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+  .atmo figure{position:relative;overflow:hidden;border-radius:4px}
+  .atmo img{width:100%;height:100%;object-fit:cover;min-height:260px}
+  .atmo figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;background:linear-gradient(transparent,rgba(28,18,13,.85));font-family:var(--display);font-size:1.25rem}
+  .atmo figcaption small{display:block;font-family:var(--body);font-size:.85rem;opacity:.85}
+  .atmo .krediti{grid-column:1/-1;font-size:.78rem;color:var(--siva);text-align:right}
+  @media (max-width:760px){ .atmo{grid-template-columns:1fr} }
+
+  /* proslave */
+  .proslave{background:var(--krem)}
+  .pro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pro{background:#fff;border:1px solid var(--linija);border-radius:6px;padding:22px 20px;display:grid;gap:8px}
+  .pro svg{width:40px;height:40px;stroke:var(--vino);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .pro h3{font-size:1.25rem;color:var(--drvo)}
+  .pro p{font-size:.94rem;color:var(--siva);line-height:1.45}
+  .rez{margin-top:30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--vino);color:#fff;border-radius:6px;padding:26px 30px}
+  .rez h3{font-size:1.6rem}
+  .rez p{opacity:.9}
+  .rez .tel{font-family:var(--display);font-size:1.8rem;font-weight:800;letter-spacing:.02em;user-select:all}
+  @media (max-width:900px){ .pro-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:520px){ .pro-grid{grid-template-columns:1fr} .rez{padding:22px} }
+
+  /* utisci */
+  .utisci-vrh{display:grid;grid-template-columns:.75fr 1.25fr;gap:24px;align-items:stretch;margin-bottom:28px}
+  .hvale{background:#fff;border:1px solid var(--linija);border-radius:6px;padding:26px 28px;display:grid;gap:16px;align-content:start}
+  .hvale h3{font-size:1.4rem;color:var(--drvo)}
+  .cipovi{display:flex;flex-wrap:wrap;gap:8px}
+  .cipovi span{background:var(--krem);border:1px solid var(--linija);border-radius:999px;padding:5px 14px;font-weight:600;font-size:.93rem;color:var(--drvo)}
+  .cipovi span::before{content:"✦ ";color:var(--vino)}
+  .rec-zid{column-count:3;column-gap:18px}
+  .rec-zid .rec{break-inside:avoid;margin-bottom:18px}
+  .rec .zv{color:var(--zlato);letter-spacing:2px;font-size:.95rem}
+  .rec blockquote{font-size:1.15rem!important}
+  .rec .ko .g{display:inline-flex;align-items:center;gap:6px}
+  .rec .ko .g i{font-style:normal;font-weight:800;font-family:Arial,sans-serif;background:linear-gradient(90deg,#4285f4,#ea4335,#fbbc05,#34a853);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .rec-dno{text-align:center;margin-top:8px}
+  @media (max-width:1000px){ .rec-zid{column-count:2} }
+  @media (max-width:860px){ .utisci-vrh{grid-template-columns:1fr} }
+  @media (max-width:640px){
+    .rec-zid{column-count:auto;display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-20px;padding:4px 20px 14px;scrollbar-width:none}
+    .rec-zid::-webkit-scrollbar{display:none}
+    .rec-zid .rec{flex:0 0 84%;scroll-snap-align:center;margin:0}
+    .hvale{padding:20px}
+  }
+  .skor{background:var(--drvo);color:#fff;border-radius:6px;padding:34px 30px;display:grid;gap:10px;align-content:center;text-align:center}
+  .skor .broj{font-family:var(--display);font-size:5rem;font-weight:800;line-height:1;color:var(--zlato)}
+  .skor .zvezde{font-size:1.6rem}
+  .skor p{color:#cdbfae;font-size:.95rem}
+  .recenzije{display:grid;gap:16px}
+  .rec{background:#fff;border:1px solid var(--linija);border-left:4px solid var(--vino);border-radius:6px;padding:22px 24px;display:grid;gap:10px}
+  .rec blockquote{font-family:var(--display);font-size:1.3rem;line-height:1.35;color:var(--drvo)}
+  .rec .prevod{color:var(--siva);font-size:.95rem}
+  .rec .ko{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;color:var(--siva)}
+  .rec .ko b{color:var(--tekst)}
+  .linkovi{display:flex;gap:10px;flex-wrap:wrap}
+  @media (max-width:860px){ .utisci-grid{grid-template-columns:1fr} }
+
+  /* kontakt */
+  .kontakt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .kk{border:1px solid var(--linija);background:#fff;border-radius:6px;padding:22px;display:grid;gap:6px;align-content:start}
+  .kk small{text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--siva);font-weight:700}
+  .kk b{font-family:var(--display);font-size:1.3rem;color:var(--drvo)}
+  .kk a.m{color:var(--vino);font-weight:700;text-decoration:none;font-size:.95rem;padding:10px 0;display:inline-block}
+  .kk a.m:hover{text-decoration:underline}
+  @media (max-width:860px){ .kontakt-grid{grid-template-columns:1fr} }
+
+  footer{background:var(--drvo);color:#cdbfae}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:30px}
+  footer img{height:34px;width:auto}
+  footer a{color:var(--zlato);font-weight:700;text-decoration:none;display:inline-block;padding-block:12px}
+  footer a:hover{text-decoration:underline}
+
+  /* telefon */
+  .mbar{display:none}
+  @media (max-width:760px){
+    body{font-size:17px;padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+    .nav{height:62px}
+    .nav ul .btn{padding:8px 12px;font-size:.85rem}
+    .hero .wrap{padding-block:56px 52px}
+    .hero::before{background:linear-gradient(180deg,rgba(28,18,13,.75),rgba(28,18,13,.9))}
+    .hero .akcije .btn{flex:1 1 100%}
+    section.blok{padding-block:60px}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--drvo);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px))}
+    .mbar .btn{padding-block:12px}
+  }
+
+  /* ---------- poboljšanja ---------- */
+  header{transition:box-shadow .25s,background .25s}
+  header.senka{box-shadow:0 10px 30px -18px rgba(43,29,22,.55)}
+  .nav ul a.aktivno:not(.btn){color:var(--vino)}
+  .nav ul a:not(.btn){position:relative}
+  .nav ul a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--vino);transform:scaleX(0);transition:transform .25s}
+  .nav ul a.aktivno:not(.btn)::after,.nav ul a:not(.btn):hover::after{transform:scaleX(1)}
+  .meni-dugme{display:none;width:44px;height:44px;border:1px solid var(--linija);background:#fff;border-radius:8px;cursor:pointer;position:relative}
+  .meni-dugme span,.meni-dugme span::before,.meni-dugme span::after{position:absolute;left:11px;right:11px;height:2px;background:var(--drvo);border-radius:2px;transition:transform .25s,opacity .25s;content:""}
+  .meni-dugme span{top:21px}.meni-dugme span::before{left:0;right:0;top:-7px}.meni-dugme span::after{left:0;right:0;top:7px}
+  .meni-dugme[aria-expanded="true"] span{background:transparent}
+  .meni-dugme[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+  .meni-dugme[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+  .mob-meni{display:none}
+  @media (max-width:900px){
+    .meni-dugme{display:block}
+    .nav ul li:not(.uvek){display:none}
+    .mob-meni{display:grid;position:absolute;left:0;right:0;top:100%;background:var(--papir);border-bottom:1px solid var(--linija);box-shadow:0 20px 30px -20px rgba(43,29,22,.5);padding:8px 20px 18px;gap:2px;transform-origin:top;transform:scaleY(.96);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+    .mob-meni.otvoren{opacity:1;transform:none;pointer-events:auto}
+    .mob-meni a{text-decoration:none;font-family:var(--display);font-size:1.4rem;color:var(--drvo);padding:10px 0;border-bottom:1px dashed var(--linija)}
+    .mob-meni a:last-child{border:0}
+  }
+  .rv{transition:opacity .8s ease,transform .8s ease}
+  .js .rv.pre{opacity:0;transform:translateY(28px)}
+  .rec{position:relative;overflow:hidden}
+  .rec::before{content:"„";position:absolute;right:18px;top:-30px;font-family:var(--display);font-size:9rem;line-height:1;color:var(--vino);opacity:.08}
+  .ostavi{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--krem);border:1px dashed var(--cigla);border-radius:6px;padding:18px 22px;text-decoration:none;color:inherit;transition:background .2s}
+  .ostavi:hover{background:#f1e6d3}
+  .ostavi b{font-family:var(--display);font-size:1.2rem;color:var(--drvo);display:block}
+  .ostavi span{color:var(--siva);font-size:.95rem}
+  .ostavi .str{font-weight:700;color:var(--vino);white-space:nowrap}
+  .mapa{margin-top:22px;border-radius:6px;overflow:hidden;border:1px solid var(--linija);background:var(--krem);aspect-ratio:21/8;min-height:260px}
+  .mapa iframe{width:100%;height:100%;border:0;display:block;filter:sepia(.18) saturate(.9)}
+  footer .kolone{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;padding-block:44px 20px}
+  footer .kolone h2{font-family:var(--display);color:#fff;font-size:1.15rem;margin-bottom:10px}
+  footer .kolone p,footer .kolone li{font-size:.95rem;line-height:1.7}
+  footer .kolone ul{list-style:none}
+  footer .kolone a{color:#e9dfd2;font-weight:400}
+  footer .kolone a:hover{color:var(--zlato)}
+  footer .kolone .opis{max-width:26em;margin-top:12px}
+  footer .dno{border-top:1px solid rgba(255,255,255,.1)}
+  footer .dno .wrap{padding-block:18px;font-size:.88rem}
+  @media (max-width:760px){
+    .hero{min-height:auto}
+    .skrol{display:none}
+    .info-red{font-size:.9rem}
+    .ocena{border-radius:16px}
+    .pro-grid{grid-template-columns:1fr 1fr!important;gap:10px}
+    .pro{padding:14px}
+    .pro h3{font-size:1.08rem}
+    .pro p{font-size:.86rem}
+    .mapa{aspect-ratio:4/3}
+    footer .kolone{grid-template-columns:1fr;gap:22px;padding-block:34px 10px}
+  }
+  @media (prefers-reduced-motion:reduce){ .hero-bg,.skrol::after{animation:none} .js .rv.pre{opacity:1;transform:none} }
+
+  /* ================= PLANER PROSLAVE ================= */
+  .pl-top{padding-block:34px 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+  .glavni-h1{margin:0;line-height:0}
+  .pl-top h1,.pl-top .str-naslov{font-size:clamp(2rem,4.6vw,3rem);color:var(--drvo)}
+  .pl-top p{color:var(--siva);max-width:38em}
+  .pl-nazad{font-weight:700;color:var(--vino);text-decoration:none}
+  .pl{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(320px,1fr);gap:22px;align-items:start;padding-bottom:110px}
+  .pl-plan{position:sticky;top:90px;background:#fff;border:1px solid var(--linija);border-radius:8px;padding:12px;display:grid;gap:10px}
+  .pl-alati{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .pl-alati .lbl{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--siva);font-weight:700;margin-right:4px}
+  .dodaj{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--linija);background:var(--papir);border-radius:6px;padding:6px 10px;font:700 .88rem var(--body);color:var(--drvo);cursor:pointer}
+  .dodaj:hover{border-color:var(--vino);background:var(--krem)}
+  .dodaj svg{width:30px;height:22px}
+  #plan{display:block;width:100%;height:auto;aspect-ratio:1240/760;touch-action:none;user-select:none;-webkit-user-select:none;border-radius:4px;background:#3a2a20}
+  #plan .sto{cursor:grab}
+  #plan .sto.vuce{cursor:grabbing}
+  #plan .sto .obrub{fill:none;stroke:transparent;stroke-width:5}
+  #plan .sto.izabran .obrub{stroke:var(--zlato);stroke-dasharray:none}
+  #plan .sto.aktivan .obrub{stroke:#fff;stroke-dasharray:8 6}
+  #plan .sto.izabran.aktivan .obrub{stroke:var(--zlato);stroke-dasharray:8 6}
+  #plan .sto .bedz{display:none}
+  #plan .sto.izabran .bedz{display:inline}
+  #plan .soba-sel{transition:fill .25s}
+  .pl-legenda{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;color:var(--siva);align-items:center}
+  .pl-legenda i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+  .pl-akt{display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-height:40px;background:var(--krem);border-radius:6px;padding:6px 10px;font-size:.92rem}
+  .pl-akt b{font-family:var(--display);font-size:1.05rem;color:var(--drvo);margin-right:auto}
+  .mini-btn{border:1px solid var(--linija);background:#fff;border-radius:6px;padding:6px 10px;font:700 .85rem var(--body);color:var(--drvo);cursor:pointer}
+  .mini-btn:hover{border-color:var(--vino)}
+  .mini-btn.crveno{color:var(--vino)}
+  .mini-btn.on{background:var(--vino);border-color:var(--vino);color:#fff}
+
+  .pl-koraci{display:grid;gap:14px}
+  .korak{background:#fff;border:1px solid var(--linija);border-radius:8px;overflow:hidden}
+  .korak > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;font-family:var(--display);font-size:1.25rem;color:var(--drvo)}
+  .korak > summary::-webkit-details-marker{display:none}
+  .korak > summary .br{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--vino);color:#fff;font-family:var(--body);font-size:.9rem;font-weight:700;flex:0 0 auto}
+  .korak > summary .izb{margin-left:auto;font-family:var(--body);font-size:.85rem;color:var(--siva);font-weight:500;text-align:right}
+  .korak[open] > summary{border-bottom:1px dashed var(--linija)}
+  .korak .telo{padding:16px 18px 18px;display:grid;gap:14px}
+  .opcije{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+  .opcija{position:relative}
+  .opcija input{position:absolute;opacity:0;pointer-events:none}
+  .opcija > span{display:grid;gap:2px;border:1.5px solid var(--linija);border-radius:8px;padding:10px 12px;cursor:pointer;background:var(--papir);font-weight:700;color:var(--drvo);height:100%}
+  .opcija > span small{font-weight:400;color:var(--siva);font-size:.82rem;line-height:1.3}
+  .opcija input:checked + span{border-color:var(--vino);background:#fbeef0;box-shadow:inset 0 0 0 1px var(--vino)}
+  .opcija input:focus-visible + span{outline:3px solid var(--zlato);outline-offset:2px}
+  .polja{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .polje{display:grid;gap:5px}
+  .polje.cela{grid-column:1/-1}
+  .polje label{font-size:.85rem;font-weight:700;color:var(--siva)}
+  .polje input,.polje select,.polje textarea{font:500 1rem var(--body);border:1.5px solid var(--linija);border-radius:6px;padding:10px 12px;background:#fff;color:var(--tekst);width:100%}
+  .polje input:focus,.polje select:focus,.polje textarea:focus{outline:none;border-color:var(--vino)}
+  .polje textarea{min-height:80px;resize:vertical}
+  .brojac{display:flex;align-items:center;gap:0;border:1.5px solid var(--linija);border-radius:6px;overflow:hidden;width:max-content}
+  .brojac button{width:44px;height:44px;border:0;background:var(--krem);font-size:1.3rem;cursor:pointer;color:var(--drvo)}
+  .brojac input{width:70px;height:44px;border:0;text-align:center;font:700 1.1rem var(--body);-moz-appearance:textfield}
+  .brojac input::-webkit-inner-spin-button{-webkit-appearance:none}
+  .meniji{display:grid;gap:10px}
+  .meni-k span{grid-template-columns:1fr auto;align-items:start;column-gap:12px}
+  .meni-k .cena{font-family:var(--display);font-size:1.15rem;color:var(--vino);white-space:nowrap}
+  .meni-k ul{grid-column:1/-1;margin:6px 0 0 18px;font-weight:400;color:var(--siva);font-size:.88rem;line-height:1.45}
+  .meni-k .premium{display:inline-block;margin-left:6px;font-size:.7rem;background:var(--zlato);color:var(--drvo);padding:1px 7px;border-radius:999px;vertical-align:2px}
+  .stiklir{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;cursor:pointer}
+  .stiklir input{width:20px;height:20px;accent-color:var(--vino);margin-top:2px;flex:0 0 auto}
+  .stiklir small{color:var(--siva);display:block}
+  .upoz{font-size:.88rem;border-radius:6px;padding:8px 12px;background:#fff6e0;color:#7a5410;border:1px solid #f0d9a0}
+  .upoz.ok{background:#eaf4e9;color:#2d6b2f;border-color:#cfe6cd}
+  .cenovnik{width:100%;border-collapse:collapse;font-size:.95rem}
+  .cenovnik td{padding:7px 0;border-bottom:1px dashed var(--linija);vertical-align:top}
+  .cenovnik td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:10px}
+  .cenovnik tr.ukupno td{border-bottom:0;padding-top:12px;font-family:var(--display);font-size:1.35rem;color:var(--drvo)}
+  .napom{font-size:.8rem;color:var(--siva)}
+
+  .pl-traka{position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--drvo);color:#fff;padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -12px 30px -16px rgba(0,0,0,.6)}
+  .pl-traka .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .pl-traka .st{display:grid;line-height:1.2}
+  .pl-traka .st small{font-size:.75rem;color:#cdbfae;text-transform:uppercase;letter-spacing:.08em}
+  .pl-traka .st b{font-family:var(--display);font-size:1.2rem}
+  .pl-traka .btn{margin-left:auto}
+
+  .modal{position:fixed;inset:0;z-index:80;background:rgba(28,18,13,.6);display:grid;place-items:center;padding:16px}
+  .modal .kutija{background:var(--papir);border-radius:10px;max-width:560px;width:100%;max-height:90vh;overflow:auto;padding:24px;display:grid;gap:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+  .modal h3{font-size:1.6rem;color:var(--drvo)}
+  .modal pre{white-space:pre-wrap;font:500 .9rem/1.5 var(--body);background:#fff;border:1px solid var(--linija);border-radius:6px;padding:12px;max-height:260px;overflow:auto}
+  .modal .kanali{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .modal .kanali .btn{width:100%}
+
+  @media (max-width:1000px){
+    .pl{grid-template-columns:1fr}
+    .pl-plan{position:relative;top:0}
+  }
+  @media (max-width:760px){
+    body.u-planeru .mbar{display:none}
+    body.u-planeru{padding-bottom:0}
+    .polja{grid-template-columns:1fr}
+    .pl-plan{padding:8px;margin-inline:-12px}
+    .pl-traka .st:nth-child(2){display:none}
+    .pl-traka .btn{padding:11px 16px}
+    .dodaj{padding:5px 8px;font-size:.8rem}
+    .dodaj svg{width:24px;height:18px}
+  }
+  body.u-planeru footer{margin-bottom:74px}
+  /* ---------- ULAZ: etno vrata ---------- */
+  .vrata{position:fixed;inset:0;z-index:999;display:grid;grid-template-columns:1fr 1fr;perspective:1800px;background:#120b08;transition:background .8s ease .25s;overflow:hidden}
+  .vrata.otvori{background:rgba(18,11,8,0);pointer-events:none}
+  .vrata .svetlo{position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:linear-gradient(#ffd27a,#ffb347 40%,#ffd27a);box-shadow:0 0 30px 12px rgba(255,190,90,.55),0 0 120px 40px rgba(255,170,70,.25);opacity:0;transition:opacity .4s ease,width .9s ease,margin .9s ease;z-index:1}
+  .vrata.pukotina .svetlo{opacity:1}
+  .vrata.otvori .svetlo{opacity:0;transition:opacity .5s ease}
+  .krilo{position:relative;z-index:2;height:100%;transform-style:preserve-3d;transition:transform 1.5s cubic-bezier(.6,.05,.25,1);
+    background:
+      repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 2px,transparent 2px 64px),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 9px),
+      linear-gradient(90deg,#4a2c1b,#6b4128 30%,#5a3520 70%,#3e2416);
+    box-shadow:inset 0 0 80px rgba(0,0,0,.55);padding:clamp(18px,4vh,46px) clamp(16px,4vw,54px);display:grid;grid-template-rows:1.25fr .7fr 1fr;gap:clamp(12px,3vh,30px)}
+  .krilo.levo{transform-origin:left center;border-right:3px solid #2a1810}
+  .krilo.desno{transform-origin:right center;border-left:3px solid #2a1810}
+  .vrata.otvori .krilo.levo{transform:rotateY(-108deg)}
+  .vrata.otvori .krilo.desno{transform:rotateY(108deg)}
+  .ploca{border-radius:10px;display:grid;place-items:center;background:rgba(0,0,0,.12);
+    box-shadow:inset 6px 6px 14px rgba(0,0,0,.55),inset -4px -4px 10px rgba(255,220,170,.10),0 1px 0 rgba(255,220,170,.12);min-height:0;overflow:hidden}
+  .ploca:first-child{border-radius:999px 999px 10px 10px}
+  .ploca svg{width:min(70%,220px);height:auto;max-height:80%;opacity:.95}
+  .karika{position:absolute;top:52%;width:clamp(38px,5vw,62px);aspect-ratio:1;border-radius:50%;border:clamp(5px,.7vw,8px) solid #1d1714;box-shadow:inset 0 2px 2px rgba(255,255,255,.18),0 4px 8px rgba(0,0,0,.6)}
+  .karika::before{content:"";position:absolute;left:50%;top:-30%;width:34%;height:34%;transform:translateX(-50%);border-radius:50%;background:#1d1714;box-shadow:0 2px 3px rgba(0,0,0,.6)}
+  .levo .karika{right:clamp(14px,2.2vw,30px)}
+  .desno .karika{left:clamp(14px,2.2vw,30px)}
+  .vrata .vez-gore{position:absolute;left:0;right:0;top:0;height:30px;z-index:3;background:var(--vez) center/auto 100% repeat-x,#f7f1e6;transition:transform 1s ease .2s}
+  .vrata.otvori .vez-gore{transform:translateY(-100%)}
+  .tabla{position:absolute;left:50%;top:clamp(46px,9vh,90px);transform:translateX(-50%);z-index:4;display:grid;justify-items:center;transition:transform 1.1s cubic-bezier(.6,.05,.25,1),opacity .8s ease .2s}
+  .tabla::before,.tabla::after{content:"";position:absolute;top:-60px;height:62px;width:2px;background:linear-gradient(#000,#3a2a20)}
+  .tabla::before{left:22%}.tabla::after{right:22%}
+  .tabla .daska{background:#8c1c2b;border:3px solid #5e1019;border-radius:10px;padding:14px 26px;box-shadow:0 18px 30px -12px rgba(0,0,0,.7),inset 0 0 0 2px rgba(224,173,76,.5);animation:ljulja 3s ease-in-out infinite alternate;transform-origin:50% -60px}
+  .tabla img{width:min(52vw,320px);height:auto}
+  @media (max-width:600px){ .tabla{top:22vh} .tabla img{width:min(56vw,240px)} }
+  .vrata.otvori .tabla{transform:translate(-50%,-140%);opacity:0}
+  @keyframes ljulja{from{transform:rotate(-1.2deg)}to{transform:rotate(1.2deg)}}
+  .vrata .udji{position:absolute;left:50%;bottom:clamp(24px,7vh,64px);transform:translateX(-50%);z-index:4;background:#e0ad4c;color:#2b1d16;border:0;border-radius:999px;padding:12px 26px;font:700 1rem 'Alegreya Sans',system-ui,sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.7);transition:opacity .4s ease}
+  .vrata.otvori .udji{opacity:0}
+  body.zakljucano{overflow:hidden}
+  @media (prefers-reduced-motion:reduce){
+    .krilo,.tabla,.vez-gore,.vrata .svetlo{transition:opacity .4s ease!important}
+    .vrata.otvori{opacity:0;transition:opacity .5s ease}
+    .vrata.otvori .krilo{transform:none!important}
+    .tabla .daska{animation:none}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important;scroll-behavior:auto!important} }
+
+  /* ================= TEMA: crveno-beli karirani stolnjak ================= */
+  :root{
+    --crvena:#c0202f; --crvena-t:#9e1825; --vino:#c0202f; --vino-t:#9e1825;
+    --karo-svetli: repeating-linear-gradient(0deg,rgba(192,32,47,.07) 0 18px,transparent 18px 36px), repeating-linear-gradient(90deg,rgba(192,32,47,.07) 0 18px,transparent 18px 36px), #fffdfa;
+    --karo-jaki: repeating-linear-gradient(0deg,rgba(192,32,47,.45) 0 22px,transparent 22px 44px), repeating-linear-gradient(90deg,rgba(192,32,47,.45) 0 22px,transparent 22px 44px), #ffffff;
+    --karo-crveni: repeating-linear-gradient(0deg,rgba(255,255,255,.13) 0 22px,transparent 22px 44px), repeating-linear-gradient(90deg,rgba(255,255,255,.13) 0 22px,transparent 22px 44px), #b81d2c;
+  }
+  body{background:var(--karo-svetli)}
+  header{background:rgba(255,255,255,.97);border-bottom:0;box-shadow:0 1px 0 var(--linija)}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:var(--karo-jaki);background-size:auto;pointer-events:none}
+  .karo{height:26px;background:var(--karo-jaki)}
+  .hero::before{background:linear-gradient(90deg,rgba(60,8,14,.88) 0%,rgba(60,8,14,.62) 50%,rgba(60,8,14,.18) 100%)}
+  .hero .pod{color:#ffd9b0}
+  .btn.zlato{background:#fff;border-color:#fff;color:var(--crvena)}
+  .btn.zlato:hover{background:#ffe9eb;border-color:#ffe9eb;color:var(--crvena-t)}
+  .ocena b{background:#fff;color:var(--crvena)}
+  .ruka{color:var(--crvena)}
+
+  /* o nama i ostale svetle sekcije: beli "papir" na karo podlozi */
+  section.blok > .wrap{position:relative}
+  #o-nama > .wrap, #atmosfera > .wrap, #utisci > .wrap, #kontakt > .wrap{background:#fff;border-radius:10px;box-shadow:0 20px 50px -34px rgba(120,10,20,.45);padding:44px 40px}
+  .foto{border-color:var(--crvena)}
+  .godina{background:var(--crvena);border-color:#fff}
+  .odlika{border-top-color:var(--crvena)}
+
+  /* kuhinja: crveni karirani stolnjak */
+  .kuhinja{background:var(--karo-crveni);color:#fff}
+  .kuhinja .glava p{color:#ffe3e5}
+  .kuhinja .ruka{color:#ffd9b0}
+  .kuhinja .napomena{color:#ffe3e5}
+  .jelo{background:#fff;border:0;box-shadow:0 18px 30px -20px rgba(60,0,8,.6)}
+  .jelo:hover{border-color:transparent;box-shadow:0 22px 36px -18px rgba(60,0,8,.75)}
+  .jelo h3{color:var(--drvo)}
+  .jelo p{color:var(--siva)}
+  .jelo .vrsta{color:var(--crvena)}
+  .traka-kontrole button{border-color:rgba(255,255,255,.7)}
+  .traka-kontrole button:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.15)}
+
+  /* proslave: jak karo, bele kartice */
+  .proslave{background:var(--karo-jaki)}
+  .proslave .glava{background:#fff;border-radius:10px;padding:24px 26px;box-shadow:0 14px 34px -26px rgba(120,10,20,.5)}
+  .pro{border-color:#f1d5d8;box-shadow:0 14px 30px -24px rgba(120,10,20,.5)}
+  .pro svg{stroke:var(--crvena)}
+  .rez{background:var(--karo-crveni)}
+
+  .skor{background:var(--karo-crveni)}
+  .skor .broj{color:#fff}
+  .skor .zvezde{color:#ffd27a}
+  .skor p{color:#ffe3e5}
+  .rec{border-left-color:var(--crvena)}
+  .rec::before{color:var(--crvena)}
+  .cipovi span{background:#fff5f5;border-color:#f1d5d8}
+  .cipovi span::before{color:var(--crvena)}
+  .ostavi{background:#fff5f5;border-color:#e9a9b0}
+  .ostavi:hover{background:#ffeaec}
+
+  footer{background:var(--karo-crveni);color:#ffe3e5}
+  footer .kolone a{color:#fff}
+  footer .kolone a:hover{color:#ffd9b0}
+  footer .dno{border-top-color:rgba(255,255,255,.25)}
+  .mbar{background:var(--crvena)}
+  .vez.tamno{background-color:#8e1622}
+
+  /* planer */
+  .pl-traka{background:var(--karo-crveni)}
+  .korak > summary .br{background:var(--crvena)}
+  .pl-plan,.korak{box-shadow:0 18px 40px -30px rgba(120,10,20,.5)}
+
+  @media (max-width:760px){
+    #o-nama > .wrap, #atmosfera > .wrap, #utisci > .wrap, #kontakt > .wrap{padding:28px 18px;border-radius:0;margin-inline:0}
+    #utisci .rec-zid{margin-inline:-18px;padding-inline:18px}
+    .hero::before{background:linear-gradient(180deg,rgba(60,8,14,.72),rgba(60,8,14,.9))}
+    .nav ul .btn{white-space:nowrap;padding:8px 12px;font-size:.82rem}
+    .nav .logo img{height:30px}
+  }
+
+  /* naši prijatelji */
+  .prijatelji-k{background:var(--karo-jaki)}
+  .prijatelji-k .glava{background:#fff;border-radius:10px;padding:22px 26px;max-width:560px;box-shadow:0 14px 34px -26px rgba(120,10,20,.5)}
+  .prij-kartica{display:grid;grid-template-columns:1fr 1.1fr;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;max-width:980px;margin:0 auto;box-shadow:0 26px 50px -30px rgba(120,10,20,.6);border:3px solid #3f9b48;transition:transform .2s,box-shadow .2s}
+  .prij-kartica:hover{transform:translateY(-4px);box-shadow:0 32px 56px -28px rgba(31,90,41,.6)}
+  .pk-slika img{width:100%;height:100%;object-fit:cover;min-height:280px}
+  .pk-tekst{padding:30px;display:grid;gap:12px;align-content:center;justify-items:start}
+  .pk-logo{height:84px;width:auto}
+  .pk-tag{font-size:.8rem;font-weight:700;color:#1f5a29;background:#eaf4e9;border-radius:999px;padding:3px 12px}
+  .pk-tekst p{color:var(--siva)}
+  .pk-tekst .btn{background:#2e7d37;border-color:#2e7d37}
+  .prij-kartica:hover .pk-tekst .btn{background:#1f5a29;border-color:#1f5a29}
+  @media (max-width:760px){ .prij-kartica{grid-template-columns:1fr} .pk-slika img{min-height:190px;max-height:230px} .pk-tekst{padding:22px} .pk-tekst .btn{width:100%} }
+
+  /* ---------- mapa lokacija ---------- */
+  .lok-mapa{padding-block:70px}
+  .lok-mapa .glava{text-align:center;margin:0 auto 30px;max-width:640px}
+  .lm-grid{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:stretch}
+  .lm-lista{background:#fff;border:1px solid #e3ddd2;border-radius:12px;padding:10px;display:grid;gap:4px;align-content:start;max-height:520px;overflow:auto}
+  .lm-lista .lm-grupa{font-weight:700;font-size:.82rem;letter-spacing:.02em;color:#5f574f;padding:10px 10px 4px;font-family:inherit}
+  .lm-lista button{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;text-align:left;border:1px solid transparent;background:none;border-radius:8px;padding:9px 10px;cursor:pointer;font:inherit;color:inherit}
+  .lm-lista button:hover{background:#fff1f2}
+  .lm-lista button.on{background:#fff1f2;border-color:#c0202f}
+  .lm-lista .pin{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:grid;place-items:center;background:#c0202f;margin-top:2px}
+  .lm-lista .pin.prij{background:#8a8178}
+  .lm-lista .pin i{transform:rotate(45deg);color:#fff;font-style:normal;font-weight:700;font-size:.78rem}
+  .lm-lista b{display:block;font-size:.98rem;line-height:1.25}
+  .lm-lista small{color:#5f574f;font-size:.85rem}
+  .lm-okvir{position:relative;border-radius:12px;overflow:hidden;border:3px solid #c0202f;background:#efe9df;min-height:420px;box-shadow:0 24px 44px -30px rgba(0,0,0,.5)}
+  .lm-okvir iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .lm-traka{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:rgba(255,255,255,.96);border-radius:10px;padding:10px 14px;box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
+  .lm-traka b{font-size:1rem}
+  .lm-traka span{color:#5f574f;font-size:.88rem;display:block}
+  .lm-traka a{font-weight:700;color:#9e1825;text-decoration:none;white-space:nowrap;padding:10px 0;display:inline-block}
+  @media (max-width:860px){ .lm-grid{grid-template-columns:1fr} .lm-okvir{min-height:340px;order:-1} .lm-lista{max-height:none;display:flex;overflow-x:auto;gap:8px;padding:8px} .lm-lista h4{display:none} .lm-lista button{flex:0 0 220px;border-color:#e3ddd2} }
+  .lok-mapa .glava{background:#fff;border-radius:10px;padding:22px 26px;box-shadow:0 14px 34px -26px rgba(120,10,20,.5)}
+  .lok-mapa{background:var(--karo-jaki)}
+</style>
+</head>
+<body>
+<a class="preskoci" href="#o-nama">Preskoči na sadržaj</a>
+<div class="vrata" id="vrata" aria-hidden="true">
+  <div class="vez-gore"></div>
+  <div class="krilo levo">
+    <div class="ploca"><svg viewBox="0 0 200 200"><g fill="none" stroke="#2a1810" stroke-width="5" stroke-linecap="round"><circle cx="100" cy="100" r="78" stroke="#c9a24a" stroke-opacity=".55" stroke-width="3"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(0 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(30 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(60 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(90 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(120 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(150 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(180 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(210 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(240 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(270 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(300 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(330 100 100)" stroke="#2a1810" fill="#6b4128"/><circle cx="183.1" cy="122.3" r="4" fill="#c9a24a" stroke="none"/><circle cx="160.8" cy="160.8" r="4" fill="#c9a24a" stroke="none"/><circle cx="122.3" cy="183.1" r="4" fill="#c9a24a" stroke="none"/><circle cx="77.7" cy="183.1" r="4" fill="#c9a24a" stroke="none"/><circle cx="39.2" cy="160.8" r="4" fill="#c9a24a" stroke="none"/><circle cx="16.9" cy="122.3" r="4" fill="#c9a24a" stroke="none"/><circle cx="16.9" cy="77.7" r="4" fill="#c9a24a" stroke="none"/><circle cx="39.2" cy="39.2" r="4" fill="#c9a24a" stroke="none"/><circle cx="77.7" cy="16.9" r="4" fill="#c9a24a" stroke="none"/><circle cx="122.3" cy="16.9" r="4" fill="#c9a24a" stroke="none"/><circle cx="160.8" cy="39.2" r="4" fill="#c9a24a" stroke="none"/><circle cx="183.1" cy="77.7" r="4" fill="#c9a24a" stroke="none"/><circle cx="100" cy="100" r="16" fill="#8c1c2b" stroke="#c9a24a" stroke-width="3"/></g></svg></div>
+    <div class="ploca"><svg viewBox="0 0 300 100"><g fill="none" stroke="#c9a24a" stroke-width="4" stroke-opacity=".8"><path d="M60 14L96 50L60 86L24 50Z"/><path d="M60 32L78 50L60 68L42 50Z"/></g><g fill="none" stroke="#8c1c2b" stroke-width="4" stroke-opacity=".8"><path d="M150 14L186 50L150 86L114 50Z"/><path d="M150 32L168 50L150 68L132 50Z"/></g><g fill="none" stroke="#c9a24a" stroke-width="4" stroke-opacity=".8"><path d="M240 14L276 50L240 86L204 50Z"/><path d="M240 32L258 50L240 68L222 50Z"/></g><path d="M8 50H24M276 50H292M96 50H114M186 50H204" stroke="#c9a24a" stroke-opacity=".6" stroke-width="3"/></svg></div>
+    <div class="ploca"><svg viewBox="0 0 200 200"><g fill="none" stroke="#c9a24a" stroke-opacity=".6" stroke-width="3"><rect x="40" y="40" width="120" height="120" transform="rotate(45 100 100)"/><rect x="62" y="62" width="76" height="76" transform="rotate(45 100 100)" stroke="#8c1c2b" stroke-opacity=".9"/><circle cx="100" cy="100" r="10" fill="#8c1c2b" stroke="none"/></g></svg></div>
+    <span class="karika"></span>
+  </div>
+  <div class="krilo desno">
+    <div class="ploca"><svg viewBox="0 0 200 200"><g fill="none" stroke="#2a1810" stroke-width="5" stroke-linecap="round"><circle cx="100" cy="100" r="78" stroke="#c9a24a" stroke-opacity=".55" stroke-width="3"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(0 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(30 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(60 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(90 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(120 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(150 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(180 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(210 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(240 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(270 100 100)" stroke="#2a1810" fill="#6b4128"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(300 100 100)" stroke="#2a1810" fill="#5a3520"/><ellipse cx="100" cy="52" rx="13" ry="34" transform="rotate(330 100 100)" stroke="#2a1810" fill="#6b4128"/><circle cx="183.1" cy="122.3" r="4" fill="#c9a24a" stroke="none"/><circle cx="160.8" cy="160.8" r="4" fill="#c9a24a" stroke="none"/><circle cx="122.3" cy="183.1" r="4" fill="#c9a24a" stroke="none"/><circle cx="77.7" cy="183.1" r="4" fill="#c9a24a" stroke="none"/><circle cx="39.2" cy="160.8" r="4" fill="#c9a24a" stroke="none"/><circle cx="16.9" cy="122.3" r="4" fill="#c9a24a" stroke="none"/><circle cx="16.9" cy="77.7" r="4" fill="#c9a24a" stroke="none"/><circle cx="39.2" cy="39.2" r="4" fill="#c9a24a" stroke="none"/><circle cx="77.7" cy="16.9" r="4" fill="#c9a24a" stroke="none"/><circle cx="122.3" cy="16.9" r="4" fill="#c9a24a" stroke="none"/><circle cx="160.8" cy="39.2" r="4" fill="#c9a24a" stroke="none"/><circle cx="183.1" cy="77.7" r="4" fill="#c9a24a" stroke="none"/><circle cx="100" cy="100" r="16" fill="#8c1c2b" stroke="#c9a24a" stroke-width="3"/></g></svg></div>
+    <div class="ploca"><svg viewBox="0 0 300 100"><g fill="none" stroke="#c9a24a" stroke-width="4" stroke-opacity=".8"><path d="M60 14L96 50L60 86L24 50Z"/><path d="M60 32L78 50L60 68L42 50Z"/></g><g fill="none" stroke="#8c1c2b" stroke-width="4" stroke-opacity=".8"><path d="M150 14L186 50L150 86L114 50Z"/><path d="M150 32L168 50L150 68L132 50Z"/></g><g fill="none" stroke="#c9a24a" stroke-width="4" stroke-opacity=".8"><path d="M240 14L276 50L240 86L204 50Z"/><path d="M240 32L258 50L240 68L222 50Z"/></g><path d="M8 50H24M276 50H292M96 50H114M186 50H204" stroke="#c9a24a" stroke-opacity=".6" stroke-width="3"/></svg></div>
+    <div class="ploca"><svg viewBox="0 0 200 200"><g fill="none" stroke="#c9a24a" stroke-opacity=".6" stroke-width="3"><rect x="40" y="40" width="120" height="120" transform="rotate(45 100 100)"/><rect x="62" y="62" width="76" height="76" transform="rotate(45 100 100)" stroke="#8c1c2b" stroke-opacity=".9"/><circle cx="100" cy="100" r="10" fill="#8c1c2b" stroke="none"/></g></svg></div>
+    <span class="karika"></span>
+  </div>
+  <span class="svetlo"></span>
+  <div class="tabla"><div class="daska"><img id="tablaLogo" alt=""></div></div>
+  <button class="udji" id="udji" type="button">Uđite ✦</button>
+</div>
+<div class="vez" aria-hidden="true"></div>
+<header>
+  <div class="wrap nav">
+    <a href="#pocetak" class="logo" aria-label="Jedno Mesto, početak"><img src="assets/km/logo_tamni.webp" alt="Jedno mesto" width="1100" height="302"></a>
+    <ul>
+      <li class="sakrij"><a href="#o-nama">O nama</a></li>
+      <li class="sakrij"><a href="#kuhinja">Kuhinja</a></li>
+      <li class="sakrij"><a href="#proslave">Proslave</a></li>
+      <li class="sakrij"><a href="#utisci">Utisci</a></li>
+      <li class="sakrij"><a href="#prijatelji">Prijatelji</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li class="uvek"><a href="#planer" class="btn sm">Rezervišite sto</a></li>
+      <li class="uvek"><button class="meni-dugme" id="meniDugme" aria-label="Otvori meni" aria-expanded="false" aria-controls="mobMeni"><span></span></button></li>
+    </ul>
+  </div>
+  <nav class="mob-meni" id="mobMeni" aria-label="Meni">
+    <a href="#o-nama">O nama</a><a href="#kuhinja">Kuhinja</a><a href="#atmosfera">Atmosfera</a><a href="#proslave">Proslave</a><a href="#utisci">Utisci</a><a href="#prijatelji">Naši prijatelji</a><a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="sajt">
+  <section class="hero" id="pocetak">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1 class="glavni-h1"><img class="glavni-logo" src="assets/km/logo_svetli.webp" alt="Kafana Jedno Mesto, Leskovac" width="1100" height="302" fetchpriority="high"></h1>
+      <div class="pod">kafana u srcu Leskovca, od 2017.</div>
+      <p>Dobra hrana, prijatna atmosfera i iskreno uživanje u svakom trenutku. Mesto za ljude, priče i trenutke koji se pamte.</p>
+      <div class="ocena"><b>4,6</b><span class="zvezde" aria-hidden="true">★★★★★</span><span>ocena gostiju na Google-u</span></div>
+      <div class="akcije">
+        <a href="#planer" class="btn zlato">Isplanirajte proslavu</a>
+        <a href="#kuhinja" class="btn svetlo">Pogledajte kuhinju</a>
+      </div>
+      <div class="info-red">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Dimitrija Tucovića 45</span>
+        <span><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>060 016 0080</span>
+        <span><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>Od 2017. godine</span>
+      </div>
+    </div>
+    <a href="#o-nama" class="skrol" aria-label="Pomerite se na sadržaj"></a>
+  </section>
+  <div class="karo" aria-hidden="true"></div>
+
+  <section class="blok" id="o-nama">
+    <div class="wrap onama">
+      <div class="tekst">
+        <div class="ruka">Dobro došli</div>
+        <div class="glava" style="margin-bottom:22px"><h2>Više od kafane</h2></div>
+        <p class="uvod">Dobro došli u Jedno Mesto, kafanu u kojoj se susreću dobra hrana, prijatna atmosfera i iskreno uživanje u svakom trenutku.</p>
+        <p>U srcu Leskovca, tamo gde se gostoprimstvo podrazumeva, a dobra atmosfera dugo pamti, od 2017. godine okupljamo prijatelje, porodice i društva. Kod nas se dolazi na porodični ručak, na proslavu ili samo na jedno piće koje se pretvori u celo veče.</p>
+        <p>Naša ideja je jednostavna: da svaki gost pronađe razlog da se vrati. Uz toplu atmosferu, pažljivo odabrane ukuse i ljubazno osoblje, svakodnevni trenuci kod nas postaju lepe uspomene.</p>
+        <div class="odlike">
+          <div class="odlika"><b>Leskovačka kuhinja</b><span>Roštilj, predjela i domaća jela</span></div>
+          <div class="odlika"><b>Domaća vina</b><span>Bogat izbor vina iz srpskih vinarija</span></div>
+          <div class="odlika"><b>Proslave</b><span>Rođendani, slave i sva okupljanja</span></div>
+        </div>
+      </div>
+      <figure class="foto">
+        <img id="salaONama" alt="Sala kafane Jedno mesto sa kariranim stolnjacima, kamenim zidovima i vinskim zidom">
+        <div class="godina"><b>2017.</b><span>od tada smo tu</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="blok kuhinja" id="kuhinja">
+    <div class="vez tamno" aria-hidden="true" style="position:absolute;left:0;right:0;top:0"></div>
+    <div class="wrap">
+      <div class="glava centar">
+        <div class="ruka">Iz naše kuhinje</div>
+        <h2>Leskovački ukusi</h2>
+        <p>Roštilj sa žara, bogata predjela i domaća jela kakva se pamte. Izdvajamo nešto od onoga što se kod nas najviše jede.</p>
+      </div>
+      <div class="traka" id="traka" aria-label="Jela iz naše kuhinje, pokretni prikaz"><div class="jela" id="jela"></div></div>
+      <div class="traka-kontrole"><button id="pauza" aria-label="Zaustavi pokretni prikaz">❚❚</button></div>
+      <p class="napomena">Pitajte konobara za dnevnu ponudu i jelo dana.</p>
+    </div>
+  </section>
+
+  <section class="blok" id="atmosfera">
+    <div class="wrap">
+      <div class="glava">
+        <div class="ruka">Atmosfera</div>
+        <h2>Kamen, drvo i topla svetla</h2>
+        <p>Zidovi od cigle, karirani stolnjaci, stara slika Leskovca na zidu i vinski zid pun domaćih vina.</p>
+      </div>
+      <div class="atmo">
+        <figure><img src="assets/km/vina.webp" alt="Vinski zid sa bocama domaćih vina" width="1600" height="1066" loading="lazy" decoding="async"><figcaption>Vinski zid<small>Domaća vina za svaku priliku</small></figcaption></figure>
+        <figure><img src="assets/km/sank.webp" alt="Šank sa čašama i pogledom na salu" width="1600" height="1066" loading="lazy" decoding="async"><figcaption>Šank<small>Za piće i druženje uz dobru atmosferu</small></figcaption></figure>
+        <p class="krediti">Fotografije šanka i vinskog zida: Studio Neša photography</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok proslave" id="proslave">
+    <div class="wrap">
+      <div class="glava">
+        <div class="ruka">Proslave i okupljanja</div>
+        <h2>Vaš povod, naša trpeza</h2>
+        <p>Bilo da dolazite na opušten ručak, večernje druženje ili proslavu posebnog povoda, pripremićemo sto po vašoj meri.</p>
+      </div>
+      <div class="pro-grid">
+        <div class="pro"><svg viewBox="0 0 24 24"><path d="M4 21h16M6 21v-7h12v7M6 14c2-2 4 0 6-2s4 0 6-2M12 10V6M12 3v1"/></svg><h3>Rođendani</h3><p>Proslavite sa društvom, uz muziku i dobru hranu.</p></div>
+        <div class="pro"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v10M7 12h10"/></svg><h3>Slave</h3><p>Svečana trpeza za domaćina i goste.</p></div>
+        <div class="pro"><svg viewBox="0 0 24 24"><path d="M3 11h18M5 11v8h14v-8M8 11V7a4 4 0 0 1 8 0v4"/></svg><h3>Porodični ručkovi</h3><p>Nedeljni ručak bez kuvanja i pranja sudova.</p></div>
+        <div class="pro"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM9 7V5h6v2"/><path d="M4 12h16"/></svg><h3>Poslovne večere</h3><p>Mirniji kutak za poslovne susrete i timske večeri.</p></div>
+      </div>
+      <div class="rez" id="rezervacija">
+        <div><h3>Isplanirajte proslavu</h3><p>Izaberite salu i stolove na planu kafane, meni i muziku, i pošaljite nam upit. Ili nas samo pozovite.</p></div>
+        <div style="display:grid;gap:8px;justify-items:start">
+          <a class="btn zlato" href="#planer">Otvori planer proslave</a>
+          <span class="tel" style="font-size:1.3rem">060 016 0080</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="utisci">
+    <div class="wrap">
+      <div class="glava">
+        <div class="ruka">Zadovoljne mušterije</div>
+        <h2>Šta kažu naši gosti</h2>
+      </div>
+      <div class="utisci-vrh">
+        <div class="skor">
+          <div class="broj">4,6</div>
+          <div class="zvezde" aria-label="4,6 od 5 zvezdica">★★★★★</div>
+          <p>prosečna ocena gostiju na Google-u</p>
+        </div>
+        <div class="hvale">
+          <h3>Gosti najčešće hvale</h3>
+          <div class="cipovi">
+            <span>Teleća čorba</span><span>Teleća glava</span><span>Teleći i juneći repovi</span><span>Škembići</span><span>Gurmanska pljeskavica</span><span>Ćevapi na kajmaku</span><span>Domaće lepinje</span><span>Ljubazni konobari</span><span>Pristupačne cene</span>
+          </div>
+          <a class="ostavi" href="https://www.google.com/maps/search/?api=1&query=Jedno+Mesto+Dimitrija+Tucovi%C4%87a+45+Leskovac" target="_blank" rel="noopener">
+            <div><b>Bili ste naš gost?</b><span>Vaše mišljenje nam mnogo znači.</span></div>
+            <span class="str">Napišite recenziju</span>
+          </a>
+        </div>
+      </div>
+      <div class="rec-zid" id="recenzije" tabindex="0" aria-label="Utisci gostiju"></div>
+      <div class="rec-dno"><a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=Jedno+Mesto+Dimitrija+Tucovi%C4%87a+45+Leskovac" target="_blank" rel="noopener">Sve recenzije na Google-u</a></div>
+    </div>
+  </section>
+
+  <section class="blok prijatelji-k" id="prijatelji">
+    <div class="wrap">
+      <div class="glava centar">
+        <div class="ruka">Preporučujemo</div>
+        <h2>Naši prijatelji</h2>
+        <p>Mesta u Leskovcu u koja i sami rado svraćamo.</p>
+      </div>
+      <a class="prij-kartica" href="index.html">
+        <div class="pk-slika"><img src="assets/km/bd_slika.webp" alt="Posna peciva iz Badem pekare" width="800" height="796" loading="lazy" decoding="async"></div>
+        <div class="pk-tekst">
+          <img class="pk-logo" src="assets/km/bd_logo.png" alt="Pekara Badem" width="800" height="605" loading="lazy" decoding="async">
+          <span class="pk-tag">Pekara · od 1996.</span>
+          <p>Domaće lepinje iz turskih peći, burek, pite i peciva na osam lokacija u Leskovcu i okolini. Slavski kolač po porudžbini, koji možete i sami da ukrasite na njihovom sajtu.</p>
+          <span class="btn">Poseti sajt Badem pekare</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="karo" aria-hidden="true"></div>
+  <section class="blok" id="kontakt">
+    <div class="wrap">
+      <div class="glava">
+        <div class="ruka">Kontakt</div>
+        <h2>Svratite kod nas</h2>
+        <p>U Ulici Dimitrija Tucovića, pored Tehničke škole „Rade Metalac“.</p>
+      </div>
+      <div class="kontakt-grid">
+        <div class="kk"><small>Adresa</small><b>Dimitrija Tucovića 45<br>16000 Leskovac</b><a class="m" href="https://www.google.com/maps/search/?api=1&query=Dimitrija+Tucovi%C4%87a+45+Leskovac" target="_blank" rel="noopener">Otvori mapu</a></div>
+        <div class="kk"><small>Rezervacije</small><b style="user-select:all">060 016 0080</b><a class="m" href="tel:+381600160080">Pozovite</a></div>
+        <div class="kk"><small>Pratite nas</small><b>Kafana Jedno Mesto</b><a class="m" href="https://www.facebook.com/kafanajednomestole/" target="_blank" rel="noopener">Facebook</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lok-mapa" id="mapa">
+    <div class="wrap">
+      <div class="glava">
+        <div class="ruka">Gde smo</div>
+        <h2 class="">Lokacije u Leskovcu</h2>
+        <p>Izaberite lokaciju sa spiska i mapa će vam je pokazati.</p>
+      </div>
+      <div class="lm-grid">
+        <div class="lm-lista" id="lmLista" role="group" aria-label="Izaberite lokaciju"></div>
+        <div class="lm-okvir">
+          <iframe id="lmMapa" title="Google mapa lokacija" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="lm-traka"><div><b id="lmNaziv"></b><span id="lmAdresa"></span></div><a id="lmLink" target="_blank" rel="noopener">Otvori u Google mapama ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<main id="planer" hidden>
+  <div class="wrap pl-top">
+    <div>
+      <a href="#pocetak" class="pl-nazad">← Nazad na sajt</a>
+      <div class="ruka" style="margin-top:10px">Planer proslave</div>
+      <h2 class="str-naslov">Isplanirajte svoje veče</h2>
+    </div>
+    <p>Izaberite povod, salu i stolove, rasporedite ih kako želite, izaberite meni i muziku. Na kraju nam pošaljite upit, a mi vas zovemo da potvrdimo.</p>
+  </div>
+
+  <div class="wrap pl">
+    <!-- PLAN -->
+    <div class="pl-plan">
+      <div class="pl-alati">
+        <span class="lbl">Dodaj sto</span>
+        <button class="dodaj" data-tip="t2"><svg viewBox="0 0 40 30"><rect x="12" y="7" width="16" height="16" rx="2" fill="#c24a55"/><rect x="15" y="1" width="10" height="5" rx="2" fill="#5e3619"/><rect x="15" y="24" width="10" height="5" rx="2" fill="#5e3619"/></svg>za 2</button>
+        <button class="dodaj" data-tip="t4"><svg viewBox="0 0 40 30"><rect x="11" y="6" width="18" height="18" rx="2" fill="#c24a55"/><rect x="15" y="0" width="10" height="5" rx="2" fill="#5e3619"/><rect x="15" y="25" width="10" height="5" rx="2" fill="#5e3619"/><rect x="5" y="10" width="5" height="10" rx="2" fill="#5e3619"/><rect x="30" y="10" width="5" height="10" rx="2" fill="#5e3619"/></svg>za 4</button>
+        <button class="dodaj" data-tip="t6"><svg viewBox="0 0 40 30"><circle cx="20" cy="15" r="10" fill="#c24a55"/><g fill="#5e3619"><circle cx="20" cy="2.5" r="2.6"/><circle cx="20" cy="27.5" r="2.6"/><circle cx="9" cy="8" r="2.6"/><circle cx="31" cy="8" r="2.6"/><circle cx="9" cy="22" r="2.6"/><circle cx="31" cy="22" r="2.6"/></g></svg>za 6</button>
+        <button class="dodaj" data-tip="t8"><svg viewBox="0 0 40 30"><rect x="3" y="9" width="34" height="12" rx="2" fill="#c24a55"/><g fill="#5e3619"><rect x="6" y="3" width="7" height="5" rx="2"/><rect x="17" y="3" width="7" height="5" rx="2"/><rect x="28" y="3" width="7" height="5" rx="2"/><rect x="6" y="22" width="7" height="5" rx="2"/><rect x="17" y="22" width="7" height="5" rx="2"/><rect x="28" y="22" width="7" height="5" rx="2"/></g></svg>za 8</button>
+        <button class="mini-btn" id="vratiRaspored" style="margin-left:auto">↺ Početni raspored</button>
+      </div>
+      <svg id="plan" viewBox="0 0 1240 760" role="application" aria-label="Plan kafane: dodirnite sto da ga izaberete, prevucite da ga pomerite"></svg>
+      <div class="pl-akt" id="plAkt"><b>Dodirnite sto da ga izaberete, prevucite da ga pomerite.</b></div>
+      <div class="pl-legenda">
+        <span><i style="background:#c24a55"></i>slobodan sto</span>
+        <span><i style="background:#e0ad4c"></i>vaš sto</span>
+        <span><i style="background:rgba(224,173,76,.25);border:1px solid #e0ad4c"></i>vaša sala</span>
+      </div>
+    </div>
+
+    <!-- KORACI -->
+    <form class="pl-koraci" id="plForma" novalidate>
+      <details class="korak" open>
+        <summary><span class="br">1</span>Povod i termin<span class="izb" id="s1"></span></summary>
+        <div class="telo">
+          <div class="opcije" id="povodi">
+            <label class="opcija"><input type="radio" name="povod" value="Slava" checked><span>Slava</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Rođendan"><span>Rođendan</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Krštenje"><span>Krštenje</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Veridba / svadba"><span>Veridba / svadba</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Porodični ručak"><span>Porodični ručak</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Poslovna večera"><span>Poslovna večera</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Ispraćaj"><span>Ispraćaj</span></label>
+            <label class="opcija"><input type="radio" name="povod" value="Drugo"><span>Drugo</span></label>
+          </div>
+          <div class="polja">
+            <div class="polje"><label for="datum">Datum</label><input type="date" id="datum" name="datum"></div>
+            <div class="polje"><label for="vreme">Početak</label>
+              <select id="vreme" name="vreme"><option>12:00</option><option>13:00</option><option>14:00</option><option>17:00</option><option>18:00</option><option selected>19:00</option><option>20:00</option><option>21:00</option></select></div>
+            <div class="polje cela"><label for="gosti">Broj gostiju</label>
+              <div class="brojac"><button type="button" data-d="-1" aria-label="Manje gostiju">−</button><input type="number" id="gosti" name="gosti" min="1" max="200" value="20" inputmode="numeric"><button type="button" data-d="1" aria-label="Više gostiju">+</button></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="korak">
+        <summary><span class="br">2</span>Sala i stolovi<span class="izb" id="s2"></span></summary>
+        <div class="telo">
+          <div class="opcije">
+            <label class="opcija"><input type="radio" name="prostor" value="stolovi" checked><span>Samo stolovi<small>Birate stolove na planu</small></span></label>
+            <label class="opcija"><input type="radio" name="prostor" value="mala"><span>Mala sala<small>Odvojena prostorija, zatvoreno društvo</small></span></label>
+            <label class="opcija"><input type="radio" name="prostor" value="velika"><span>Velika sala<small>Glavna sala sa vinskim zidom</small></span></label>
+            <label class="opcija"><input type="radio" name="prostor" value="cela"><span>Cela kafana<small>Otkup obe sale</small></span></label>
+          </div>
+          <div class="upoz" id="mestaInfo"></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" class="mini-btn" id="predlozi">✦ Predloži stolove za moj broj gostiju</button>
+            <button type="button" class="mini-btn" id="ponisti">Poništi izbor</button>
+          </div>
+        </div>
+      </details>
+
+      <details class="korak">
+        <summary><span class="br">3</span>Muzika<span class="izb" id="s3"></span></summary>
+        <div class="telo">
+          <div class="opcije">
+            <label class="opcija"><input type="radio" name="muzika" value="bez" checked><span>Bez muzike uživo<small>Tiha muzika sa razglasa</small></span></label>
+            <label class="opcija"><input type="radio" name="muzika" value="kafana"><span>Muzika uživo, organizuje kafana<small>Mi dovodimo muzičare</small></span></label>
+            <label class="opcija"><input type="radio" name="muzika" value="mi"><span>Muzika uživo, dovodimo mi<small>Vaši muzičari, naš razglas</small></span></label>
+          </div>
+          <div class="polje" id="sastavPolje" hidden><label for="sastav">Kakva muzika?</label>
+            <select id="sastav" name="sastav"><option>Narodni orkestar</option><option>Trubači</option><option>Tamburaši</option><option>Pevač sa klavijaturama</option><option>Starogradska muzika</option></select></div>
+        </div>
+      </details>
+
+      <details class="korak">
+        <summary><span class="br">4</span>Meni i piće<span class="izb" id="s4"></span></summary>
+        <div class="telo">
+          <div class="meniji" id="meniji"></div>
+          <div class="polje"><label for="pice">Piće</label>
+            <select id="pice" name="pice"><option value="potrosnja">Po potrošnji</option><option value="paket">Paket pića (neograničeno)</option><option value="svoje">Donosimo svoje vino / rakiju</option></select></div>
+          <label class="stiklir"><input type="checkbox" name="dodatak" value="Slavski kolač iz Badem pekare"><span>Slavski kolač iz Badem pekare<small>Naručujemo za vas kod naših prijatelja</small></span></label>
+          <label class="stiklir"><input type="checkbox" name="dodatak" value="Torta"><span>Torta<small>Možete doneti svoju ili je naručujemo mi</small></span></label>
+          <label class="stiklir"><input type="checkbox" name="dodatak" value="Dekoracija"><span>Dekoracija stolova i sale<small>Cveće, baloni, natpisi</small></span></label>
+          <label class="stiklir"><input type="checkbox" name="dodatak" value="Vegetarijanska / posna jela"><span>Posna ili vegetarijanska jela za deo gostiju</span></label>
+        </div>
+      </details>
+
+      <details class="korak">
+        <summary><span class="br">5</span>Cenovnik i upit<span class="izb" id="s5"></span></summary>
+        <div class="telo">
+          <table class="cenovnik" id="cenovnik"></table>
+          <p class="napom">Okvirna procena. Tačnu cenu potvrđujemo telefonom nakon upita.</p>
+          <div class="polja">
+            <div class="polje"><label for="ime">Ime i prezime *</label><input id="ime" name="ime" autocomplete="name" required></div>
+            <div class="polje"><label for="telefon">Telefon *</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" required></div>
+            <div class="polje cela"><label for="napomena">Napomena</label><textarea id="napomena" name="napomena" placeholder="Npr. dečija stolica, alergije, posebne želje"></textarea></div>
+          </div>
+          <div class="upoz" id="greska" hidden></div>
+          <button type="submit" class="btn">Pošalji upit</button>
+        </div>
+      </details>
+    </form>
+  </div>
+
+  <div class="pl-traka">
+    <div class="wrap">
+      <div class="st"><small>Gostiju / mesta</small><b id="tGosti">20 / 0</b></div>
+      <div class="st"><small>Meni</small><b id="tMeni">—</b></div>
+      <div class="st"><small>Okvirno</small><b id="tUkupno">—</b></div>
+      <button class="btn zlato" type="button" id="tDalje">Dalje</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mNaslov">
+    <div class="kutija">
+      <h3 id="mNaslov">Vaš upit je spreman</h3>
+      <p>Izaberite kako želite da nam ga pošaljete. Javljamo vam se u najkraćem roku da potvrdimo termin.</p>
+      <pre id="mTekst"></pre>
+      <div class="kanali">
+        <a class="btn" id="kViber" target="_blank" rel="noopener">Viber</a>
+        <a class="btn" id="kWa" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" id="kSms">SMS poruka</a>
+        <button class="btn zlato" type="button" id="kKopiraj">Kopiraj tekst</button>
+      </div>
+      <p class="napom">Ili nas pozovite: <b style="user-select:all">060 016 0080</b></p>
+      <button class="mini-btn" type="button" id="mZatvori">Zatvori</button>
+    </div>
+  </div>
+</main>
+
+
+<footer>
+  <div class="vez tamno" aria-hidden="true"></div>
+  <div class="wrap kolone">
+    <div>
+      <img src="assets/km/logo_svetli.webp" alt="Jedno mesto" width="1100" height="302" loading="lazy" decoding="async">
+      <p class="opis">Kafana u srcu Leskovca od 2017. Dobra hrana, domaća vina i atmosfera koja se pamti.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <ul><li>Dimitrija Tucovića 45, Leskovac</li><li><a href="tel:+381600160080">060 016 0080</a></li><li><a href="https://www.facebook.com/kafanajednomestole/" target="_blank" rel="noopener">Facebook</a></li></ul>
+    </div>
+    <div>
+      <h2>Brzi linkovi</h2>
+      <ul><li><a href="#kuhinja">Kuhinja</a></li><li><a href="#proslave">Proslave i rezervacije</a></li><li><a href="#utisci">Utisci gostiju</a></li><li><a href="index.html#prijatelji">Naši prijatelji: Badem pekara</a></li></ul>
+    </div>
+  </div>
+  <div class="dno"><div class="wrap"><span>© <span id="y"></span> Kafana Jedno Mesto · Leskovac</span></div></div>
+</footer>
+
+<nav class="mbar" aria-label="Brze akcije">
+  <a class="btn zlato" href="tel:+381600160080">Pozovite</a>
+  <a class="btn svetlo" href="https://www.google.com/maps/search/?api=1&query=Dimitrija+Tucovi%C4%87a+45+Leskovac" target="_blank" rel="noopener">Kako do nas</a>
+</nav>
+
+<script>
+/* crveni vez */
+(() => {
+  const M = ["......X......",".....XXX.....","....XX.XX....","...XX.X.XX...","..XX.XXX.XX..",".XX.XX.XX.XX.","XX.XX...XX.XX",".XX.XX.XX.XX.","..XX.XXX.XX..","...XX.X.XX...","....XX.XX....",".....XXX.....","......X......"];
+  const mk = col => {
+    const c=6,pad=2,w=(M[0].length+2)*c,h=(M.length+2*pad)*c;
+    let s=`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><g stroke="${col}" stroke-width="1.6" stroke-linecap="round">`;
+    M.forEach((row,y)=>[...row].forEach((ch,x)=>{ if(ch!=='X')return; const X=(x+1)*c,Y=(y+pad)*c; s+=`<path d="M${X+1} ${Y+1}L${X+c-1} ${Y+c-1}M${X+c-1} ${Y+1}L${X+1} ${Y+c-1}"/>`; }));
+    for(let x=0;x<w;x+=c){ s+=`<path d="M${x+1} 2L${x+c-1} ${c}M${x+c-1} 2L${x+1} ${c}"/><path d="M${x+1} ${h-c}L${x+c-1} ${h-2}M${x+c-1} ${h-c}L${x+1} ${h-2}"/>`; }
+    return 'url("data:image/svg+xml,'+encodeURIComponent(s+'</g></svg>')+'")';
+  };
+  document.documentElement.style.setProperty('--vez', mk('#8c1c2b'));
+  document.querySelectorAll('.vez.tamno').forEach(el=>el.style.backgroundImage = mk('#e0ad4c'));
+})();
+
+/* jela (nazivi se lako menjaju ovde) */
+const JELA = [
+  {img:'assets/km/j_cevapi.webp',       vrsta:'Roštilj',        n:'Leskovački ćevapi', d:'Sa žara, uz luk i lepinju.'},
+  {img:'assets/km/j_plata.webp',        vrsta:'Za društvo',     n:'Mešano meso',       d:'Plata sa roštilja i grilovanim povrćem, za više osoba.'},
+  {img:'assets/km/j_pljeskavica.webp',  vrsta:'Roštilj',        n:'Pljeskavica',       d:'Sa rendanim kačkavaljem, ljutom paprikom i povrćem.'},
+  {img:'assets/km/j_predjelo.webp',     vrsta:'Predjela',       n:'Daska predjela',    d:'Sirevi, kajmak, ajvar, masline i suhomesnato.'},
+  {img:'assets/km/j_kobasice.webp',     vrsta:'Roštilj',        n:'Roštilj kobasice',  d:'Uz paradajz i grilovane tikvice.'},
+  {img:'assets/km/j_crepulja.webp',     vrsta:'Domaća jela',    n:'Meso iz crepulje',  d:'Sporo pečeno meso sa povrćem u zemljanoj posudi.'},
+  {img:'assets/km/j_prebranac.webp',    vrsta:'Domaća jela',    n:'Prebranac',         d:'Zapečeni pasulj, kao kod kuće.'},
+  {img:'assets/km/j_salata.webp',       vrsta:'Salate',         n:'Piletina salata',   d:'Zelena salata, pileće belo meso i jaje.'},
+  {img:'assets/km/j_pohovano.webp',     vrsta:'Glavna jela',    n:'Pohovana piletina', d:'Hrskavo pohovano, sa pomfritom i tartar sosom.'},
+];
+const kartica = (j,dup) => `<article class="jelo"${dup?' aria-hidden="true"':''}><img src="${j.img}" alt="${dup?'':j.n}" width="784" height="1100" loading="lazy" decoding="async"><div class="t"><span class="vrsta">${j.vrsta}</span><h3>${j.n}</h3><p>${j.d}</p></div></article>`;
+document.getElementById('jela').innerHTML = JELA.map(j=>kartica(j,false)).join('') + JELA.map(j=>kartica(j,true)).join('');
+document.getElementById('jela').style.setProperty('--trajanje', (JELA.length*7)+'s');
+(() => {
+  const traka = document.getElementById('traka'), dug = document.getElementById('pauza');
+  dug.onclick = () => { const s = traka.classList.toggle('stop'); dug.textContent = s ? '▶' : '❚❚'; dug.setAttribute('aria-label', s ? 'Pokreni pokretni prikaz' : 'Zaustavi pokretni prikaz'); };
+  traka.addEventListener('touchstart', ()=>traka.classList.add('stop'), {passive:true});
+  traka.addEventListener('touchend', ()=>{ if(dug.textContent!=='▶') setTimeout(()=>traka.classList.remove('stop'), 1500); }, {passive:true});
+})();
+
+/* recenzije: prave Google recenzije gostiju, prikazane anonimno */
+const RECENZIJE = [
+  {citat:"Najbolja teleća čorba i teleća glava i škembići u gradu... i juneći repovi...", kad:"pre 10 meseci"},
+  {citat:"Topla preporuka. Čista 10ka što se svega tiče.", kad:"pre godinu dana"},
+  {citat:"Wonderful food, nice staff, really good place for local experience.", kad:"pre godinu dana", prevod:"Divna hrana, ljubazno osoblje, pravo mesto za domaći doživljaj."},
+  {citat:"Kafana je vrhunska, meso odlično spremljeno, velike pljeskavice su stvarno velike, jeo sam gurmansku, i stvarno je ogromna, a pre svega preukusna. Probali smo i teleće repove, jedno od boljih mesta gde sam ih jeo do sada. Sve im je preukusno, za svakoga ima ponešto da jede, mesto gde ćemo sigurno da se vratimo opet.", kad:"pre 3 godine"},
+  {citat:"Врхунска услуга, преукусни специјалитети а цене више него приступачне. Свака препорука свима. ЈЕДНО МЕСТО ЈЕДНО И ЈЕДИНО", kad:"pre 4 godine"},
+  {citat:"Vrhunska hrana. Teleća čorba TOP, stara srpska tradicionalna jela VRH. Sve preporuke.", kad:"pre 4 godine"},
+  {citat:"Odlična i ukusna hrana, ljubazno osoblje i normalne cene. Uvek se rado vraćam na ovo mesto.", kad:"pre 4 godine"},
+  {citat:"Izuzetni u svakom pogledu. Kvalitet vrhunski, usluga izvanredna a cene pristupačne. Sve preporuke!", kad:"pre 7 godina"},
+  {citat:"Јако укусно месо, као и лепиње, прилози су такође предобри а радници не штеде кад стављају и јако су љубазни. Цене океј, препоручујем љуту пљескавицу са парадајзом, краставцима и урнебесом.", kad:"pre 7 godina"}
+];
+document.getElementById('recenzije').innerHTML = RECENZIJE.map(r=>`
+  <article class="rec">
+    <blockquote>${r.citat}</blockquote>
+    ${r.prevod?`<p class="prevod">${r.prevod}</p>`:''}
+    <div class="ko"><span><b>Gost kafane</b> · ${r.kad}</span><span class="g"><i>G</i> Google recenzija</span></div>
+  </article>`).join('');
+
+/* sala: ista fotografija kao u zaglavlju, bez dupliranja fajla */
+(() => { const bg = getComputedStyle(document.querySelector('.hero')).backgroundImage.match(/url\("?(.*?)"?\)/); if(bg) document.getElementById('salaONama').src = bg[1]; })();
+document.getElementById('y').textContent = new Date().getFullYear();
+
+/* poboljšanja: meni, aktivni link, senka zaglavlja, pojavljivanje */
+document.documentElement.classList.add('js');
+(() => {
+  const dug = document.getElementById('meniDugme'), mm = document.getElementById('mobMeni');
+  const zatvori = () => { mm.classList.remove('otvoren'); dug.setAttribute('aria-expanded','false'); dug.setAttribute('aria-label','Otvori meni'); };
+  dug.addEventListener('click', () => { const o = mm.classList.toggle('otvoren'); dug.setAttribute('aria-expanded', o); dug.setAttribute('aria-label', o ? 'Zatvori meni' : 'Otvori meni'); });
+  mm.addEventListener('click', e => { if(e.target.closest('a')) zatvori(); });
+  addEventListener('keydown', e => { if(e.key==='Escape') zatvori(); });
+
+  const header = document.querySelector('header');
+  const naSkrol = () => header.classList.toggle('senka', scrollY > 10);
+  addEventListener('scroll', naSkrol, {passive:true}); naSkrol();
+
+  const linkovi = [...document.querySelectorAll('.nav ul a[href^="#"]:not(.btn)')];
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if(e.isIntersecting) linkovi.forEach(a => a.classList.toggle('aktivno', a.getAttribute('href') === '#'+e.target.id));
+    }), {rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
+
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      const rv = document.querySelectorAll('.glava, .onama .tekst, .foto, .atmo figure, .pro, .rez, .skor, .rec, .ostavi, .kk, .mapa');
+      const vh = innerHeight;
+      rv.forEach(el => { el.classList.add('rv'); if(el.getBoundingClientRect().top > vh*0.9) el.classList.add('pre'); });
+      const io2 = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.remove('pre'); io2.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
+      rv.forEach(el => io2.observe(el));
+    }
+  }
+})();
+
+
+/* ================= PLANER PROSLAVE ================= */
+(() => {
+  /* ---- CENE: PRIMER, zamenite pravim cenama ---- */
+  const MENIJI = [
+    {id:'osnovni', n:'Osnovni meni', c:2200, s:['Domaća supa ili čorba','Mešano meso sa roštilja','Pomfrit i grilovano povrće','Sezonska salata','Hleb i lepinje']},
+    {id:'predjelo', n:'Meni sa predjelom', c:2900, s:['Hladno predjelo: sir, kajmak, ajvar, proja','Teleća čorba','Mešano meso sa roštilja i prilozi','Sezonske salate','Dezert']},
+    {id:'premium', n:'Premium meni', c:3900, premium:true, s:['Daska pršuta, kulena i domaćih sireva','Gibanica i pohovani kačkavalj','Teleća čorba','Pečenje i mešano meso','Salate po izboru','Dezert i voće']},
+  ];
+  const CENE = { paketPica:1500, muzikaKafana:35000 };
+  const TEL = '381600160080';
+
+  const $ = id => document.getElementById(id);
+  const fmt = n => n.toLocaleString('sr-RS') + ' din';
+  const NS = 'http://www.w3.org/2000/svg';
+  const plan = $('plan'), forma = $('plForma');
+
+  /* ---- tipovi stolova ---- */
+  const TIP = { t2:{mesta:2,n:'za 2'}, t4:{mesta:4,n:'za 4'}, t6:{mesta:6,n:'za 6'}, t8:{mesta:8,n:'za 8'} };
+  const stolica = (x,y,rot) => `<g transform="translate(${x} ${y}) rotate(${rot})"><rect x="-15" y="-10" width="30" height="20" rx="6" fill="#4a2a14"/><rect x="-11" y="-4" width="22" height="11" rx="4" fill="#efe3c9"/></g>`;
+  const tanjir = (x,y) => `<circle cx="${x}" cy="${y}" r="8.5" fill="#fff" stroke="#d9cdb8" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="5" fill="none" stroke="#e8dfcf"/>`;
+  function crtajSto(t){
+    const k = t.izabran ? 'url(#karoZ)' : 'url(#karo)';
+    let s='';
+    if(t.tip==='t2'){
+      s += stolica(0,-46,0)+stolica(0,46,180);
+      s += `<rect x="-34" y="-34" width="68" height="68" rx="4" fill="#5e3619"/><rect x="-31" y="-31" width="62" height="62" rx="3" fill="${k}"/>`+tanjir(0,-18)+tanjir(0,18);
+    } else if(t.tip==='t4'){
+      s += stolica(0,-56,0)+stolica(0,56,180)+stolica(-56,0,-90)+stolica(56,0,90);
+      s += `<rect x="-44" y="-44" width="88" height="88" rx="4" fill="#5e3619"/><rect x="-41" y="-41" width="82" height="82" rx="3" fill="${k}"/>`+tanjir(0,-26)+tanjir(0,26)+tanjir(-26,0)+tanjir(26,0);
+    } else if(t.tip==='t6'){
+      for(let i=0;i<6;i++){ const a=i*60-90, r=a*Math.PI/180; s += stolica((Math.cos(r)*70).toFixed(1),(Math.sin(r)*70).toFixed(1),a+90); }
+      s += `<circle r="54" fill="#5e3619"/><circle r="51" fill="${k}"/>`;
+      for(let i=0;i<6;i++){ const r=(i*60-90)*Math.PI/180; s += tanjir((Math.cos(r)*34).toFixed(1),(Math.sin(r)*34).toFixed(1)); }
+    } else {
+      for(const x of [-70,0,70]){ s += stolica(x,-56,0)+stolica(x,56,180); }
+      s += stolica(-122,0,-90)+stolica(122,0,90);
+      s += `<rect x="-108" y="-44" width="216" height="88" rx="4" fill="#5e3619"/><rect x="-105" y="-41" width="210" height="82" rx="3" fill="${k}"/>`;
+      for(const x of [-70,0,70]){ s += tanjir(x,-24)+tanjir(x,24); }
+      s += tanjir(-88,0)+tanjir(88,0);
+    }
+    const ob = t.tip==='t6' ? `<circle class="obrub" r="90"/>` : t.tip==='t8' ? `<rect class="obrub" x="-140" y="-74" width="280" height="148" rx="12"/>` : t.tip==='t4' ? `<rect class="obrub" x="-74" y="-74" width="148" height="148" rx="12"/>` : `<rect class="obrub" x="-50" y="-64" width="100" height="128" rx="12"/>`;
+    const bez = `<g transform="rotate(${-t.r})"><circle r="15" fill="#fbf8f2" stroke="${t.izabran?'#8c1c2b':'#5e3619'}" stroke-width="2.5"/><text y="5.5" text-anchor="middle" font-family="Alegreya Sans,sans-serif" font-weight="700" font-size="15" fill="#2b1d16">${t.br}</text></g>`;
+    return ob + s + bez;
+  }
+
+  /* ---- početni raspored ---- */
+  const POCETNI = [
+    ['t8',210,170,0],['t8',470,170,0],['t4',690,170,0],
+    ['t4',250,335,0],['t6',425,340,0],['t4',590,335,0],['t4',715,335,0],
+    ['t8',310,500,0],['t6',545,505,0],['t4',715,500,0],
+    ['t4',110,400,0],['t8',200,655,0],['t4',450,655,0],['t2',600,650,0],['t2',715,650,0],
+    ['t8',1023,165,0],['t4',925,325,0],['t4',1121,325,0],['t6',1023,438,0],
+  ];
+  let stolovi = [], aktivan = null;
+  const noviBr = () => (stolovi.reduce((m,t)=>Math.max(m,t.br),0)+1);
+  function postaviPocetni(){ stolovi = POCETNI.map((p,i)=>({id:i+1, br:i+1, tip:p[0], x:p[1], y:p[2], r:p[3], izabran:false})); }
+  try{ const s = JSON.parse(localStorage.getItem('jm-raspored2')||'null'); if(Array.isArray(s) && s.length) stolovi = s.map(t=>({...t, izabran:false})); }catch(e){}
+  if(!stolovi.length) postaviPocetni();
+  const sacuvaj = () => { try{ localStorage.setItem('jm-raspored2', JSON.stringify(stolovi.map(({izabran,...o})=>o))); }catch(e){} };
+
+  const soba = t => t.x < 813 ? 'velika' : 'mala';
+  function poluvelicina(t){
+    const b = {t2:[50,64],t4:[74,74],t6:[90,90],t8:[140,74]}[t.tip];
+    const r = ((t.r%180)+180)%180;
+    if(r===90) return [b[1],b[0]];
+    if(r!==0){ const m = Math.max(...b)*0.9; return [m,m]; }
+    return b;
+  }
+  function stegni(t){
+    const [hx,hy] = poluvelicina(t);
+    if(t.x < 813){ t.x = Math.min(Math.max(t.x, 24+hx), 796-hx); t.y = Math.min(Math.max(t.y, 24+hy), 736-hy); }
+    else { t.x = Math.min(Math.max(t.x, 830+hx), 1216-hx); t.y = Math.min(Math.max(t.y, 24+hy), 520-hy); }
+  }
+
+  /* ---- crtanje prostora ---- */
+  function prostor(){
+    let sijalice='';
+    const nizovi = [[[40,110],[240,140],[420,105],[620,140],[790,110]],[[40,420],[220,450],[420,415],[620,455],[790,420]],[[845,110],[1023,140],[1205,110]]];
+    for(const n of nizovi){
+      sijalice += `<polyline points="${n.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#1a120d" stroke-opacity=".45" stroke-width="1.5"/>`;
+      for(let i=0;i<n.length-1;i++){ for(let k=0;k<=4;k++){ const x=n[i][0]+(n[i+1][0]-n[i][0])*k/4, y=n[i][1]+(n[i+1][1]-n[i][1])*k/4; sijalice += `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="16" fill="url(#sjaj)"/><circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="3.5" fill="#fff4cf"/>`; } }
+    }
+    let vino='';
+    for(let i=0;i<7;i++){ const x=268+i*40; vino += `<path d="M${x} 28L${x+20} 58L${x+40} 28" fill="none" stroke="#8a6238" stroke-width="2"/>`; }
+    const boje=['#7a1020','#a01c2e','#e6c75a','#2e4d2a','#7a1020','#e6c75a','#5c0f19'];
+    for(let i=0;i<20;i++){ vino += `<circle cx="${272+i*14}" cy="${36+(i%3)*7}" r="3.6" fill="${boje[i%7]}"/>`; }
+    return `
+    <defs>
+      <pattern id="pod" width="90" height="90" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="90" height="90" fill="#8b6a4b"/><rect x="3" y="3" width="39" height="39" fill="#a17d5a"/><rect x="48" y="48" width="39" height="39" fill="#a17d5a"/>
+        <rect x="48" y="3" width="39" height="39" fill="#7d5d40"/><rect x="3" y="48" width="39" height="39" fill="#7d5d40"/>
+      </pattern>
+      <pattern id="plocice" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#b9b4ab"/><rect x="1" y="1" width="28" height="28" fill="#cdc8be"/></pattern>
+      <pattern id="cigla" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#7b5a3c"/><rect x="1" y="1" width="38" height="8" fill="#b88a5c"/><rect x="-19" y="11" width="38" height="8" fill="#a77b50"/><rect x="21" y="11" width="38" height="8" fill="#c09468"/></pattern>
+      <pattern id="karo" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#fff"/><rect width="7" height="14" fill="#d24c5a" opacity=".55"/><rect width="14" height="7" fill="#d24c5a" opacity=".55"/></pattern>
+      <pattern id="karoZ" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#fff8e6"/><rect width="7" height="14" fill="#e0ad4c" opacity=".7"/><rect width="14" height="7" fill="#e0ad4c" opacity=".7"/></pattern>
+      <pattern id="daske" width="200" height="16" patternUnits="userSpaceOnUse"><rect width="200" height="16" fill="#6b4128"/><rect y="1" width="200" height="14" fill="#835233"/><path d="M60 1v14M150 1v14" stroke="#5a3520"/></pattern>
+      <pattern id="srafura" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="none"/><path d="M0 0v12" stroke="#000" stroke-opacity=".08" stroke-width="5"/></pattern>
+      <radialGradient id="sjaj"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+      <filter id="senkaS" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#000" flood-opacity=".35"/></filter>
+    </defs>
+    <rect width="1240" height="760" fill="url(#cigla)"/>
+    <rect x="24" y="24" width="772" height="712" fill="url(#pod)"/>
+    <rect x="830" y="24" width="386" height="496" fill="url(#pod)"/>
+    <!-- hodnik (ulaz) -->
+    <rect x="830" y="540" width="386" height="196" fill="url(#pod)"/>
+    <rect x="830" y="540" width="386" height="196" fill="#2b1d16" opacity=".18"/>
+    <rect x="860" y="560" width="300" height="70" rx="6" fill="#8c1c2b" opacity=".55"/>
+    <rect x="866" y="566" width="288" height="58" rx="4" fill="none" stroke="#e0ad4c" stroke-opacity=".6" stroke-dasharray="6 5"/>
+    <!-- prolaz između sala -->
+    <rect x="796" y="34" width="34" height="120" fill="url(#pod)"/>
+    <!-- iz hodnika u veliku salu -->
+    <rect x="796" y="580" width="34" height="120" fill="url(#pod)"/>
+    <!-- iz hodnika u malu salu -->
+    <rect x="1040" y="520" width="120" height="20" fill="url(#pod)"/>
+    <!-- ulaz sa ulice -->
+    <path d="M1238 640 h-60 m14 -12 l-14 12 l14 12" fill="none" stroke="#e0ad4c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- sale za izbor -->
+    <rect class="soba-sel" id="selVelika" x="24" y="24" width="772" height="712" fill="transparent"/>
+    <rect class="soba-sel" id="selMala" x="830" y="24" width="386" height="496" fill="transparent"/>
+    <!-- vinski zid -->
+    <rect x="260" y="24" width="300" height="40" fill="#c79a62"/><rect x="260" y="24" width="300" height="40" fill="none" stroke="#7a5230" stroke-width="2"/>${vino}
+    <path d="M260 64h300" stroke="#1d1714" stroke-width="3" stroke-dasharray="6 4"/>
+    <!-- slika starog Leskovca -->
+    <rect x="40" y="26" width="190" height="16" fill="#d8c3a0" stroke="#6b4a2a" stroke-width="2"/>
+    <!-- niša u maloj sali -->
+    <path d="M985 24 v18 a38 30 0 0 1 76 0 v-18 z" fill="#c9a06a" stroke="#7a5230" stroke-width="2"/>
+    <rect x="1209" y="150" width="7" height="160" fill="#bfe0f0" stroke="#7aa6bd" stroke-width="2"/>
+    <!-- sijalice -->
+    <g opacity=".9">${sijalice}</g>
+    <!-- natpisi -->
+    <g font-family="Alegreya,Georgia,serif" font-weight="800" fill="#fbf8f2" letter-spacing="4" text-anchor="middle">
+      <text x="680" y="62" font-size="18" opacity=".9">VELIKA SALA</text>
+      <text x="1023" y="80" font-size="20" opacity=".9">MALA SALA</text>
+      <text x="1010" y="602" font-size="20" opacity=".95">HODNIK</text>
+    </g>
+    <g font-family="Caveat,cursive" font-size="24" fill="#fbf8f2" text-anchor="middle">
+      <text x="1010" y="616" font-size="17" opacity=".9" dy="4">ulaz u kafanu</text>
+      <text x="1150" y="690" font-size="22" fill="#e0ad4c">Ulaz</text>
+      <text x="410" y="88" font-size="20">Vinski zid</text>
+      <text x="135" y="64" font-size="18" opacity=".85">stari Leskovac</text>
+      <text x="813" y="94" font-size="18" transform="rotate(-90 813 94)">prolaz</text>
+    </g>
+    <g id="slojStolova"></g>`;
+  }
+  plan.innerHTML = prostor();
+  const sloj = $('slojStolova');
+
+  function crtajStolove(){
+    sloj.innerHTML = stolovi.map(t=>`<g class="sto${t.izabran?' izabran':''}${aktivan===t.id?' aktivan':''}" data-id="${t.id}" transform="translate(${t.x} ${t.y}) rotate(${t.r})" filter="url(#senkaS)" tabindex="0" role="button" aria-pressed="${t.izabran}" aria-label="Sto ${t.br}, ${TIP[t.tip].n}">${crtajSto(t)}</g>`).join('');
+  }
+  function osvezi(){ crtajStolove(); panelAkt(); racunaj(); }
+
+  /* ---- panel aktivnog stola ---- */
+  function panelAkt(){
+    const t = stolovi.find(s=>s.id===aktivan), el = $('plAkt');
+    if(!t){ el.innerHTML = '<b>Dodirnite sto da ga izaberete, prevucite da ga pomerite.</b>'; return; }
+    el.innerHTML = `<b>Sto ${t.br} · ${TIP[t.tip].n} · ${soba(t)==='velika'?'velika':'mala'} sala</b>
+      <button type="button" class="mini-btn ${t.izabran?'on':''}" data-a="izaberi">${t.izabran?'✓ Izabran':'Izaberi'}</button>
+      <button type="button" class="mini-btn" data-a="okreni">↻ Okreni</button>
+      <button type="button" class="mini-btn crveno" data-a="ukloni">✕ Ukloni sto</button>`;
+  }
+  $('plAkt').addEventListener('click', e=>{
+    const a = e.target.closest('[data-a]'); if(!a) return; const t = stolovi.find(s=>s.id===aktivan); if(!t) return;
+    if(a.dataset.a==='izaberi'){ prostorNa('stolovi'); t.izabran=!t.izabran; }
+    if(a.dataset.a==='okreni'){ t.r = (t.r+45)%360; stegni(t); sacuvaj(); }
+    if(a.dataset.a==='ukloni'){ stolovi = stolovi.filter(s=>s!==t); aktivan=null; sacuvaj(); }
+    osvezi();
+  });
+
+  /* ---- dodavanje stolova ---- */
+  document.querySelectorAll('.dodaj').forEach(b=>b.addEventListener('click', ()=>{
+    const id = Math.max(0,...stolovi.map(s=>s.id))+1;
+    const t = {id, br:noviBr(), tip:b.dataset.tip, x:560+(Math.random()-.5)*80, y:600, r:0, izabran:false};
+    stegni(t); stolovi.push(t); aktivan=id; sacuvaj(); osvezi();
+  }));
+  let potvrdi=false, tPotvrdi;
+  $('vratiRaspored').addEventListener('click', e=>{
+    if(!potvrdi){ potvrdi=true; e.target.textContent='Sigurno? Klik još jednom'; tPotvrdi=setTimeout(()=>{potvrdi=false;e.target.textContent='↺ Početni raspored';},2500); return; }
+    clearTimeout(tPotvrdi); potvrdi=false; e.target.textContent='↺ Početni raspored';
+    postaviPocetni(); aktivan=null; sacuvaj(); primeniProstor(); osvezi();
+  });
+
+  /* ---- prevlačenje ---- */
+  const tacka = e => { const p = plan.createSVGPoint(); p.x=e.clientX; p.y=e.clientY; return p.matrixTransform(plan.getScreenCTM().inverse()); };
+  let vuce = null;
+  plan.addEventListener('pointerdown', e=>{
+    const g = e.target.closest('.sto'); if(!g) { aktivan=null; panelAkt(); crtajStolove(); return; }
+    const t = stolovi.find(s=>s.id===+g.dataset.id), p = tacka(e);
+    vuce = {t, g, dx:p.x-t.x, dy:p.y-t.y, sx:p.x, sy:p.y, pomeren:false};
+    try{ plan.setPointerCapture(e.pointerId); }catch(_){}
+    e.preventDefault();
+  });
+  plan.addEventListener('pointermove', e=>{
+    if(!vuce) return; const p = tacka(e);
+    if(!vuce.pomeren && Math.hypot(p.x-vuce.sx,p.y-vuce.sy) < 8) return;
+    vuce.pomeren = true; vuce.g.classList.add('vuce');
+    vuce.t.x = Math.round((p.x-vuce.dx)/5)*5; vuce.t.y = Math.round((p.y-vuce.dy)/5)*5; stegni(vuce.t);
+    vuce.g.setAttribute('transform', `translate(${vuce.t.x} ${vuce.t.y}) rotate(${vuce.t.r})`);
+  });
+  const pusti = () => {
+    if(!vuce) return; const {t,pomeren} = vuce; vuce = null;
+    if(pomeren){ sacuvaj(); if(prostorVr()!=='stolovi') primeniProstor(); aktivan=t.id; }
+    else if(aktivan===t.id || prostorVr()==='stolovi'){
+      if(prostorVr()!=='stolovi'){ prostorNa('stolovi'); }
+      t.izabran = !t.izabran; aktivan=t.id;
+    } else { aktivan=t.id; }
+    osvezi();
+  };
+  plan.addEventListener('pointerup', pusti); plan.addEventListener('pointercancel', pusti);
+  plan.addEventListener('touchmove', e=>{ if(vuce && e.cancelable) e.preventDefault(); }, {passive:false});
+  plan.addEventListener('keydown', e=>{
+    const g = e.target.closest('.sto'); if(!g) return; const t = stolovi.find(s=>s.id===+g.dataset.id);
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); prostorNa('stolovi'); t.izabran=!t.izabran; aktivan=t.id; osvezi(); plan.querySelector(`.sto[data-id="${t.id}"]`)?.focus(); }
+  });
+
+  /* ---- prostor (sala) ---- */
+  const prostorVr = () => forma.prostor.value;
+  function prostorNa(v){ forma.querySelector(`input[name="prostor"][value="${v}"]`).checked = true; primeniProstor(); }
+  function primeniProstor(){
+    const v = prostorVr();
+    if(v!=='stolovi') stolovi.forEach(t=> t.izabran = v==='cela' || soba(t)===v);
+    const z = 'rgba(224,173,76,.22)';
+    $('selVelika').setAttribute('fill', (v==='velika'||v==='cela') ? z : 'transparent');
+    $('selMala').setAttribute('fill', (v==='mala'||v==='cela') ? z : 'transparent');
+  }
+  forma.querySelectorAll('input[name="prostor"]').forEach(r=>r.addEventListener('change', ()=>{
+    if(prostorVr()==='stolovi') stolovi.forEach(t=>t.izabran=false);
+    primeniProstor(); osvezi();
+  }));
+  $('ponisti').addEventListener('click', ()=>{ prostorNa('stolovi'); stolovi.forEach(t=>t.izabran=false); osvezi(); });
+  $('predlozi').addEventListener('click', ()=>{
+    const g = gosti(); prostorNa('stolovi'); stolovi.forEach(t=>t.izabran=false);
+    const mala = stolovi.filter(t=>soba(t)==='mala'), kapMala = mala.reduce((s,t)=>s+TIP[t.tip].mesta,0);
+    let izbor;
+    if(g<=kapMala && g>12){ izbor = [...mala].sort((a,b)=>TIP[b.tip].mesta-TIP[a.tip].mesta); }
+    else { izbor = [...stolovi].sort((a,b)=> (soba(a)===soba(b)?0:soba(a)==='velika'?-1:1) || TIP[b.tip].mesta-TIP[a.tip].mesta || a.y-b.y || a.x-b.x); }
+    let m=0;
+    for(const t of izbor){ if(m>=g) break; t.izabran=true; m+=TIP[t.tip].mesta; }
+    osvezi();
+  });
+
+  /* ---- gosti ---- */
+  const gosti = () => Math.max(1, Math.min(200, parseInt($('gosti').value)||1));
+  document.querySelectorAll('.brojac button').forEach(b=>b.addEventListener('click', ()=>{ $('gosti').value = gosti()+(+b.dataset.d); racunaj(); }));
+  $('gosti').addEventListener('input', racunaj);
+
+  /* ---- meniji ---- */
+  $('meniji').innerHTML = MENIJI.map((m,i)=>`<label class="opcija meni-k"><input type="radio" name="meni" value="${m.id}" ${i===1?'checked':''}><span><span>${m.n}${m.premium?'<em class="premium">premium</em>':''}</span><span class="cena">${fmt(m.c)}<small style="display:block;text-align:right">po osobi</small></span><ul>${m.s.map(x=>`<li>${x}</li>`).join('')}</ul></span></label>`).join('');
+
+  /* ---- muzika ---- */
+  forma.querySelectorAll('input[name="muzika"]').forEach(r=>r.addEventListener('change', ()=>{ $('sastavPolje').hidden = forma.muzika.value==='bez'; racunaj(); }));
+  forma.addEventListener('change', racunaj);
+  const danas = new Date(); danas.setDate(danas.getDate()+7); $('datum').value = danas.toISOString().slice(0,10); $('datum').min = new Date().toISOString().slice(0,10);
+
+  /* ---- obračun ---- */
+  let stanje = {};
+  function racunaj(){
+    const g = gosti(), iz = stolovi.filter(t=>t.izabran), mesta = iz.reduce((s,t)=>s+TIP[t.tip].mesta,0);
+    const m = MENIJI.find(x=>x.id===forma.meni.value) || MENIJI[0];
+    const muz = forma.muzika.value, pice = $('pice').value, pv = prostorVr();
+    const dodaci = [...forma.querySelectorAll('input[name="dodatak"]:checked')].map(c=>c.value);
+    const hrana = m.c*g, pic = pice==='paket' ? CENE.paketPica*g : 0, muzC = muz==='kafana' ? CENE.muzikaKafana : 0;
+    const ukupno = hrana+pic+muzC;
+    const prostorTxt = {stolovi:'Izabrani stolovi', mala:'Mala sala', velika:'Velika sala', cela:'Cela kafana (otkup)'}[pv];
+    const muzTxt = {bez:'Bez muzike uživo', kafana:'Uživo, organizuje kafana', mi:'Uživo, dovodimo svoje muzičare'}[muz];
+    const piceTxt = {potrosnja:'Po potrošnji', paket:'Paket pića', svoje:'Donosimo svoje piće'}[pice];
+    stanje = {g, iz, mesta, m, muz, muzTxt, pice, piceTxt, pv, prostorTxt, dodaci, ukupno};
+
+    const info = $('mestaInfo');
+    if(!iz.length){ info.className='upoz'; info.textContent = `Izaberite stolove na planu ili celu salu. Potrebno je ${g} mesta.`; }
+    else if(mesta < g){ info.className='upoz'; info.textContent = `Izabrano ${mesta} mesta, fali još ${g-mesta}. Dodajte sto ili izaberite veću salu.`; }
+    else { info.className='upoz ok'; info.textContent = `Izabrano ${iz.length} ${iz.length===1?'sto':'stolova'} sa ${mesta} mesta za ${g} gostiju.`; }
+
+    const d = $('datum').value ? new Date($('datum').value+'T12:00').toLocaleDateString('sr-Latn-RS',{day:'numeric',month:'numeric',year:'numeric'}) : '';
+    $('s1').textContent = `${forma.povod.value} · ${g} gostiju${d?' · '+d:''}`;
+    $('s2').textContent = iz.length ? `${pv==='stolovi'?iz.length+' stolova':prostorTxt} · ${mesta} mesta` : 'nije izabrano';
+    $('s3').textContent = muzTxt;
+    $('s4').textContent = m.n;
+    $('s5').textContent = '≈ '+fmt(ukupno);
+
+    $('cenovnik').innerHTML = `
+      <tr><td>${m.n} × ${g} osoba <br><small class="napom">${fmt(m.c)} po osobi</small></td><td>${fmt(hrana)}</td></tr>
+      <tr><td>Piće: ${piceTxt}</td><td>${pice==='paket'?fmt(pic):pice==='svoje'?'po dogovoru':'po potrošnji'}</td></tr>
+      <tr><td>Muzika: ${muzTxt}</td><td>${muz==='kafana'?'od '+fmt(muzC):'—'}</td></tr>
+      <tr><td>Prostor: ${prostorTxt}</td><td>${pv==='cela'?'po dogovoru':'bez doplate'}</td></tr>
+      ${dodaci.length?`<tr><td>Dodaci: ${dodaci.join(', ')}</td><td>po dogovoru</td></tr>`:''}
+      <tr class="ukupno"><td>Okvirno ukupno</td><td>${fmt(ukupno)}</td></tr>`;
+    $('tGosti').textContent = `${g} / ${mesta}`;
+    $('tMeni').textContent = m.n;
+    $('tUkupno').textContent = '≈ '+fmt(ukupno);
+  }
+
+  /* ---- koraci ---- */
+  const koraci = [...forma.querySelectorAll('.korak')];
+  koraci.forEach(k=>k.addEventListener('toggle', ()=>{ $('tDalje').textContent = koraci[koraci.length-1].open ? 'Pošalji upit' : 'Dalje'; }));
+  $('tDalje').addEventListener('click', ()=>{
+    const i = koraci.findIndex(k=>k.open);
+    if(koraci[koraci.length-1].open){ forma.requestSubmit ? forma.requestSubmit() : forma.dispatchEvent(new Event('submit',{cancelable:true})); return; }
+    koraci.forEach(k=>k.open=false);
+    const sl = koraci[Math.min(i+1, koraci.length-1)]; sl.open = true;
+    sl.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  /* ---- slanje upita ---- */
+  let tekst = '';
+  forma.addEventListener('submit', e=>{
+    e.preventDefault(); racunaj();
+    const greska = $('greska'), ime = $('ime').value.trim(), tel = $('telefon').value.trim();
+    if(!ime || tel.replace(/\D/g,'').length < 6){
+      koraci.forEach(k=>k.open=false); koraci[koraci.length-1].open = true;
+      greska.hidden=false; greska.textContent = 'Upišite ime i broj telefona da bismo mogli da vas pozovemo.';
+      (!ime ? $('ime') : $('telefon')).focus(); return;
+    }
+    greska.hidden = true;
+    const s = stanje;
+    const d = $('datum').value ? new Date($('datum').value+'T12:00').toLocaleDateString('sr-Latn-RS') : 'po dogovoru';
+    const stoloviTxt = s.pv==='stolovi' ? (s.iz.length ? 'stolovi br. '+s.iz.map(t=>t.br).sort((a,b)=>a-b).join(', ')+` (${s.mesta} mesta)` : 'nije izabrano') : `${s.prostorTxt} (${s.mesta} mesta)`;
+    tekst = [
+      'UPIT ZA PROSLAVU · Jedno Mesto',
+      `Povod: ${forma.povod.value}`,
+      `Datum: ${d} u ${$('vreme').value}`,
+      `Broj gostiju: ${s.g}`,
+      `Prostor: ${stoloviTxt}`,
+      `Muzika: ${s.muzTxt}${s.muz!=='bez'?' ('+$('sastav').value+')':''}`,
+      `Meni: ${s.m.n} (${fmt(s.m.c)} po osobi)`,
+      `Piće: ${s.piceTxt}`,
+      s.dodaci.length ? `Dodaci: ${s.dodaci.join(', ')}` : '',
+      `Okvirno: ${fmt(s.ukupno)}`,
+      '',
+      `Ime: ${ime}`,
+      `Telefon: ${tel}`,
+      $('napomena').value.trim() ? `Napomena: ${$('napomena').value.trim()}` : '',
+    ].filter((x,i,a)=>x!=='' || a[i-1]!=='').join('\n');
+    $('mTekst').textContent = tekst;
+    const enc = encodeURIComponent(tekst);
+    $('kViber').href = 'viber://forward?text='+enc;
+    $('kWa').href = `https://wa.me/${TEL}?text=${enc}`;
+    $('kSms').href = `sms:+${TEL}?&body=${enc}`;
+    $('modal').hidden = false; $('kKopiraj').focus();
+  });
+  $('kKopiraj').addEventListener('click', async ()=>{
+    try{ await navigator.clipboard.writeText(tekst); $('kKopiraj').textContent='Kopirano ✓'; }
+    catch(e){ const r=document.createRange(); r.selectNodeContents($('mTekst')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('kKopiraj').textContent='Tekst je označen'; }
+    setTimeout(()=>$('kKopiraj').textContent='Kopiraj tekst', 2200);
+  });
+  const zatvoriModal = () => { $('modal').hidden = true; };
+  $('mZatvori').addEventListener('click', zatvoriModal);
+  $('modal').addEventListener('click', e=>{ if(e.target===$('modal')) zatvoriModal(); });
+  addEventListener('keydown', e=>{ if(e.key==='Escape' && !$('modal').hidden) zatvoriModal(); });
+
+  primeniProstor(); osvezi();
+
+  /* ---- ruter: #planer (radi i kad se adresa ne može menjati) ---- */
+  let trenutna = location.hash;
+  function ruta(skrol){
+    const p = trenutna === '#planer';
+    $('planer').hidden = !p; $('sajt').hidden = p;
+    document.body.classList.toggle('u-planeru', p);
+    if(p){ scrollTo(0,0); return; }
+    const id = trenutna.length>1 ? trenutna.slice(1) : '';
+    const cilj = id && document.getElementById(id);
+    if(cilj && skrol!==false) requestAnimationFrame(()=>cilj.scrollIntoView({behavior:'smooth'}));
+  }
+  document.addEventListener('click', e=>{
+    const a = e.target.closest('a[href^="#"]'); if(!a) return;
+    const h = a.getAttribute('href'); if(h.length<2) return;
+    if(h!=='#planer' && trenutna!=='#planer' && !document.getElementById(h.slice(1))) return;
+    e.preventDefault();
+    trenutna = h;
+    try{ history.pushState(null,'',h); }catch(_){}
+    ruta();
+  }, true);
+  addEventListener('hashchange', ()=>{ trenutna = location.hash; ruta(); });
+  addEventListener('popstate', ()=>{ trenutna = location.hash; ruta(); });
+  ruta(false);
+})();
+
+/* ulaz: otvaranje vrata */
+(() => {
+  const v = document.getElementById('vrata'); if(!v) return;
+  const hero = document.querySelector('.hero .glavni-logo'); if(hero) document.getElementById('tablaLogo').src = hero.src;
+  let video = false; try{ video = sessionStorage.getItem('jm-vrata') === '1'; }catch(e){}
+  if(video){ v.remove(); return; }
+  document.body.classList.add('zakljucano');
+  let otvoreno = false;
+  const otvori = () => {
+    if(otvoreno) return; otvoreno = true;
+    v.classList.add('pukotina');
+    setTimeout(()=>v.classList.add('otvori'), 350);
+    setTimeout(()=>{ document.body.classList.remove('zakljucano'); }, 1300);
+    setTimeout(()=>{ v.remove(); }, 2400);
+    try{ sessionStorage.setItem('jm-vrata','1'); }catch(e){}
+  };
+  document.getElementById('udji').addEventListener('click', otvori);
+  v.addEventListener('click', otvori);
+  addEventListener('keydown', e=>{ if(!otvoreno && (e.key==='Enter' || e.key===' ' || e.key==='Escape')) otvori(); });
+  setTimeout(otvori, 1600);
+  setTimeout(()=>{ if(document.getElementById('vrata')){ document.body.classList.remove('zakljucano'); v.remove(); } }, 6000);
+})();
+
+/* mapa lokacija */
+(() => {
+  const GRUPE = [{"g": "Kafana", "l": [{"n": "Kafana Jedno Mesto", "a": "Dimitrija Tucovića 45", "m": "Leskovac", "t": "glavno"}]}, {"g": "Naši prijatelji: Badem pekara", "l": [{"n": "Badem · Centar grada", "a": "Bulevar oslobođenja 23", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Kod stare glavne pošte", "a": "Trg JNA 10", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Kod Tehnološkog fakulteta", "a": "Bulevar oslobođenja 134", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Kod bolnice", "a": "Svetozara Markovića 85", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Bulevar Nikole Pašića", "a": "Bulevar Nikole Pašića", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Bojnički put", "a": "Žunića 109", "m": "Leskovac", "t": "prij"}, {"n": "Badem · Bogojevce", "a": "Vlade Dokića bb", "m": "Bogojevce", "t": "prij"}, {"n": "Badem · Bošnjace", "a": "Ivo Lole Ribara 10", "m": "Bošnjace", "t": "prij"}]}];
+  const lista = document.getElementById('lmLista'); if(!lista) return;
+  let br = 0;
+  lista.innerHTML = GRUPE.map(g => `<p class="lm-grupa">${g.g}</p>` + g.l.map(l => { br++; return `<button type="button" data-a="${l.a}" data-m="${l.m}" data-n="${l.n}"><span class="pin ${l.t==='prij'?'prij':''}"><i>${br}</i></span><span><b>${l.n}</b><small>${l.a}${l.m!=='Leskovac'?', '+l.m:''}</small></span></button>`; }).join('')).join('');
+  const izaberi = b => {
+    lista.querySelectorAll('button').forEach(x => x.classList.toggle('on', x===b));
+    const q = encodeURIComponent(`${b.dataset.a}, ${b.dataset.m}, Srbija`);
+    document.getElementById('lmMapa').src = `https://maps.google.com/maps?q=${q}&z=16&output=embed`;
+    document.getElementById('lmNaziv').textContent = b.dataset.n;
+    document.getElementById('lmAdresa').textContent = b.dataset.a + ', ' + b.dataset.m;
+    document.getElementById('lmLink').href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+  };
+  lista.addEventListener('click', e => { const b = e.target.closest('button'); if(b) izaberi(b); });
+  izaberi(lista.querySelector('button'));
+})();
+</script>
+</body>
+</html>

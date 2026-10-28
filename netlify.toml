@@ -1,0 +1,16 @@
+# Netlify podešavanje za Pekaru Badem
+# Nema "build" koraka: sajt je gotov HTML, objavljuje se ceo folder.
+[build]
+  publish = "."
+
+# Slike i video se keširaju nedelju dana (brži sajt za mušterije koje se vraćaju)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

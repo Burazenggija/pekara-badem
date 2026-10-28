@@ -1,0 +1,26 @@
+BADEM PEKARA + KAFANA JEDNO MESTO - postavljanje na internet
+
+1. Raspakujte ovaj ZIP. Dobijate folder "badem".
+2. Otvorite u pregledaču: app.netlify.com/drop
+3. Prevucite CEO folder "badem" (ne pojedinačne fajlove) u polje na stranici.
+4. Za par sekundi dobijate adresu sajta (npr. nesto.netlify.app).
+5. Napravite besplatan Netlify nalog da sajt ostane trajno,
+   pa u "Site settings" promenite ime adrese (npr. pekarabadem).
+
+Šta je u folderu:
+- index.html               = sajt Badem pekare (početna strana)
+- kafana-jedno-mesto.html  = sajt kafane (adresa/kafana-jedno-mesto.html)
+- assets/                  = slike, logo i video (mora ostati pored index.html)
+
+Fajlove ne preimenujte - linkovi "Naši prijatelji" zavise od ovih imena.
+
+==== POSAO U BADEMU: prijave stižu na mejl (Netlify Forms) ====
+1. Kad postavite sajt na Netlify, Netlify sam pronađe formular "karijera".
+2. Na Netlify-ju otvorite sajt → Forms → uključite "Enable form detection" (ako je isključeno), pa ponovo postavite ZIP.
+3. Forms → Form notifications → Add notification → Email notification:
+   - Event: New form submission, Form: karijera
+   - Email: prava adresa pekare (npr. posao@... ili Gmail vlasnika)
+4. Sve prijave se vide i na Netlify-ju pod Forms → karijera (sa CV prilogom).
+5. Na sajtu je privremena adresa posao@pekarabadem.rs (link "Više volite mejl?").
+   Zamenite je pravom: u index.html potražite "posao@pekarabadem.rs" i zamenite na svim mestima.
+Besplatni Netlify plan prima 100 prijava mesečno.
