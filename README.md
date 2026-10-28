@@ -12,3 +12,4 @@ Ručno prevlačenje foldera više nije potrebno.
 Uputstvo za formular "Posao" je u `UPUTSTVO.txt`.
 
 GitHub repozitorijum: https://github.com/Burazenggija/pekara-badem
+Poslednja provera objavljivanja: 28.10.2026.
