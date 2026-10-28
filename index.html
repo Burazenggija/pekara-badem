@@ -1015,6 +1015,41 @@
   .lukovi .wrap{position:relative;z-index:1}
   .lukovi .lk-red{margin-top:10px}
   @media (max-width:900px){ .lk-uspravno{display:none} .lk-klasje{width:220px;right:-40px;top:20px} }
+
+/* ===== Podnožje u Welling stilu (28.10.2026) ===== */
+  footer.fw{background:#132a19;color:#cfe0cb;font-size:.98rem}
+  footer.fw .wrap{display:grid;justify-content:normal;align-items:start;text-align:left;padding-block:0}
+  footer.fw img{height:auto;background:none;border-radius:0;padding:0}
+  .fw-gore{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;padding-top:64px!important}
+  .fw-logo{display:inline-block;background:#fff;border-radius:14px;padding:8px 14px}
+  .fw-logo img{width:112px}
+  .fw-o-nama > p{margin:18px 0 0;max-width:30em;line-height:1.6}
+  .fw-naslov{font:800 clamp(1.7rem,2.6vw,2.2rem)/1 'Playfair Display',Georgia,serif;color:#fff;text-transform:uppercase;letter-spacing:.03em;margin:44px 0 18px}
+  .fw-kontakt{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .fw-kontakt li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;line-height:1.45}
+  .fw-kontakt svg{width:18px;height:18px;margin-top:2px;fill:none;stroke:#9fd89f;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  footer.fw a{color:#fff;text-decoration:none}
+  footer.fw a:hover{color:#bfe5bf;text-decoration:underline}
+  .fw-poruka{padding-top:6px;color:#e3ede0;line-height:1.6}
+  .fw-poruka p{margin:0 0 16px}
+  .fw-poruka a{font-weight:700;border-bottom:1px solid rgba(255,255,255,.4)}
+  .fw-poruka .script{font-size:2.2rem;color:#a8dca6;display:inline-block;margin-top:4px}
+  .fw-linkovi{grid-template-columns:repeat(4,1fr) auto;gap:24px;margin-top:56px;padding-block:28px!important;border-top:1px solid rgba(255,255,255,.12)}
+  .fw-linkovi ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .fw-linkovi a{font-weight:600}
+  .fw-gore-dugme{align-self:end;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center}
+  .fw-gore-dugme:hover{border-color:#fff;text-decoration:none!important}
+  .fw-gore-dugme svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .fw-dno{grid-template-columns:1fr auto;gap:12px;padding-block:18px 26px!important;border-top:1px solid rgba(255,255,255,.12);font-size:.86rem;color:#a9bfa6}
+  .fw-dno b{color:#a8dca6;font-weight:700}
+  @media (max-width:860px){
+    .fw-gore{grid-template-columns:1fr;gap:34px;padding-top:48px!important}
+    .fw-linkovi{grid-template-columns:1fr 1fr;row-gap:22px;margin-top:36px}
+    .fw-gore-dugme{grid-column:2;justify-self:end}
+    .fw-dno{grid-template-columns:1fr;padding-bottom:96px!important}
+
+  }
+  @media (max-width:760px){ footer.fw{box-shadow:0 160px 0 0 #132a19} }
 </style>
 </head>
 <body>
@@ -1621,11 +1656,36 @@
     <nav class="mtabs" id="mtabs" aria-label="Alati kolača"><button data-t="ukrasi" class="on"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>Ukrasi</button><button data-t="izmeni"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M14 6l4 4"/></svg>Izmeni</button><button data-t="crtaj"><svg viewBox="0 0 24 24"><path d="M3 17c3-6 6 2 9-4s6-2 9-6"/></svg>Crtaj</button><button data-t="jos"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>Još</button></nav>
 </main>
 
-<footer>
+<footer class="fw">
   <div class="vez dark" aria-hidden="true"></div>
-  <div class="wrap">
-    <img src="assets/logo.png" alt="Pekara Badem" width="800" height="605" decoding="async">
-    <span>© <span id="y"></span> Badem pekara · Leskovac · <a href="#prijatelji" style="color:#bfe5bf">Naši prijatelji</a> · <a href="#posao" style="color:#bfe5bf">Posao u Bademu</a></span>
+  <div class="wrap fw-gore">
+    <div class="fw-o-nama">
+      <a href="#pocetna" class="fw-logo" aria-label="Pekara Badem, na vrh"><img src="assets/logo.png" alt="Pekara Badem" width="800" height="605" loading="lazy" decoding="async"></a>
+      <p>Pekara Badem iz Leskovca peče od 1996. godine. Danas ima osam pekara u gradu i okolini, a poznata je po domaćim lepinjama iz turske peći.</p>
+      <h2 class="fw-naslov">Kontakt</h2>
+      <ul class="fw-kontakt">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Bulevar oslobođenja 23<br>16000 Leskovac</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>644 79 45</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:info@pekarabadem.rs">info@pekarabadem.rs</a></li>
+      </ul>
+    </div>
+    <div class="fw-poruka">
+      <p>Dobar dan od Pekare Badem,</p>
+      <p>drago nam je što ste svratili. Za porudžbine, pitanja ili saradnju pišite nam na <a href="mailto:info@pekarabadem.rs">info@pekarabadem.rs</a> ili nas pozovite.</p>
+      <p>Javićemo vam se što pre.</p>
+      <p>Srdačan pozdrav,<br><span class="script">Vaš Badem</span></p>
+    </div>
+  </div>
+  <nav class="wrap fw-linkovi" aria-label="Podnožje">
+    <ul><li><a href="#ponuda">Naša ponuda</a></li><li><a href="#o-nama">O nama</a></li><li><a href="#lokacije">Lokacije</a></li></ul>
+    <ul><li><a href="#posao">Posao u Bademu</a></li><li><a href="#slave">Kalendar slava</a></li><li><a href="#kolac">Radionica kolača</a></li></ul>
+    <ul><li><a href="#poruci">Poručite unapred</a></li><li><a href="kafana-jedno-mesto.html">Kafana Jedno Mesto</a></li></ul>
+    <ul><li><a href="https://www.facebook.com/pekarabadem/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/pekarabadem/" target="_blank" rel="noopener">Instagram</a></li></ul>
+    <a href="#pocetna" class="fw-gore-dugme" aria-label="Nazad na vrh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+  </nav>
+  <div class="wrap fw-dno">
+    <span>Pekara Badem © <span id="y"></span> · Sva prava zadržana.</span>
+    <span>Izrada sajta: <b>Nikola Lazić</b></span>
   </div>
 </footer>
 
