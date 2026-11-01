@@ -1073,6 +1073,7 @@
 /* ===== Slavski kolač: poručivanje po veličini (umesto radionice) ===== */
   .vt-p .kg-red.kg-kolac{display:grid;grid-template-columns:1fr;justify-items:start;gap:6px;margin-top:4px}
   .kg-kolac .kg-vel{font-size:.86rem;color:var(--siva);font-weight:600}
+  .k-ok{flex-basis:100%;background:var(--svetla);color:var(--tamna);border-radius:12px;padding:12px 14px;font-weight:600;margin:0 0 6px}
 </style>
 </head>
 <body>
@@ -1557,9 +1558,10 @@
       <p class="k-gr" id="kGreska" hidden></p>
       <pre id="kTekst" hidden></pre>
       <div class="k-akc" id="kAkc">
-        <button type="submit" class="btn">Napravi porudžbinu</button>
+        <button type="submit" class="btn">Pošalji porudžbinu</button>
         <button type="button" class="btn out" id="kZatvori">Zatvori</button>
       </div>
+      <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Ne popunjavajte <input id="kWeb" tabindex="-1" autocomplete="off"></label></p>
     </form>
   </div>
 <nav class="bnav" id="bnav" aria-label="Brza navigacija"><a href="#pocetna" data-s="pocetna"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>Početna</a><a href="#ponuda" data-s="ponuda"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 14c0-5 3.6-8 8-8s8 3 8 8v4H4z"/><path d="M8 10v8M12 8v10M16 10v8"/></svg></span>Ponuda</a><a href="#slave" data-s="slave"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg></span>Slave</a><a href="#lokacije" data-s="lokacije"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>Lokacije</a></nav>
@@ -2624,7 +2626,11 @@ const Korpa = (() => {
     const p = e.target.closest('.kp-kol button');
     if(p){ postavi(p.dataset.n, (KORPA[p.dataset.n]||0) + (+p.dataset.d)); }
   });
-  const akcPocetne = () => `<button type="submit" class="btn">Napravi porudžbinu</button><button type="button" class="btn out" id="kZatvori">Zatvori</button>`;
+  // ===== PORUDŽBINE: podešavanja =====
+  const PORUDZBINE_URL = '';               // web adresa Google Apps Script-a (Deploy → Web app)
+  const BROJ_PEKARE = '065 467 2093', BROJ_PEKARE_INT = '+381654672093';
+  const ROK_KOLAC = 3;                     // slavski kolač najmanje 3 dana ranije
+  const akcPocetne = () => `<button type="submit" class="btn">Pošalji porudžbinu</button><button type="button" class="btn out" id="kZatvori">Zatvori</button>`;
   function otvori(){
     osvezi(); pregled();
     $('kTekst').hidden = true; $('kGreska').hidden = true; $('kAkc').innerHTML = akcPocetne();
@@ -2645,10 +2651,28 @@ const Korpa = (() => {
     if(!ime || tel.replace(/\D/g,'').length < 6){ $('kGreska').hidden = false; $('kGreska').textContent = 'Upišite ime i broj telefona da bismo mogli da vas pozovemo.'; return; }
     const d = new Date($('kDatum').value+'T12:00').toLocaleDateString('sr-Latn-RS');
     const tekst = ['PORUDŽBINA · Badem pekara', ...st.map(([n,v])=>`• ${n}: ${fmtK(v,jed(n))}${KorpaOpis[n]?` (${KorpaOpis[n]})`:''}`), `Okvirno: ${fmtD(uk)}`, `Preuzimanje: ${$('kLok').value}`, `Datum: ${d} u ${$('kVreme').value}`, `Ime: ${ime}`, `Telefon: ${tel}`, $('kNap').value.trim() ? `Napomena: ${$('kNap').value.trim()}` : ''].filter(Boolean).join('\n');
-    $('kTekst').textContent = tekst; $('kTekst').hidden = false; $('kGreska').hidden = true;
-    const enc = encodeURIComponent(tekst);
-    $('kAkc').innerHTML = `<a class="btn" href="viber://forward?text=${enc}">Pošalji Viberom</a><a class="btn" href="sms:?&body=${enc}">Pošalji SMS</a><button type="button" class="btn out" id="kKop">Kopiraj tekst</button><button type="button" class="btn out" id="kZatvori">Zatvori</button>`;
-    $('kKop').onclick = async () => { try{ await navigator.clipboard.writeText(tekst); $('kKop').textContent='Kopirano ✓'; }catch(_){ const r=document.createRange(); r.selectNodeContents($('kTekst')); getSelection().removeAllRanges(); getSelection().addRange(r); $('kKop').textContent='Tekst je označen'; } };
+    // Slavski kolač se poručuje najmanje ROK_KOLAC dana ranije
+    const danaDo = Math.round((new Date($('kDatum').value+'T12:00') - new Date(iso(new Date())+'T12:00')) / 864e5);
+    if(st.some(([n])=>n.indexOf('Slavski kolač')===0) && danaDo < ROK_KOLAC){ $('kGreska').hidden = false; $('kGreska').textContent = `Slavski kolač se poručuje najmanje ${ROK_KOLAC} dana ranije. Izaberite kasniji datum ili sklonite kolač iz porudžbine.`; $('kDatum').focus(); return; }
+    $('kGreska').hidden = true;
+    const rucno = (uvod) => {
+      $('kTekst').textContent = tekst; $('kTekst').hidden = false;
+      const enc = encodeURIComponent(tekst);
+      $('kAkc').innerHTML = (uvod ? `<p class="k-gr" style="flex-basis:100%">${uvod}</p>` : '') + `<a class="btn" href="viber://forward?text=${enc}">Pošalji Viberom</a><a class="btn" href="sms:${BROJ_PEKARE_INT}?&body=${enc}">Pošalji SMS (${BROJ_PEKARE})</a><button type="button" class="btn out" id="kKop">Kopiraj tekst</button><button type="button" class="btn out" id="kZatvori">Zatvori</button>`;
+      $('kKop').onclick = async () => { try{ await navigator.clipboard.writeText(tekst); $('kKop').textContent='Kopirano ✓'; }catch(_){ const r=document.createRange(); r.selectNodeContents($('kTekst')); getSelection().removeAllRanges(); getSelection().addRange(r); $('kKop').textContent='Tekst je označen'; } };
+    };
+    if(!PORUDZBINE_URL){ rucno(''); return; }
+    const podaci = { stavke: st.map(([n,v])=>`${n}: ${fmtK(v,jed(n))}${KorpaOpis[n]?` (${KorpaOpis[n]})`:''}`), lokacija: $('kLok').value, kada: `${d} u ${$('kVreme').value}`, ime, tel, napomena: $('kNap').value.trim(), okvirno: fmtD(uk), web: $('kWeb').value };
+    $('kAkc').innerHTML = `<button type="button" class="btn" disabled>Šaljem porudžbinu…</button>`;
+    fetch(PORUDZBINE_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(podaci) })
+      .then(r => r.json())
+      .then(j => {
+        if(!j || !j.ok) throw new Error('nije primljeno');
+        st.forEach(([n]) => postavi(n, 0));
+        $('kTekst').hidden = true;
+        $('kAkc').innerHTML = `<p class="k-ok" role="status">✓ Hvala, ${ime.replace(/</g,'&lt;')}! Porudžbina #${j.broj} je poslata pekari. Pozvaćemo vas na ${tel.replace(/</g,'&lt;')} da je potvrdimo.</p><button type="button" class="btn out" id="kZatvori">Zatvori</button>`;
+      })
+      .catch(() => rucno('Porudžbina nije poslata, verovatno zbog veze. Pošaljite je Viberom ili SMS-om:'));
   });
   return { dodaj, postavi, otvori, osvezi, datum: d => { $('kDatum').value = iso(d); }, napomena: s => { $('kNap').value = s; } };
 })();
