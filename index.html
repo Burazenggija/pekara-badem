@@ -5,20 +5,20 @@
 <script>(function(){var v=0;try{v=sessionStorage.getItem('uvod')}catch(e){}if(!v&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('uvod')})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Pekara Badem Leskovac – lepinje, burek i slavski kolači</title>
-<meta name="description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Ukrasite i poručite slavski kolač.">
+<meta name="description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Poručite slavski kolač za svoju slavu.">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sr_RS">
 <meta property="og:site_name" content="Pekara Badem">
 <meta property="og:title" content="Pekara Badem Leskovac – lepinje, burek i slavski kolači">
-<meta property="og:description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Ukrasite i poručite slavski kolač.">
+<meta property="og:description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Poručite slavski kolač za svoju slavu.">
 <meta property="og:image" content="assets/og-badem.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Pleteni slavski kolač iz Pekare Badem i natpis Od testa do slave">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pekara Badem Leskovac – lepinje, burek i slavski kolači">
-<meta name="twitter:description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Ukrasite i poručite slavski kolač.">
+<meta name="twitter:description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Poručite slavski kolač za svoju slavu.">
 <meta name="twitter:image" content="assets/og-badem.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Bakery","@id":"#badem","name":"Pekara Badem","alternateName":"Badem pekara","description":"Pekara iz Leskovca od 1996. godine: domaće lepinje iz turske peći, burek, sarajevska pita, posna peciva, sendviči i slavski kolači po porudžbini.","foundingDate":"1996","logo":"assets/logo.png","image":"assets/og-badem.jpg","address":{"@type":"PostalAddress","streetAddress":"Bulevar oslobođenja 23","addressLocality":"Leskovac","postalCode":"16000","addressCountry":"RS"},"areaServed":"Leskovac","servesCuisine":"Pekarski proizvodi","sameAs":["https://www.instagram.com/pekarabadem/","https://www.facebook.com/pekarabadem/"]},{"@type":"Bakery","name":"Pekara Badem · Centar grada","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Bulevar oslobođenja 23","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Kod stare glavne pošte","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Trg JNA 10","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Kod Tehnološkog fakulteta","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Bulevar oslobođenja 134","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Kod bolnice","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Svetozara Markovića 85","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Bulevar Nikole Pašića","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Bulevar Nikole Pašića","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Na Bojničkom putu","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Žunića 109","addressLocality":"Leskovac","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Bogojevce","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Vlade Dokića bb","addressLocality":"Bogojevce","addressCountry":"RS"}},{"@type":"Bakery","name":"Pekara Badem · Bošnjace","parentOrganization":{"@id":"#badem"},"address":{"@type":"PostalAddress","streetAddress":"Ivo Lole Ribara 10","addressLocality":"Bošnjace","addressCountry":"RS"}}]}</script>
 <meta name="theme-color" content="#1f5a29">
@@ -1069,6 +1069,10 @@
     #kolac-prica .kp-tekst{max-width:none}
     #kolac-prica .kp-in{position:relative}
   }
+
+/* ===== Slavski kolač: poručivanje po veličini (umesto radionice) ===== */
+  .vt-p .kg-red.kg-kolac{display:grid;grid-template-columns:1fr;justify-items:start;gap:6px;margin-top:4px}
+  .kg-kolac .kg-vel{font-size:.86rem;color:var(--siva);font-weight:600}
 </style>
 </head>
 <body>
@@ -1106,7 +1110,7 @@
         <p>Domaće <b>lepinje iz turskih peći</b>, burek, pite i peciva. Od 1996. godine pečemo za Leskovac, a danas nas ima na <b>osam lokacija</b> u gradu i okolini.</p>
         <div class="actions">
           <a href="#ponuda" class="btn hw-btn">Pogledajte ponudu</a>
-          <a href="#kolac" class="hw-link">Napravi svoj slavski kolač →</a>
+          <a href="#poruci" class="hw-link">Poručite unapred →</a>
         </div>
         <div class="facts">
           <div><b>8</b><span>lokacija</span></div>
@@ -1238,8 +1242,8 @@
             <div class="kg-red" data-n="Žužu pecivo bez sira"><div class="kg-br"><button type="button" data-d="-0.5" aria-label="Manje žužu peciva bez sira">−</button><output>0 kg</output><button type="button" data-d="0.5" aria-label="Više žužu peciva bez sira">+</button></div></div></div></article>
           <article class="vt-p"><div class="vt-p-il"><img src="assets/meni/domaca-lepinja-v2.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></div><div><h4>Domaće lepinje</h4><p>Iz turske peći, za slavu i veće skupove.</p>
             <div class="kg-red" data-n="Domaće lepinje"><div class="kg-br"><button type="button" data-d="-5" aria-label="Pet lepinja manje">−</button><output>0 kom</output><button type="button" data-d="5" aria-label="Pet lepinja više">+</button></div></div></div></article>
-          <article class="vt-p"><div class="vt-p-il"><img src="assets/meni/slavski-kolac.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></div><div><h4>Slavski kolač</h4><p>Ukrasite ga sami u radionici, pa ga dodajte u porudžbinu.</p>
-            <a class="btn sm" href="#kolac">Napravi svoj kolač</a></div></article>
+          <article class="vt-p"><div class="vt-p-il"><img src="assets/meni/slavski-kolac.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></div><div><h4>Slavski kolač</h4><p>Po porudžbini, za vašu slavu. Izaberite veličinu:</p>
+            <div class="kg-red kg-kolac" data-n="Slavski kolač – mali (oko 1 kg)"><small class="kg-vel">Mali, oko 1 kg</small><div class="kg-br"><button type="button" data-d="-1" aria-label="Jedan manje: Slavski kolač – mali (oko 1 kg)">−</button><output>0 kom</output><button type="button" data-d="1" aria-label="Jedan više: Slavski kolač – mali (oko 1 kg)">+</button></div></div><div class="kg-red kg-kolac" data-n="Slavski kolač – srednji (oko 1,5 kg)"><small class="kg-vel">Srednji, oko 1,5 kg</small><div class="kg-br"><button type="button" data-d="-1" aria-label="Jedan manje: Slavski kolač – srednji (oko 1,5 kg)">−</button><output>0 kom</output><button type="button" data-d="1" aria-label="Jedan više: Slavski kolač – srednji (oko 1,5 kg)">+</button></div></div><div class="kg-red kg-kolac" data-n="Slavski kolač – veliki (oko 2 kg)"><small class="kg-vel">Veliki, oko 2 kg</small><div class="kg-br"><button type="button" data-d="-1" aria-label="Jedan manje: Slavski kolač – veliki (oko 2 kg)">−</button><output>0 kom</output><button type="button" data-d="1" aria-label="Jedan više: Slavski kolač – veliki (oko 2 kg)">+</button></div></div></div></article>
         </div>
       </div>
     </div>
@@ -1256,7 +1260,7 @@
             <article class="kp-faza"><h3>Ukrasi od testa</h3><p>Bure, klasje i cvet od testa pekar stavlja rukom, svaki na svoje mesto. Klasje je za berićet, a svaki ukras ima svoje značenje.</p></article>
             <article class="kp-faza"><h3>Pečeno do zlata</h3><p>Peče se polako, dok kora ne postane zlatna i dok miris ne ispuni pekaru.</p></article>
             <article class="kp-faza"><h3>Lomi se za slavu</h3><p>Domaćin ga prelama sa gostima, za zdravlje kuće. Mi ga pečemo za vašu slavu.</p>
-              <div class="actions"><a href="#kolac" class="btn">Ukrasi svoj kolač</a><a href="#slave" class="btn out">Pronađi svoju slavu</a></div></article>
+              <div class="actions"><a href="#poruci" class="btn">Poručite kolač</a><a href="#slave" class="btn out">Pronađi svoju slavu</a></div></article>
           </div>
         </div>
         <figure class="kp-slika"><canvas id="kpPlatno" width="1280" height="720" role="img" aria-label="Pekar mesi testo, oblikuje visok okrugao kolač sa režnjevima, rukom stavlja ukrase od testa, bure, klasje i cvet, i kolač se peče do zlatne boje"></canvas></figure>
@@ -1267,7 +1271,7 @@
     <script type="application/json" id="kpTama">[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</script>
   </section>
 
-  <section class="baner">
+  <section class="baner" hidden>
     <div class="vez dark" aria-hidden="true"></div>
     <div class="wrap in">
       <div>
@@ -1697,7 +1701,7 @@
   </div>
   <nav class="wrap fw-linkovi" aria-label="Podnožje">
     <ul><li><a href="#ponuda">Naša ponuda</a></li><li><a href="#o-nama">O nama</a></li><li><a href="#lokacije">Lokacije</a></li></ul>
-    <ul><li><a href="#posao">Posao u Bademu</a></li><li><a href="#slave">Kalendar slava</a></li><li><a href="#kolac">Radionica kolača</a></li></ul>
+    <ul><li><a href="#posao">Posao u Bademu</a></li><li><a href="#slave">Kalendar slava</a></li><li><a href="#kolac-prica">Slavski kolač</a></li></ul>
     <ul><li><a href="#poruci">Poručite unapred</a></li><li><a href="kafana-jedno-mesto.html">Kafana Jedno Mesto</a></li></ul>
     <ul><li><a href="https://www.facebook.com/pekarabadem/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/pekarabadem/" target="_blank" rel="noopener">Instagram</a></li></ul>
     <a href="#pocetna" class="fw-gore-dugme" aria-label="Nazad na vrh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
@@ -2489,7 +2493,7 @@ const KAT = [
   { id:'slava', naziv:'Za slavu', ikon:'kolac', slika:'slavaHero', opis:'Slavski kolač po porudžbini, posna peciva i pogače za goste.', stavke:[
     {n:'Žužu pecivo sa sirom', o:'zuzu', fil:['sir'], d:'Sitno pecivo punjeno sirom, idealno za slavu, rođendan i goste. Poručuje se na kilogram.', oz:['top','kg'], kg:{cena:1200}},
     {n:'Žužu pecivo bez sira', o:'zuzu', fil:[], d:'Sitno pecivo bez fila, posno i hrskavo. Poručuje se na kilogram.', oz:['posno','kg'], kg:{cena:900}},
-    {n:'Slavski kolač', o:'kolac', fil:[], d:'Tradicionalno ukrašen, pripremljen po porudžbini. Složite svoj izgled u radionici kolača.', oz:['porudz'], link:['#kolac','Napravi svoj kolač']},
+    {n:'Slavski kolač', o:'kolac', fil:[], d:'Tradicionalno ukrašen, pripremljen po porudžbini, u tri veličine.', oz:['porudz'], link:['#poruci','Poručite kolač']},
     {n:'Posna peciva za slavu', o:'kroasan', fil:[], d:'Pripremite slavu i proslavu uz ukusna posna peciva iz Badem pekare.', oz:['posno','porudz']},
     {n:'Pogača za goste', o:'pogaca', fil:[], d:'Velika pogača za trpezu, po porudžbini.', oz:['porudz']},
     {n:'Slane kiflice i štapići', o:'kifla', fil:['susam'], d:'Tacna slanih kiflica za goste.', oz:['porudz']},
@@ -2637,7 +2641,7 @@ const Korpa = (() => {
     e.preventDefault();
     const ime = $('kIme').value.trim(), tel = $('kTel').value.trim();
     const {st, uk} = osvezi();
-    if(!st.length){ $('kGreska').hidden = false; $('kGreska').textContent = 'Porudžbina je prazna. Dodajte žužu pecivo, lepinje ili kolač iz radionice.'; return; }
+    if(!st.length){ $('kGreska').hidden = false; $('kGreska').textContent = 'Porudžbina je prazna. Dodajte žužu pecivo, lepinje ili slavski kolač.'; return; }
     if(!ime || tel.replace(/\D/g,'').length < 6){ $('kGreska').hidden = false; $('kGreska').textContent = 'Upišite ime i broj telefona da bismo mogli da vas pozovemo.'; return; }
     const d = new Date($('kDatum').value+'T12:00').toLocaleDateString('sr-Latn-RS');
     const tekst = ['PORUDŽBINA · Badem pekara', ...st.map(([n,v])=>`• ${n}: ${fmtK(v,jed(n))}${KorpaOpis[n]?` (${KorpaOpis[n]})`:''}`), `Okvirno: ${fmtD(uk)}`, `Preuzimanje: ${$('kLok').value}`, `Datum: ${d} u ${$('kVreme').value}`, `Ime: ${ime}`, `Telefon: ${tel}`, $('kNap').value.trim() ? `Napomena: ${$('kNap').value.trim()}` : ''].filter(Boolean).join('\n');
@@ -2785,7 +2789,7 @@ const Korpa = (() => {
     <h3>${prva.dr && !prva.n.includes(prva.dr) ? prva.dr : prva.n}</h3>
     <div class="dat">${prva.dr && !prva.n.includes(prva.dr) ? prva.n+' · ' : ''}${DANI[prva.d.getDay()]}, ${fmt(prva.d)}</div>
     <div class="sl-brojac">${n0===0 ? '<b>Danas</b><span>Srećna slava!</span>' : `<b>${n0}</b><span>${n0===1?'dan':'dana'} do slave</span>`}</div>
-    <a class="btn" href="#kolac">Ukrasite i poručite slavski kolač</a>
+    <a class="btn" href="#poruci">Poručite slavski kolač</a>
     <div class="i-ostale">Zatim: ${dalje.map(x => `${x.dr && !x.n.includes(x.dr) ? x.dr : x.n} (${x.d.getDate()}. ${MESK[x.d.getMonth()]})`).join(', ')}</div>`;
 
   { const st = document.getElementById('stNaziv'); if(st){ const ime = prva.dr && !prva.n.includes(prva.dr) ? prva.dr : prva.n;
@@ -2827,7 +2831,7 @@ const Korpa = (() => {
         ${n >= 3 ? `<div class="rok">Slavski kolač poručite najkasnije do ${DANIG[rok.getDay()]}, ${rok.getDate()}. ${MES[rok.getMonth()]}.</div>` : `<div class="rok">Slava je blizu, pozovite najbližu pekaru za porudžbinu kolača.</div>`}
       </div>
       <div class="sl-akcije">
-        <a class="btn" href="#kolac">Ukrasite kolač</a>
+        <a class="btn" href="#poruci">Poručite kolač</a>
         <a class="btn out" href="${ics(x)}" download="slava-${kljuc(x.n).trim().replace(/ +/g,'-')}.ics">Dodaj podsetnik u kalendar</a>
       </div>
       <div class="sl-paket">
@@ -2907,7 +2911,7 @@ let trenutna = location.hash;
 function ruta(){
   if(trenutna.indexOf('#meni') === 0) trenutna = '#ponuda';
   const h = trenutna;
-  const k = h === '#kolac', m = false, kal = h === '#slave', ps = h === '#posao';
+  const k = false, m = false, kal = h === '#slave', ps = h === '#posao';
   const bioMeni = false;
   $('home').hidden = k || m || kal || ps; $('radionica').hidden = !k; $('kalendar').hidden = !kal; $('posao').hidden = !ps;
   document.querySelectorAll('.nav-kal').forEach(a=>a.classList.toggle('on', kal));
