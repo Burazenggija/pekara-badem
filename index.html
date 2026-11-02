@@ -2,7 +2,7 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<script>(function(){var v=0;try{v=sessionStorage.getItem('uvod')}catch(e){}if(!v&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('uvod')})();</script>
+<script>(function(){var v=0;try{v=sessionStorage.getItem('uvod')||localStorage.getItem('uvod')}catch(e){}if(!v&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('uvod')})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Pekara Badem Leskovac – lepinje, burek i slavski kolači</title>
 <meta name="description" content="Pekara Badem u Leskovcu od 1996: domaće lepinje iz turske peći, burek, pite i posna peciva. 8 pekara u gradu i okolini. Poručite slavski kolač za svoju slavu.">
@@ -65,6 +65,9 @@
   .nav ul{display:flex;gap:26px;list-style:none;align-items:center}
   .nav ul a{text-decoration:none;font-weight:600;font-size:.98rem}
   .nav ul a:not(.btn):hover{color:var(--zelena-t)}
+  .nav ul a.nav-poruci{color:#fff;font-weight:700;padding:9px 18px}
+  .nav ul a.nav-poruci:hover{color:#fff}
+  @media (max-width:1180px){ .nav ul{gap:18px} .nav ul a{font-size:.94rem} }
   .nav ul a.btn.on{background:var(--tamna);border-color:var(--tamna)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:999px;background:var(--zelena-t);color:#fff;text-decoration:none;font-weight:700;font-size:.98rem;border:2px solid var(--zelena-t);cursor:pointer;font-family:var(--body);transition:background .15s,transform .15s}
   .btn:hover{background:var(--tamna);border-color:var(--tamna);transform:translateY(-1px)}
@@ -158,7 +161,8 @@
   @media (max-width:760px){ .insta-slave{grid-template-columns:1fr} }
   /* ===== Priča o kolaču: od testa do slave (skrol) ===== */
   .kp{position:relative;height:520vh;--t:0;background:#f4ebd8;background:color-mix(in srgb,#24160d calc(var(--t) * 100%),#f4ebd8)}
-  .kp-faza h3,.kp-faza p,.kp-tekst .script{transition:color .5s}
+  .kp-faza h3,.kp-faza p,.kp-tekst .script{transition:color .5s,opacity .5s}
+  .kp.posle .kp-tekst > .script{opacity:0}
   .kp.tamno .kp-faza h3{color:#f6e8cc} .kp.tamno .kp-faza p{color:#eadfc9} .kp.tamno .kp-tekst .script{color:#e8bf6e} .kp.tamno .kp-dalje{color:#d9c8a8}
   .kp-stage{position:sticky;top:var(--hh,76px);height:calc(100vh - var(--hh,76px));height:calc(100svh - var(--hh,76px));overflow:hidden;display:grid;align-items:center}
   .kp-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:24px;align-items:center;max-width:1280px;margin:0 auto;padding-inline:40px;width:100%}
@@ -173,7 +177,7 @@
   .kp-slika{position:relative;margin:0 -40px 0 0}
   .kp-slika canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:center/cover no-repeat;
     -webkit-mask-image:radial-gradient(closest-side,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%)}
-  .kp-dalje{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:.9rem;color:#6b5a44;display:flex;gap:8px;align-items:center;transition:opacity .4s}
+  .kp-dalje{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:.9rem;color:#4f4130;font-weight:600;display:flex;gap:8px;align-items:center;transition:opacity .4s}
   .kp-dalje svg{width:18px;height:18px;animation:kpStrela 1.6s ease-in-out infinite}
   @keyframes kpStrela{50%{transform:translateY(4px)}}
   @media (max-width:860px){
@@ -192,6 +196,8 @@
   @media (prefers-reduced-motion:reduce){ .kp-faza{transition:none;transform:none} .kp-dalje svg{animation:none} }
   /* ===== Priča o Bademu (skrol): peć vatra lepinja ponuda 8 pekara mapa ===== */
   .kp.pb{height:900vh}
+  #o-nama.kp{height:330vh}
+  @media (max-width:760px){ #o-nama.kp{height:300vh} }
   #o-nama.kp{background:var(--pbbg,#f4ebd8);transition:background-color .25s linear}
   #o-nama .kp-slika canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:center/cover no-repeat;
     -webkit-mask-image:radial-gradient(closest-side,#000 64%,rgba(0,0,0,.6) 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 64%,rgba(0,0,0,.6) 82%,transparent 100%)}
@@ -430,7 +436,7 @@
 
     /* početna */
     body:not(.app){padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
-    .bnav{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:50;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid var(--linija);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 26px -20px rgba(31,90,41,.6)}
+    .bnav{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:50;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--linija);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 26px -20px rgba(31,90,41,.6)}
     body.app .bnav{display:none}
     .bnav a{display:grid;justify-items:center;align-content:end;gap:3px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--siva);padding:2px 0}
     .bnav .ic{display:grid;place-items:center;width:28px;height:28px}
@@ -512,7 +518,7 @@
   .lm-lista button{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;text-align:left;border:1px solid transparent;background:none;border-radius:8px;padding:9px 10px;cursor:pointer;font:inherit;color:inherit}
   .lm-lista button:hover{background:#eaf4e9}
   .lm-lista button.on{background:#eaf4e9;border-color:#3f9b48}
-  .lm-lista .pin{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:grid;place-items:center;background:#3f9b48;margin-top:2px}
+  .lm-lista .pin{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:grid;place-items:center;background:var(--zelena-t);margin-top:2px}
   .lm-lista .pin.prij{background:#8a8178}
   .lm-lista .pin i{transform:rotate(45deg);color:#fff;font-style:normal;font-weight:700;font-size:.78rem}
   .lm-lista b{display:block;font-size:.98rem;line-height:1.25}
@@ -835,7 +841,7 @@
   .uv-in{position:relative;width:min(88vw,620px)}
   .uv-in video{display:block;width:100%;height:auto;aspect-ratio:992/768;mix-blend-mode:multiply;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--uvm),#000 calc(100% - var(--uvm)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--uvm),#000 calc(100% - var(--uvm)),transparent 100%);transition:--uvm .7s ease}
   .uv-in.slova video{--uvm:0%}
-  .uv-preskoci{position:absolute;right:20px;bottom:30px;background:none;border:0;font:600 .9rem var(--body);color:var(--siva);padding:12px 14px;min-height:44px;cursor:pointer;opacity:.8}
+  .uv-preskoci{position:absolute;right:20px;bottom:30px;background:none;border:0;font:700 .95rem var(--body);color:var(--tamna);padding:12px 16px;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
   .uv-preskoci:hover{color:var(--tamna);opacity:1}
   .uv-in{display:grid;place-items:center}
   .uv-in > *{grid-area:1/1}
@@ -853,36 +859,20 @@
   .vt-f{font:inherit;font-weight:700;font-size:.95rem;color:var(--tamna);background:#fff;border:1.5px solid var(--linija);border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
   .vt-f:hover{border-color:var(--zelena)}
   .vt-f[aria-pressed=true]{background:var(--tamna);border-color:var(--tamna);color:#fff}
-  .gl-scena{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
-  .gl-slika{position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:var(--testo);box-shadow:0 0 0 6px #fffdf7,0 0 0 7.5px rgba(31,90,41,.35),0 34px 50px -30px rgba(40,25,10,.75)}
-  .gl-slika img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease,transform 6s ease-out}
-  .gl-slika img.skriven{opacity:0}
-  .gl-slika img.zum{transform:scale(1.06)}
-  .gl-info{position:relative;padding-block:10px}
-  .gl-kat{font-size:2rem;color:var(--zelena-t);margin-bottom:2px}
-  .gl-info h3{font-family:var(--display);font-size:clamp(2rem,3.6vw,3rem);color:var(--tamna);line-height:1.08}
-  .gl-info p{color:var(--siva);font-size:1.12rem;margin-top:12px;max-width:26em;min-height:3.2em}
-  .gl-info .gl-kat,.gl-info h3,.gl-info p{transition:opacity .35s ease,transform .35s ease}
-  .gl-info.menja .gl-kat,.gl-info.menja h3,.gl-info.menja p{opacity:0;transform:translateY(8px)}
-  .gl-kontrole{display:flex;align-items:center;gap:14px;margin-top:26px}
-  .gl-str{width:52px;height:52px;border-radius:50%;border:2px solid var(--tamna);background:#fffdf7;color:var(--tamna);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
-  .gl-str:hover{background:var(--tamna);color:#fff}
-  .gl-str svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-  .gl-broj{font-weight:700;color:var(--siva);min-width:5.5em;text-align:center;font-variant-numeric:tabular-nums}
-  .gl-vreme{display:block;height:3px;margin-top:22px;max-width:260px;background:var(--linija);border-radius:2px;overflow:hidden}
-  .gl-vreme i{display:block;height:100%;width:100%;background:var(--zelena-t);transform-origin:left;transform:scaleX(0)}
-  .gl-vreme i.tece{animation:glTece 5s linear forwards}
-  .gl.stalo .gl-vreme{visibility:hidden}
-  @keyframes glTece{to{transform:scaleX(1)}}
-  .gl-traka{list-style:none;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;padding:30px 4px 10px;margin-top:6px;scrollbar-width:thin;scrollbar-color:var(--linija) transparent}
-  .gl-traka li{flex:none;scroll-snap-align:center}
-  .gl-traka li[hidden]{display:none}
-  .gl-t{display:block;width:92px;height:92px;padding:0;border:0;border-radius:18px;overflow:hidden;cursor:pointer;background:var(--testo);opacity:.62;filter:saturate(.75);box-shadow:0 8px 14px -10px rgba(0,0,0,.6);transition:opacity .25s,filter .25s,transform .25s,box-shadow .25s}
-  .gl-t img{width:100%;height:100%;object-fit:cover}
-  .gl-t:hover{opacity:1;filter:none}
-  .gl-t[aria-current=true]{opacity:1;filter:none;transform:translateY(-8px);box-shadow:0 0 0 3px #fffdf7,0 0 0 5px var(--zelena-t),0 14px 20px -12px rgba(0,0,0,.6)}
-  @media (max-width:880px){ .gl-scena{grid-template-columns:1fr;gap:20px} .gl-info{padding-block:0} .gl-kat{font-size:1.6rem} .gl-info p{font-size:1rem;min-height:0} .gl-kontrole{margin-top:16px} .gl-vreme{margin-top:14px} .gl-t{width:72px;height:72px;border-radius:14px} .gl-traka{padding-top:22px;gap:10px} }
-  @media (prefers-reduced-motion:reduce){ .gl-slika img{transition:opacity .2s} .gl-slika img.zum{transform:none} .gl-info .gl-kat,.gl-info h3,.gl-info p{transition:none} }
+  main [id]{scroll-margin-top:calc(var(--hh,76px) + 8px)}
+  .skriveno{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .vitrina{padding-top:10px}
+  .vt-filteri{margin-top:0}
+  .pn-mreza{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+  .pn-mreza li{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linija);border-radius:20px;overflow:hidden;box-shadow:0 20px 30px -26px rgba(40,25,10,.75)}
+  .pn-mreza li[hidden]{display:none}
+  .pn-mreza img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--testo)}
+  .pn-mreza li > div{padding:14px 16px 18px}
+  .pn-mreza h3{font:700 1.15rem/1.2 var(--display);color:var(--tamna)}
+  .pn-mreza p{color:var(--siva);font-size:.92rem;line-height:1.45;margin-top:4px}
+  .pn-vise{text-align:center;margin-top:28px}
+  @media (max-width:980px){ .pn-mreza{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  @media (max-width:760px){ .pn-mreza{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px} .pn-mreza li{border-radius:16px} .pn-mreza li > div{padding:10px 12px 14px} .pn-mreza h3{font-size:1rem} .pn-mreza p{font-size:.84rem} .pn-vise .btn{width:100%} }
   .vt-poruci{margin-top:56px;background:#fffdf7;border:1px solid #ecdcb9;border-radius:24px;padding:30px;display:grid;grid-template-columns:minmax(220px,.8fr) 2.2fr;gap:28px;align-items:center;box-shadow:0 24px 40px -30px rgba(60,35,10,.6)}
   .vt-poruci-tx h3{font-family:var(--display);font-size:1.8rem;color:var(--tamna);line-height:1.15}
   .vt-poruci-tx p{color:var(--siva);margin-top:8px}
@@ -902,7 +892,7 @@
   /* Krupniji, hrabriji naslovi: rukopis prelazi preko velikog naslova */
   .hero h1{font-size:clamp(3.4rem,8.6vw,6.6rem);line-height:.92;letter-spacing:-.02em;margin:0 0 22px}
   .hero .script{font-size:clamp(2.2rem,3.6vw,3rem)}
-  .glava .script{font-size:clamp(2.6rem,5vw,3.8rem);color:#5aa55f;position:relative;z-index:0;margin-bottom:-.2em}
+  .glava .script{font-size:clamp(2.6rem,5vw,3.8rem);color:var(--zelena-t);position:relative;z-index:0;margin-bottom:-.2em}
   .glava h2{position:relative;z-index:1;font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800;text-transform:uppercase;letter-spacing:.03em;line-height:.95;margin:0 0 16px}
   .glava p{font-size:1.08rem}
 
@@ -975,6 +965,8 @@
   .hero-w .actions{align-items:center;gap:22px}
   .hw-btn{background:transparent;border:1.5px solid #fff;color:#fff;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;padding:14px 26px}
   .hw-btn:hover{background:#fff;color:var(--tamna)}
+  .hw-btn.hw-pun{background:#fff;color:var(--tamna);border-color:#fff}
+  .hw-btn.hw-pun:hover{background:var(--svetla);border-color:var(--svetla)}
   .hw-link{color:#fff;font-weight:700;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.5);padding-bottom:2px}
   .hw-link:hover{border-color:#fff}
   .hero-w .facts{margin-top:42px;gap:0}
@@ -1093,10 +1085,11 @@
       <li class="hide-m"><a href="#prijatelji">Naši prijatelji</a></li>
       <li class="hide-m"><a href="#posao">Posao</a></li>
       <li class="hide-m"><a href="#instagram">Instagram</a></li>
+      <li class="hide-m"><a href="#poruci" class="btn sm nav-poruci">Poručite unapred</a></li>
     </ul>
     <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mMeni" aria-label="Otvori meni"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <nav class="m-meni" id="mMeni" aria-label="Glavni meni" hidden><div class="wrap"><a href="#ponuda">Ponuda</a><a href="#o-nama">O nama</a><a href="#slave">Kalendar slava</a><a href="#lokacije">Lokacije</a><a href="#prijatelji">Naši prijatelji</a><a href="#posao">Posao</a><a href="#instagram">Instagram</a></div></nav>
+  <nav class="m-meni" id="mMeni" aria-label="Glavni meni" hidden><div class="wrap"><a href="#ponuda">Ponuda</a><a href="#o-nama">O nama</a><a href="#slave">Kalendar slava</a><a href="#lokacije">Lokacije</a><a href="#prijatelji">Naši prijatelji</a><a href="#posao">Posao</a><a href="#instagram">Instagram</a><a href="#poruci">Poručite unapred</a></div></nav>
 </header>
 
 <!-- ================= POČETNA ================= -->
@@ -1110,8 +1103,8 @@
         <div class="script hw-script">Lepinja iz turske peći od 1996.</div>
         <p>Domaće <b>lepinje iz turskih peći</b>, burek, pite i peciva. Od 1996. godine pečemo za Leskovac, a danas nas ima na <b>osam lokacija</b> u gradu i okolini.</p>
         <div class="actions">
-          <a href="#ponuda" class="btn hw-btn">Pogledajte ponudu</a>
-          <a href="#poruci" class="hw-link">Poručite unapred →</a>
+          <a href="#poruci" class="btn hw-btn hw-pun">Poručite unapred</a>
+          <a href="#ponuda" class="hw-link">Pogledajte ponudu →</a>
         </div>
         <div class="facts">
           <div><b>8</b><span>lokacija</span></div>
@@ -1164,71 +1157,52 @@
 
   <section class="blok vitrina" id="ponuda" aria-labelledby="vtNaslov">
     <div class="wrap">
-      <div class="glava">
-        <div class="script">Iz naše peći</div>
-        <h2 id="vtNaslov">Naša ponuda</h2>
-        <p>Burek, pite, peciva, hleb i slatko, svakog dana sveže u svim Badem pekarama.</p>
-      </div>
+      <h2 id="vtNaslov" class="skriveno">Naša ponuda</h2>
       <div class="vt-filteri" role="group" aria-label="Vrsta proizvoda"><button type="button" class="vt-f" data-f="sve" aria-pressed="true">Sve</button><button type="button" class="vt-f" data-f="burek" aria-pressed="false">Burek</button><button type="button" class="vt-f" data-f="pite" aria-pressed="false">Pite</button><button type="button" class="vt-f" data-f="peciva" aria-pressed="false">Peciva</button><button type="button" class="vt-f" data-f="sendvici" aria-pressed="false">Pica i sendviči</button><button type="button" class="vt-f" data-f="hleb" aria-pressed="false">Hleb i lepinje</button><button type="button" class="vt-f" data-f="slatko" aria-pressed="false">Slatko</button></div>
     </div>
     <div class="wrap">
-      <div class="gl" id="galerija">
-        <div class="gl-scena">
-          <div class="gl-slika"><img id="glA" src="assets/meni/burek-meso.webp" alt="Burek sa mesom, četvrtina" width="720" height="540" decoding="async"><img id="glB" alt="" width="720" height="540" decoding="async" aria-hidden="true"></div>
-          <div class="gl-info" aria-live="polite">
-            <div class="script gl-kat" id="glKat">Burek</div>
-            <h3 id="glIme">Burek sa mesom, četvrtina</h3>
-            <p id="glOpis">Klasik leskovačkog doručka, sa sočnim mlevenim mesom.</p>
-            <div class="gl-kontrole">
-              <button type="button" class="gl-str" id="glPre" aria-label="Prethodni proizvod"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-              <span class="gl-broj" id="glBroj">1 od 39</span>
-              <button type="button" class="gl-str" id="glSle" aria-label="Sledeći proizvod"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-            </div>
-            <i class="gl-vreme" aria-hidden="true"><i id="glVreme"></i></i>
-          </div>
-        </div>
-        <ul class="gl-traka" id="glTraka" aria-label="Svi proizvodi">
-          <li data-kat="burek"><button type="button" class="gl-t" data-img="assets/meni/burek-meso.webp" data-n="Burek sa mesom, četvrtina" data-d="Klasik leskovačkog doručka, sa sočnim mlevenim mesom." data-k="Burek" aria-label="Burek sa mesom, četvrtina"><img src="assets/meni/burek-meso.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="burek"><button type="button" class="gl-t" data-img="assets/meni/burek-sir.webp" data-n="Burek sa sirom, četvrtina" data-d="Sa belim sirom, mekan iznutra i hrskav spolja." data-k="Burek" aria-label="Burek sa sirom, četvrtina"><img src="assets/meni/burek-sir.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="burek"><button type="button" class="gl-t" data-img="assets/meni/burek-pica.webp" data-n="Pica burek, četvrtina" data-d="Burek sa ukusom pice." data-k="Burek" aria-label="Pica burek, četvrtina"><img src="assets/meni/burek-pica.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="burek"><button type="button" class="gl-t" data-img="assets/meni/burek-spanac.webp" data-n="Burek sa spanaćem, četvrtina" data-d="Spanać u tankim korama." data-k="Burek" aria-label="Burek sa spanaćem, četvrtina"><img src="assets/meni/burek-spanac.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="pite"><button type="button" class="gl-t" data-img="assets/meni/sarajevska-pita.webp" data-n="Sarajevska pita sir-spanać" data-d="Sa sirom i spanaćem, uvijena u rolnice." data-k="Pite" aria-label="Sarajevska pita sir-spanać"><img src="assets/meni/sarajevska-pita.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="pite"><button type="button" class="gl-t" data-img="assets/meni/pita-sir-spanac.webp" data-n="Pita sir-spanać" data-d="Domaća pita sa sirom i spanaćem." data-k="Pite" aria-label="Pita sir-spanać"><img src="assets/meni/pita-sir-spanac.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="pite"><button type="button" class="gl-t" data-img="assets/meni/kukuruzna-sprza.webp" data-n="Kukuruzna pita sa spržom" data-d="Kukuruzna kora punjena spržom." data-k="Pite" aria-label="Kukuruzna pita sa spržom"><img src="assets/meni/kukuruzna-sprza.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="pite"><button type="button" class="gl-t" data-img="assets/meni/kukuruzna-piletina.webp" data-n="Kukuruzna pita sa piletinom" data-d="Kukuruzna kora sa susamom, punjena piletinom." data-k="Pite" aria-label="Kukuruzna pita sa piletinom"><img src="assets/meni/kukuruzna-piletina.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="pite"><button type="button" class="gl-t" data-img="assets/meni/pita-slatka.webp" data-n="Slatka pita" data-d="Birate fil: višnja, jabuka ili šljiva sa makom." data-k="Pite" aria-label="Slatka pita"><img src="assets/meni/pita-slatka.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/lisnata-pletenica.webp" data-n="Lisnata pletenica" data-d="Pletenica od lisnatog testa." data-k="Peciva" aria-label="Lisnata pletenica"><img src="assets/meni/lisnata-pletenica.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/pastetica-sir.webp" data-n="Paštetica sa sirom" data-d="Lisnata paštetica punjena sirom." data-k="Peciva" aria-label="Paštetica sa sirom"><img src="assets/meni/pastetica-sir.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/puz-sir.webp" data-n="Puž sa sirom" data-d="Lisnati puž punjen sirom." data-k="Peciva" aria-label="Puž sa sirom"><img src="assets/meni/puz-sir.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/zuzu.webp" data-n="Žužu pecivo" data-d="Sitno lisnato pecivo sa susamom, sa sirom ili bez. Prodaje se na kilogram." data-k="Peciva" aria-label="Žužu pecivo"><img src="assets/meni/zuzu.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/mini-djevrek.webp" data-n="Mini đevrek" data-d="Mali đevrek pun susama." data-k="Peciva" aria-label="Mini đevrek"><img src="assets/meni/mini-djevrek.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/integralna-pogacica.webp" data-n="Integralna pogačica" data-d="Od integralnog brašna, posuta semenkama." data-k="Peciva" aria-label="Integralna pogačica"><img src="assets/meni/integralna-pogacica.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/stapic.webp" data-n="Štapić" data-d="Integralni, kukuruzni ili od heljde." data-k="Peciva" aria-label="Štapić"><img src="assets/meni/stapic.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/rol-sunka.webp" data-n="Rol šunka" data-d="Lisnati rol sa šunkom." data-k="Peciva" aria-label="Rol šunka"><img src="assets/meni/rol-sunka.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/rol-virsla.webp" data-n="Rol viršla" data-d="Lisnati rol sa viršlom." data-k="Peciva" aria-label="Rol viršla"><img src="assets/meni/rol-virsla.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="peciva"><button type="button" class="gl-t" data-img="assets/meni/mrezica-kulen.webp" data-n="Mrežica Zdenka i kulen" data-d="Lisnata mrežica sa Zdenka sirom i kulenom." data-k="Peciva" aria-label="Mrežica Zdenka i kulen"><img src="assets/meni/mrezica-kulen.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="sendvici"><button type="button" class="gl-t" data-img="assets/meni/pica-parce.webp" data-n="Parče pice" data-d="Veliko parče pice, toplo iz peći." data-k="Pica i sendviči" aria-label="Parče pice"><img src="assets/meni/pica-parce.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="sendvici"><button type="button" class="gl-t" data-img="assets/meni/rol-pica.webp" data-n="Rol pica" data-d="Lisnati rol sa ukusom pice." data-k="Pica i sendviči" aria-label="Rol pica"><img src="assets/meni/rol-pica.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="sendvici"><button type="button" class="gl-t" data-img="assets/meni/pancerota-piletina.webp" data-n="Pancerota sa piletinom" data-d="Zatvorena pica punjena piletinom." data-k="Pica i sendviči" aria-label="Pancerota sa piletinom"><img src="assets/meni/pancerota-piletina.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="sendvici"><button type="button" class="gl-t" data-img="assets/meni/sendvic-kulen.webp" data-n="Sendvič sa kulenom" data-d="Sa kulenom i svežom salatom." data-k="Pica i sendviči" aria-label="Sendvič sa kulenom"><img src="assets/meni/sendvic-kulen.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="sendvici"><button type="button" class="gl-t" data-img="assets/meni/integralni-sendvic.webp" data-n="Integralni sendvič" data-d="U integralnom pecivu." data-k="Pica i sendviči" aria-label="Integralni sendvič"><img src="assets/meni/integralni-sendvic.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/domaca-lepinja-v2.webp" data-n="Domaća lepinja" data-d="Naš zaštitni znak od 1996. Pečena u turskoj peći: hrskava kora i meka sredina." data-k="Hleb i lepinje" aria-label="Domaća lepinja"><img src="assets/meni/domaca-lepinja-v2.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/beli-hleb.webp" data-n="Beli hleb" data-d="Klasičan beli hleb, mekane sredine." data-k="Hleb i lepinje" aria-label="Beli hleb"><img src="assets/meni/beli-hleb.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/polubeli-hleb.webp" data-n="Polubeli hleb" data-d="Za svaki dan i za svaki obrok." data-k="Hleb i lepinje" aria-label="Polubeli hleb"><img src="assets/meni/polubeli-hleb.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/crni-hleb.webp" data-n="Crni hleb" data-d="Tamne kore, dugo ostaje svež." data-k="Hleb i lepinje" aria-label="Crni hleb"><img src="assets/meni/crni-hleb.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/sunce-pogaca.webp" data-n="Sunce pogača" data-d="Pogača od kuglica testa, lepa za trpezu." data-k="Hleb i lepinje" aria-label="Sunce pogača"><img src="assets/meni/sunce-pogaca.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/domaca-pogaca.webp" data-n="Domaća pogača" data-d="Mekana pogača za porodični ručak." data-k="Hleb i lepinje" aria-label="Domaća pogača"><img src="assets/meni/domaca-pogaca.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="hleb"><button type="button" class="gl-t" data-img="assets/meni/slavski-kolac.webp" data-n="Slavski kolač" data-d="Po porudžbini, sa krstom, klasjem i ukrasima po vašoj želji." data-k="Hleb i lepinje" aria-label="Slavski kolač"><img src="assets/meni/slavski-kolac.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/kroasan-krem.webp" data-n="Kroasan krem" data-d="Kroasan sa kremom i čokoladnim prelivom." data-k="Slatko" aria-label="Kroasan krem"><img src="assets/meni/kroasan-krem.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/mini-kroasan.webp" data-n="Mini kroasan sa kremom" data-d="Mali kroasan punjen kremom." data-k="Slatko" aria-label="Mini kroasan sa kremom"><img src="assets/meni/mini-kroasan.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/rol-krem-vanila.webp" data-n="Rol krem i vanila" data-d="Rol sa kremom i vanilom, pod čokoladnim prelivom." data-k="Slatko" aria-label="Rol krem i vanila"><img src="assets/meni/rol-krem-vanila.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/rol-visnja-jagoda.webp" data-n="Rol višnja ili jagoda" data-d="Rol sa filom od višnje ili jagode." data-k="Slatko" aria-label="Rol višnja ili jagoda"><img src="assets/meni/rol-visnja-jagoda.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/coko-kokos.webp" data-n="Čoko kokos" data-d="Sa čokoladom i kokosom." data-k="Slatko" aria-label="Čoko kokos"><img src="assets/meni/coko-kokos.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/integralna-vanila-visnja.webp" data-n="Integralna vanila-višnja" data-d="Integralno testo sa vanilom i višnjom." data-k="Slatko" aria-label="Integralna vanila-višnja"><img src="assets/meni/integralna-vanila-visnja.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/snikers.webp" data-n="Snikers" data-d="Slatko pecivo sa ukusom snikersa." data-k="Slatko" aria-label="Snikers"><img src="assets/meni/snikers.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-          <li data-kat="slatko"><button type="button" class="gl-t" data-img="assets/meni/strudla-mak.webp" data-n="Štrudla sa makom" data-d="Tradicionalna štrudla, puna maka." data-k="Slatko" aria-label="Štrudla sa makom"><img src="assets/meni/strudla-mak.webp" alt="" width="720" height="540" loading="lazy" decoding="async"></button></li>
-        </ul>
-      </div>
+      <ul class="pn-mreza" id="pnMreza" aria-live="polite">
+          <li data-kat="burek" data-top><img src="assets/meni/burek-meso.webp" alt="Burek sa mesom, četvrtina" width="720" height="540" loading="lazy" decoding="async"><div><h3>Burek sa mesom, četvrtina</h3><p>Klasik leskovačkog doručka, sa sočnim mlevenim mesom.</p></div></li>
+          <li data-kat="burek"><img src="assets/meni/burek-sir.webp" alt="Burek sa sirom, četvrtina" width="720" height="540" loading="lazy" decoding="async"><div><h3>Burek sa sirom, četvrtina</h3><p>Sa belim sirom, mekan iznutra i hrskav spolja.</p></div></li>
+          <li data-kat="burek"><img src="assets/meni/burek-pica.webp" alt="Pica burek, četvrtina" width="720" height="540" loading="lazy" decoding="async"><div><h3>Pica burek, četvrtina</h3><p>Burek sa ukusom pice.</p></div></li>
+          <li data-kat="burek"><img src="assets/meni/burek-spanac.webp" alt="Burek sa spanaćem, četvrtina" width="720" height="540" loading="lazy" decoding="async"><div><h3>Burek sa spanaćem, četvrtina</h3><p>Spanać u tankim korama.</p></div></li>
+          <li data-kat="pite" data-top><img src="assets/meni/sarajevska-pita.webp" alt="Sarajevska pita sir-spanać" width="720" height="540" loading="lazy" decoding="async"><div><h3>Sarajevska pita sir-spanać</h3><p>Sa sirom i spanaćem, uvijena u rolnice.</p></div></li>
+          <li data-kat="pite"><img src="assets/meni/pita-sir-spanac.webp" alt="Pita sir-spanać" width="720" height="540" loading="lazy" decoding="async"><div><h3>Pita sir-spanać</h3><p>Domaća pita sa sirom i spanaćem.</p></div></li>
+          <li data-kat="pite"><img src="assets/meni/kukuruzna-sprza.webp" alt="Kukuruzna pita sa spržom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Kukuruzna pita sa spržom</h3><p>Kukuruzna kora punjena spržom.</p></div></li>
+          <li data-kat="pite"><img src="assets/meni/kukuruzna-piletina.webp" alt="Kukuruzna pita sa piletinom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Kukuruzna pita sa piletinom</h3><p>Kukuruzna kora sa susamom, punjena piletinom.</p></div></li>
+          <li data-kat="pite"><img src="assets/meni/pita-slatka.webp" alt="Slatka pita" width="720" height="540" loading="lazy" decoding="async"><div><h3>Slatka pita</h3><p>Birate fil: višnja, jabuka ili šljiva sa makom.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/lisnata-pletenica.webp" alt="Lisnata pletenica" width="720" height="540" loading="lazy" decoding="async"><div><h3>Lisnata pletenica</h3><p>Pletenica od lisnatog testa.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/pastetica-sir.webp" alt="Paštetica sa sirom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Paštetica sa sirom</h3><p>Lisnata paštetica punjena sirom.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/puz-sir.webp" alt="Puž sa sirom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Puž sa sirom</h3><p>Lisnati puž punjen sirom.</p></div></li>
+          <li data-kat="peciva" data-top><img src="assets/meni/zuzu.webp" alt="Žužu pecivo" width="720" height="540" loading="lazy" decoding="async"><div><h3>Žužu pecivo</h3><p>Sitno lisnato pecivo sa susamom, sa sirom ili bez. Prodaje se na kilogram.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/mini-djevrek.webp" alt="Mini đevrek" width="720" height="540" loading="lazy" decoding="async"><div><h3>Mini đevrek</h3><p>Mali đevrek pun susama.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/integralna-pogacica.webp" alt="Integralna pogačica" width="720" height="540" loading="lazy" decoding="async"><div><h3>Integralna pogačica</h3><p>Od integralnog brašna, posuta semenkama.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/stapic.webp" alt="Štapić" width="720" height="540" loading="lazy" decoding="async"><div><h3>Štapić</h3><p>Integralni, kukuruzni ili od heljde.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/rol-sunka.webp" alt="Rol šunka" width="720" height="540" loading="lazy" decoding="async"><div><h3>Rol šunka</h3><p>Lisnati rol sa šunkom.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/rol-virsla.webp" alt="Rol viršla" width="720" height="540" loading="lazy" decoding="async"><div><h3>Rol viršla</h3><p>Lisnati rol sa viršlom.</p></div></li>
+          <li data-kat="peciva"><img src="assets/meni/mrezica-kulen.webp" alt="Mrežica Zdenka i kulen" width="720" height="540" loading="lazy" decoding="async"><div><h3>Mrežica Zdenka i kulen</h3><p>Lisnata mrežica sa Zdenka sirom i kulenom.</p></div></li>
+          <li data-kat="sendvici" data-top><img src="assets/meni/pica-parce.webp" alt="Parče pice" width="720" height="540" loading="lazy" decoding="async"><div><h3>Parče pice</h3><p>Veliko parče pice, toplo iz peći.</p></div></li>
+          <li data-kat="sendvici"><img src="assets/meni/rol-pica.webp" alt="Rol pica" width="720" height="540" loading="lazy" decoding="async"><div><h3>Rol pica</h3><p>Lisnati rol sa ukusom pice.</p></div></li>
+          <li data-kat="sendvici"><img src="assets/meni/pancerota-piletina.webp" alt="Pancerota sa piletinom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Pancerota sa piletinom</h3><p>Zatvorena pica punjena piletinom.</p></div></li>
+          <li data-kat="sendvici"><img src="assets/meni/sendvic-kulen.webp" alt="Sendvič sa kulenom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Sendvič sa kulenom</h3><p>Sa kulenom i svežom salatom.</p></div></li>
+          <li data-kat="sendvici"><img src="assets/meni/integralni-sendvic.webp" alt="Integralni sendvič" width="720" height="540" loading="lazy" decoding="async"><div><h3>Integralni sendvič</h3><p>U integralnom pecivu.</p></div></li>
+          <li data-kat="hleb" data-top><img src="assets/meni/domaca-lepinja-v2.webp" alt="Domaća lepinja" width="720" height="540" loading="lazy" decoding="async"><div><h3>Domaća lepinja</h3><p>Naš zaštitni znak od 1996. Pečena u turskoj peći: hrskava kora i meka sredina.</p></div></li>
+          <li data-kat="hleb"><img src="assets/meni/beli-hleb.webp" alt="Beli hleb" width="720" height="540" loading="lazy" decoding="async"><div><h3>Beli hleb</h3><p>Klasičan beli hleb, mekane sredine.</p></div></li>
+          <li data-kat="hleb"><img src="assets/meni/polubeli-hleb.webp" alt="Polubeli hleb" width="720" height="540" loading="lazy" decoding="async"><div><h3>Polubeli hleb</h3><p>Za svaki dan i za svaki obrok.</p></div></li>
+          <li data-kat="hleb" data-top><img src="assets/meni/crni-hleb.webp" alt="Crni hleb" width="720" height="540" loading="lazy" decoding="async"><div><h3>Crni hleb</h3><p>Tamne kore, dugo ostaje svež.</p></div></li>
+          <li data-kat="hleb"><img src="assets/meni/sunce-pogaca.webp" alt="Sunce pogača" width="720" height="540" loading="lazy" decoding="async"><div><h3>Sunce pogača</h3><p>Pogača od kuglica testa, lepa za trpezu.</p></div></li>
+          <li data-kat="hleb"><img src="assets/meni/domaca-pogaca.webp" alt="Domaća pogača" width="720" height="540" loading="lazy" decoding="async"><div><h3>Domaća pogača</h3><p>Mekana pogača za porodični ručak.</p></div></li>
+          <li data-kat="hleb" data-top><img src="assets/meni/slavski-kolac.webp" alt="Slavski kolač" width="720" height="540" loading="lazy" decoding="async"><div><h3>Slavski kolač</h3><p>Po porudžbini, sa krstom, klasjem i ukrasima po vašoj želji.</p></div></li>
+          <li data-kat="slatko" data-top><img src="assets/meni/kroasan-krem.webp" alt="Kroasan krem" width="720" height="540" loading="lazy" decoding="async"><div><h3>Kroasan krem</h3><p>Kroasan sa kremom i čokoladnim prelivom.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/mini-kroasan.webp" alt="Mini kroasan sa kremom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Mini kroasan sa kremom</h3><p>Mali kroasan punjen kremom.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/rol-krem-vanila.webp" alt="Rol krem i vanila" width="720" height="540" loading="lazy" decoding="async"><div><h3>Rol krem i vanila</h3><p>Rol sa kremom i vanilom, pod čokoladnim prelivom.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/rol-visnja-jagoda.webp" alt="Rol višnja ili jagoda" width="720" height="540" loading="lazy" decoding="async"><div><h3>Rol višnja ili jagoda</h3><p>Rol sa filom od višnje ili jagode.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/coko-kokos.webp" alt="Čoko kokos" width="720" height="540" loading="lazy" decoding="async"><div><h3>Čoko kokos</h3><p>Sa čokoladom i kokosom.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/integralna-vanila-visnja.webp" alt="Integralna vanila-višnja" width="720" height="540" loading="lazy" decoding="async"><div><h3>Integralna vanila-višnja</h3><p>Integralno testo sa vanilom i višnjom.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/snikers.webp" alt="Snikers" width="720" height="540" loading="lazy" decoding="async"><div><h3>Snikers</h3><p>Slatko pecivo sa ukusom snikersa.</p></div></li>
+          <li data-kat="slatko"><img src="assets/meni/strudla-mak.webp" alt="Štrudla sa makom" width="720" height="540" loading="lazy" decoding="async"><div><h3>Štrudla sa makom</h3><p>Tradicionalna štrudla, puna maka.</p></div></li>
+      </ul>
+      <div class="pn-vise" id="pnViseW"><button type="button" class="btn out" id="pnVise">Prikaži sve proizvode (39)</button></div>
     </div>
     <div class="wrap">
       <div class="vt-poruci" id="poruci">
@@ -1309,22 +1283,19 @@
         <div class="kp-tekst">
           <h2 class="script" id="pbNaslov">Priča o Bademu</h2>
           <div class="kp-faze">
-            <article class="kp-faza on"><span class="god">1996.</span><h3>Sve je počelo od jedne peći</h3><p>Pekara Badem otvara vrata u Leskovcu, sa turskom peći i domaćim lepinjama.</p></article>
-            <article class="kp-faza"><h3>Peć se loži pre zore</h3><p>Testo se mesi svakog dana, a vatra se pali pre nego što grad ustane, da bi prva tura bila topla kad otvorimo vrata.</p></article>
-            <article class="kp-faza"><h3>Lepinja iz turske peći</h3><p>Hrskava, blago zapečena kora i meka, šupljikava sredina. Zbog nje su Leskovčani počeli da svraćaju u Badem.</p>
+            <article class="kp-faza on"><span class="god">1996.</span><h3>Sve je počelo od jedne peći</h3><p>Pekara Badem otvara vrata u Leskovcu, sa turskom peći i domaćim lepinjama. Vatra se i danas pali pre zore, da prva tura bude topla kad otvorimo vrata.</p></article>
+            <article class="kp-faza"><h3>Lepinja iz turske peći</h3><p>Hrskava kora i meka, šupljikava sredina. Zbog nje su Leskovčani počeli da svraćaju u Badem, a od 2010. uz lepinju pečemo i burek, pite, peciva i slavske kolače.</p>
               <div class="actions"><a href="#ponuda" class="btn" data-vt="hleb">Pogledaj hleb i lepinje</a></div></article>
-            <article class="kp-faza"><span class="god">2010.</span><h3>Krenuli smo dalje</h3><p>Novi objekti i veća proizvodnja. Uz lepinje su stigli burek, sarajevska pita, posna peciva, sendviči i slavski kolači.</p></article>
-            <article class="kp-faza"><span class="god">Danas</span><h3>Osam pekara, isti ukus</h3><p>Od centra grada do Bogojevca i Bošnjaca. Način rada se nije promenio.</p></article>
-            <article class="kp-faza"><h3>Pronađite nas</h3><p>Svaka lepinja na mapi je jedna naša pekara. Ispod su tačne adrese i telefoni.</p>
+            <article class="kp-faza"><span class="god">Danas</span><h3>Osam pekara, isti ukus</h3><p>Od centra grada do Bogojevca i Bošnjaca. Način rada se nije promenio.</p>
               <div class="actions"><a href="#lokacije" class="btn">Lokacije i telefoni ↓</a></div></article>
           </div>
         </div>
-        <figure class="kp-slika"><canvas id="pbPlatno" width="880" height="495" role="img" aria-label="Turska peć se loži, iz nje izlazi lepinja, oko nje se pojavljuju burek, pita, peciva, sendvič i slavski kolač, lepinja se umnoži u osam, a zatim se pojavi mala mapa Leskovca na kojoj su lepinje mesta naših pekara"></canvas></figure>
+        <figure class="kp-slika"><canvas id="pbPlatno" width="880" height="495" role="img" aria-label="Turska peć se loži, iz nje izlazi lepinja, oko nje se pojavljuju burek, pita, peciva, sendvič i slavski kolač, a zatim se lepinja umnoži u osam, koliko danas ima naših pekara"></canvas></figure>
       </div>
       <div class="kp-dalje" aria-hidden="true">Skrolujte <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
     </div>
-    <script type="application/json" id="pbFrejmovi">["assets/badem/001.webp", "assets/badem/002.webp", "assets/badem/003.webp", "assets/badem/004.webp", "assets/badem/005.webp", "assets/badem/006.webp", "assets/badem/007.webp", "assets/badem/008.webp", "assets/badem/009.webp", "assets/badem/010.webp", "assets/badem/011.webp", "assets/badem/012.webp", "assets/badem/013.webp", "assets/badem/014.webp", "assets/badem/015.webp", "assets/badem/016.webp", "assets/badem/017.webp", "assets/badem/018.webp", "assets/badem/019.webp", "assets/badem/020.webp", "assets/badem/021.webp", "assets/badem/022.webp", "assets/badem/023.webp", "assets/badem/024.webp", "assets/badem/025.webp", "assets/badem/026.webp", "assets/badem/027.webp", "assets/badem/028.webp", "assets/badem/029.webp", "assets/badem/030.webp", "assets/badem/031.webp", "assets/badem/032.webp", "assets/badem/033.webp", "assets/badem/034.webp", "assets/badem/035.webp", "assets/badem/036.webp", "assets/badem/037.webp", "assets/badem/038.webp", "assets/badem/039.webp", "assets/badem/040.webp", "assets/badem/041.webp", "assets/badem/042.webp", "assets/badem/043.webp", "assets/badem/044.webp", "assets/badem/045.webp", "assets/badem/046.webp", "assets/badem/047.webp", "assets/badem/048.webp", "assets/badem/049.webp", "assets/badem/050.webp", "assets/badem/051.webp", "assets/badem/052.webp", "assets/badem/053.webp", "assets/badem/054.webp", "assets/badem/055.webp", "assets/badem/056.webp", "assets/badem/057.webp", "assets/badem/058.webp", "assets/badem/059.webp", "assets/badem/060.webp", "assets/badem/061.webp", "assets/badem/062.webp", "assets/badem/063.webp", "assets/badem/064.webp", "assets/badem/065.webp", "assets/badem/066.webp", "assets/badem/067.webp", "assets/badem/068.webp", "assets/badem/069.webp", "assets/badem/070.webp", "assets/badem/071.webp", "assets/badem/072.webp", "assets/badem/073.webp", "assets/badem/074.webp", "assets/badem/075.webp", "assets/badem/076.webp", "assets/badem/077.webp", "assets/badem/078.webp", "assets/badem/079.webp", "assets/badem/080.webp", "assets/badem/081.webp", "assets/badem/082.webp", "assets/badem/083.webp", "assets/badem/084.webp", "assets/badem/085.webp", "assets/badem/086.webp", "assets/badem/087.webp", "assets/badem/088.webp", "assets/badem/089.webp", "assets/badem/090.webp", "assets/badem/091.webp", "assets/badem/092.webp", "assets/badem/093.webp", "assets/badem/094.webp", "assets/badem/095.webp", "assets/badem/096.webp", "assets/badem/097.webp", "assets/badem/098.webp", "assets/badem/099.webp", "assets/badem/100.webp", "assets/badem/101.webp", "assets/badem/102.webp", "assets/badem/103.webp", "assets/badem/104.webp", "assets/badem/105.webp", "assets/badem/106.webp", "assets/badem/107.webp", "assets/badem/108.webp", "assets/badem/109.webp", "assets/badem/110.webp", "assets/badem/111.webp", "assets/badem/112.webp", "assets/badem/113.webp", "assets/badem/114.webp", "assets/badem/115.webp", "assets/badem/116.webp", "assets/badem/117.webp", "assets/badem/118.webp", "assets/badem/119.webp", "assets/badem/120.webp", "assets/badem/121.webp", "assets/badem/122.webp", "assets/badem/123.webp", "assets/badem/124.webp", "assets/badem/125.webp", "assets/badem/126.webp", "assets/badem/127.webp", "assets/badem/128.webp", "assets/badem/129.webp", "assets/badem/130.webp", "assets/badem/131.webp", "assets/badem/132.webp", "assets/badem/133.webp", "assets/badem/134.webp", "assets/badem/135.webp", "assets/badem/136.webp", "assets/badem/137.webp", "assets/badem/138.webp", "assets/badem/139.webp", "assets/badem/140.webp", "assets/badem/141.webp", "assets/badem/142.webp", "assets/badem/143.webp", "assets/badem/144.webp", "assets/badem/145.webp", "assets/badem/146.webp", "assets/badem/147.webp", "assets/badem/148.webp", "assets/badem/149.webp", "assets/badem/150.webp", "assets/badem/151.webp", "assets/badem/152.webp", "assets/badem/153.webp", "assets/badem/154.webp", "assets/badem/155.webp", "assets/badem/156.webp", "assets/badem/157.webp", "assets/badem/158.webp", "assets/badem/159.webp", "assets/badem/160.webp", "assets/badem/161.webp", "assets/badem/162.webp", "assets/badem/163.webp", "assets/badem/164.webp", "assets/badem/165.webp", "assets/badem/166.webp", "assets/badem/167.webp", "assets/badem/168.webp", "assets/badem/169.webp", "assets/badem/170.webp", "assets/badem/171.webp", "assets/badem/172.webp", "assets/badem/173.webp", "assets/badem/174.webp", "assets/badem/175.webp", "assets/badem/176.webp", "assets/badem/177.webp", "assets/badem/178.webp", "assets/badem/179.webp", "assets/badem/180.webp", "assets/badem/181.webp", "assets/badem/182.webp", "assets/badem/183.webp", "assets/badem/184.webp", "assets/badem/185.webp", "assets/badem/186.webp", "assets/badem/187.webp", "assets/badem/188.webp", "assets/badem/189.webp", "assets/badem/190.webp", "assets/badem/191.webp", "assets/badem/192.webp", "assets/badem/193.webp", "assets/badem/194.webp", "assets/badem/195.webp", "assets/badem/196.webp", "assets/badem/197.webp", "assets/badem/198.webp", "assets/badem/199.webp", "assets/badem/200.webp", "assets/badem/201.webp", "assets/badem/202.webp", "assets/badem/203.webp", "assets/badem/204.webp", "assets/badem/205.webp", "assets/badem/206.webp", "assets/badem/207.webp", "assets/badem/208.webp", "assets/badem/209.webp", "assets/badem/210.webp", "assets/badem/211.webp", "assets/badem/212.webp", "assets/badem/213.webp", "assets/badem/214.webp", "assets/badem/215.webp", "assets/badem/216.webp", "assets/badem/217.webp", "assets/badem/218.webp", "assets/badem/219.webp", "assets/badem/220.webp", "assets/badem/221.webp", "assets/badem/222.webp", "assets/badem/223.webp", "assets/badem/224.webp", "assets/badem/225.webp", "assets/badem/226.webp", "assets/badem/227.webp", "assets/badem/228.webp", "assets/badem/229.webp", "assets/badem/230.webp", "assets/badem/231.webp", "assets/badem/232.webp", "assets/badem/233.webp", "assets/badem/234.webp", "assets/badem/235.webp", "assets/badem/236.webp", "assets/badem/237.webp", "assets/badem/238.webp", "assets/badem/239.webp", "assets/badem/240.webp", "assets/badem/241.webp", "assets/badem/242.webp", "assets/badem/243.webp", "assets/badem/244.webp", "assets/badem/245.webp", "assets/badem/246.webp", "assets/badem/247.webp", "assets/badem/248.webp", "assets/badem/249.webp", "assets/badem/250.webp", "assets/badem/251.webp", "assets/badem/252.webp", "assets/badem/253.webp", "assets/badem/254.webp", "assets/badem/255.webp", "assets/badem/256.webp"]</script>
-    <script type="application/json" id="pbBoje">["#ddccb3","#ddccb3","#ddccb3","#ddccb3","#dccbb2","#dccbb2","#dbcbb1","#dbcab1","#dac9af","#d9c8ad","#d8c7ac","#d7c6ab","#d7c5aa","#d6c3a8","#d4c1a6","#d3c0a5","#d2c0a4","#d0bea1","#cebc9e","#cdba9d","#cbb89a","#c8b597","#c7b496","#c4b092","#c3ae90","#c1ac8e","#bea98a","#bba587","#b8a283","#b69f80","#b39b7c","#b09879","#ad9576","#aa9273","#a68e6f","#a38b6d","#a08769","#9d8467","#988063","#937c60","#90795d","#8b7459","#877156","#836d52","#7e694f","#7a654b","#766148","#725d44","#6f5a42","#69553d","#66523b","#614d38","#5d4934","#594531","#51412d","#473725","#3e301f","#36291a","#312316","#2c1f12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2c1e13","#2d1f14","#322217","#36261a","#3d2c1f","#483525","#584331","#69543d","#7d674f","#967f63","#ac9578","#bfa88a","#cfb99a","#dac7a7","#e4d2b3","#e9d9bc","#ebddc2","#ebddc2","#ebddc3","#ebdec5","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ede0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#eee3cb","#f1e7d1","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f1e8d4","#f0e5d1","#eee3ce","#ece1cb","#ebdfc8","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc6","#ebdec6","#ebdfc7","#ebdec6","#ebdfc6","#ebdec6","#ebdec6","#ebddc5","#eaddc5","#eaddc5","#eaddc5","#eaddc5","#ebe0c7","#f0e7d2","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f4ebd9","#f3ead8","#f2e9d6","#f0e7d4","#eee5d2","#ede3d0","#ede3cf","#ebe1cd","#eae0cd","#e9dfcb","#e8dec9","#e7ddc8","#e7ddc8","#e8deca","#e9dfcb","#e9e0cb","#e9dfca","#e8dec9","#e7ddc8","#e6dbc7","#e4d9c5","#e2d8c2","#e0d5c0","#e1d6c1","#e1d6c0","#e0d5bf","#e0d4be","#dfd4bd","#dfd2bb","#ded1b8","#dfd0b6","#dfcfb4","#dfceb3","#e0cfb3","#e4d3b6","#e4d4b6","#e3d3b4","#e1d2b2","#dcd0ac","#d9cea9","#d7cda7","#d6cca4","#d4cba1","#d1ca9e","#cfc89b","#d1c89b","#d2c89b","#cfc798","#ccc293","#cec296","#d0c598","#d2c79c","#d4c89e","#d5caa0","#d4c9a0","#d7caa5","#d6c9a5","#d4c7a3","#d3c5a0","#d7c6a6","#dbc8ab","#dac7a9","#d8c5a5","#d5c3a1","#cfc09b","#ccbf96","#cbbe96","#cabe95","#ccc098","#cfc39a","#d0c49c","#d1c49d","#d0c39c","#cfc09a","#cdbd97","#cdbb97","#cebc98","#d2c09d","#d6c4a3","#dac7a7","#dac8a9"]</script>
+    <script type="application/json" id="pbFrejmovi">["assets/badem/001.webp", "assets/badem/002.webp", "assets/badem/003.webp", "assets/badem/004.webp", "assets/badem/005.webp", "assets/badem/006.webp", "assets/badem/007.webp", "assets/badem/008.webp", "assets/badem/009.webp", "assets/badem/010.webp", "assets/badem/011.webp", "assets/badem/012.webp", "assets/badem/013.webp", "assets/badem/014.webp", "assets/badem/015.webp", "assets/badem/016.webp", "assets/badem/017.webp", "assets/badem/018.webp", "assets/badem/019.webp", "assets/badem/020.webp", "assets/badem/021.webp", "assets/badem/022.webp", "assets/badem/023.webp", "assets/badem/024.webp", "assets/badem/025.webp", "assets/badem/026.webp", "assets/badem/027.webp", "assets/badem/028.webp", "assets/badem/029.webp", "assets/badem/030.webp", "assets/badem/031.webp", "assets/badem/032.webp", "assets/badem/033.webp", "assets/badem/034.webp", "assets/badem/035.webp", "assets/badem/036.webp", "assets/badem/037.webp", "assets/badem/038.webp", "assets/badem/039.webp", "assets/badem/040.webp", "assets/badem/041.webp", "assets/badem/042.webp", "assets/badem/043.webp", "assets/badem/044.webp", "assets/badem/045.webp", "assets/badem/046.webp", "assets/badem/047.webp", "assets/badem/048.webp", "assets/badem/049.webp", "assets/badem/050.webp", "assets/badem/051.webp", "assets/badem/052.webp", "assets/badem/053.webp", "assets/badem/054.webp", "assets/badem/055.webp", "assets/badem/056.webp", "assets/badem/057.webp", "assets/badem/058.webp", "assets/badem/059.webp", "assets/badem/060.webp", "assets/badem/061.webp", "assets/badem/062.webp", "assets/badem/063.webp", "assets/badem/064.webp", "assets/badem/065.webp", "assets/badem/066.webp", "assets/badem/067.webp", "assets/badem/068.webp", "assets/badem/069.webp", "assets/badem/070.webp", "assets/badem/071.webp", "assets/badem/072.webp", "assets/badem/073.webp", "assets/badem/074.webp", "assets/badem/075.webp", "assets/badem/076.webp", "assets/badem/077.webp", "assets/badem/078.webp", "assets/badem/079.webp", "assets/badem/080.webp", "assets/badem/081.webp", "assets/badem/082.webp", "assets/badem/083.webp", "assets/badem/084.webp", "assets/badem/085.webp", "assets/badem/086.webp", "assets/badem/087.webp", "assets/badem/088.webp", "assets/badem/089.webp", "assets/badem/090.webp", "assets/badem/091.webp", "assets/badem/092.webp", "assets/badem/093.webp", "assets/badem/094.webp", "assets/badem/095.webp", "assets/badem/096.webp", "assets/badem/097.webp", "assets/badem/098.webp", "assets/badem/099.webp", "assets/badem/100.webp", "assets/badem/101.webp", "assets/badem/102.webp", "assets/badem/103.webp", "assets/badem/104.webp", "assets/badem/105.webp", "assets/badem/106.webp", "assets/badem/107.webp", "assets/badem/108.webp", "assets/badem/109.webp", "assets/badem/110.webp", "assets/badem/111.webp", "assets/badem/112.webp", "assets/badem/113.webp", "assets/badem/114.webp", "assets/badem/115.webp", "assets/badem/116.webp", "assets/badem/117.webp", "assets/badem/118.webp", "assets/badem/119.webp", "assets/badem/120.webp", "assets/badem/121.webp", "assets/badem/122.webp", "assets/badem/123.webp", "assets/badem/124.webp", "assets/badem/125.webp", "assets/badem/126.webp", "assets/badem/127.webp", "assets/badem/128.webp", "assets/badem/129.webp", "assets/badem/130.webp", "assets/badem/131.webp", "assets/badem/132.webp", "assets/badem/133.webp", "assets/badem/134.webp", "assets/badem/135.webp", "assets/badem/136.webp", "assets/badem/137.webp", "assets/badem/138.webp", "assets/badem/139.webp", "assets/badem/140.webp", "assets/badem/141.webp", "assets/badem/142.webp", "assets/badem/143.webp", "assets/badem/144.webp", "assets/badem/145.webp", "assets/badem/146.webp", "assets/badem/147.webp", "assets/badem/148.webp", "assets/badem/149.webp", "assets/badem/150.webp", "assets/badem/151.webp", "assets/badem/152.webp", "assets/badem/153.webp", "assets/badem/154.webp", "assets/badem/155.webp", "assets/badem/156.webp", "assets/badem/157.webp", "assets/badem/158.webp", "assets/badem/159.webp", "assets/badem/160.webp", "assets/badem/161.webp", "assets/badem/162.webp", "assets/badem/163.webp", "assets/badem/164.webp", "assets/badem/165.webp", "assets/badem/166.webp", "assets/badem/167.webp", "assets/badem/168.webp", "assets/badem/169.webp", "assets/badem/170.webp", "assets/badem/171.webp"]</script>
+    <script type="application/json" id="pbBoje">["#ddccb3","#ddccb3","#ddccb3","#ddccb3","#dccbb2","#dccbb2","#dbcbb1","#dbcab1","#dac9af","#d9c8ad","#d8c7ac","#d7c6ab","#d7c5aa","#d6c3a8","#d4c1a6","#d3c0a5","#d2c0a4","#d0bea1","#cebc9e","#cdba9d","#cbb89a","#c8b597","#c7b496","#c4b092","#c3ae90","#c1ac8e","#bea98a","#bba587","#b8a283","#b69f80","#b39b7c","#b09879","#ad9576","#aa9273","#a68e6f","#a38b6d","#a08769","#9d8467","#988063","#937c60","#90795d","#8b7459","#877156","#836d52","#7e694f","#7a654b","#766148","#725d44","#6f5a42","#69553d","#66523b","#614d38","#5d4934","#594531","#51412d","#473725","#3e301f","#36291a","#312316","#2c1f12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2c1e13","#2d1f14","#322217","#36261a","#3d2c1f","#483525","#584331","#69543d","#7d674f","#967f63","#ac9578","#bfa88a","#cfb99a","#dac7a7","#e4d2b3","#e9d9bc","#ebddc2","#ebddc2","#ebddc3","#ebdec5","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ede0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#eee3cb","#f1e7d1","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f1e8d4","#f0e5d1","#eee3ce","#ece1cb","#ebdfc8","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc6","#ebdec6","#ebdfc7","#ebdec6","#ebdfc6","#ebdec6","#ebdec6","#ebddc5","#eaddc5","#eaddc5","#eaddc5","#eaddc5","#ebe0c7","#f0e7d2","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd9","#f4ebd9"]</script>
   </section>
 
   <section class="od96" aria-labelledby="od96Naslov">
@@ -1564,7 +1535,7 @@
       <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Ne popunjavajte <input id="kWeb" tabindex="-1" autocomplete="off"></label></p>
     </form>
   </div>
-<nav class="bnav" id="bnav" aria-label="Brza navigacija"><a href="#pocetna" data-s="pocetna"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>Početna</a><a href="#ponuda" data-s="ponuda"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 14c0-5 3.6-8 8-8s8 3 8 8v4H4z"/><path d="M8 10v8M12 8v10M16 10v8"/></svg></span>Ponuda</a><a href="#slave" data-s="slave"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg></span>Slave</a><a href="#lokacije" data-s="lokacije"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>Lokacije</a></nav>
+<nav class="bnav" id="bnav" aria-label="Brza navigacija"><a href="#pocetna" data-s="pocetna"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>Početna</a><a href="#ponuda" data-s="ponuda"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 14c0-5 3.6-8 8-8s8 3 8 8v4H4z"/><path d="M8 10v8M12 8v10M16 10v8"/></svg></span>Ponuda</a><a href="#poruci" data-s="poruci" class="glavno"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1.6 10.2a2 2 0 0 1-2 1.8H7.6a2 2 0 0 1-2-1.8z"/><path d="M8.5 9 12 4l3.5 5"/></svg></span>Poruči</a><a href="#slave" data-s="slave"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg></span>Slave</a><a href="#lokacije" data-s="lokacije"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>Lokacije</a></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <!-- ================= RADIONICA KOLAČA ================= -->
@@ -3018,7 +2989,8 @@ ruta();
   function ucitaj(){
     if(ucitano) return; ucitano = true;
     const red = [], bio = new Set();
-    for(const k of [16,8,4,2,1]) for(let i=0;i<N;i+=k) if(!bio.has(i)){ bio.add(i); red.push(i); }
+    const KORAK = matchMedia('(max-width:760px)').matches ? 2 : 1;   // na telefonu svaki drugi kadar: upola manje preuzimanja
+    for(const k of [16,8,4,2,1].filter(k => k >= KORAK)) for(let i=0;i<N;i+=k) if(!bio.has(i)){ bio.add(i); red.push(i); }
     if(!bio.has(N-1)) red.splice(1,0,N-1);
     red.forEach(i => { const im = new Image(); im.decoding = 'async'; im.onload = () => { if(Math.abs(i - Math.round(sad)) < 24) crtaj(true); }; im.src = FR[i]; slike[i] = im; });
   }
@@ -3035,7 +3007,7 @@ ruta();
     const p = Math.max(0, Math.min(1, -r.top / dug)), n = faze.length;
     const x = Math.min(n - 1e-6, p * n * 1.08), k = Math.floor(x), u = Math.min(1, (x - k) * 1.15);
     cilj = GR[k] + (GR[k+1] - GR[k]) * u;
-    if(k !== faza){ faza = k; faze.forEach((el, i) => el.classList.toggle('on', i === k)); }
+    if(k !== faza){ faza = k; faze.forEach((el, i) => el.classList.toggle('on', i === k)); sec.classList.toggle('posle', k > 0); }
     dalje.style.opacity = p > .03 ? 0 : 1;
     if(!radi){ radi = true; requestAnimationFrame(petlja); }
   }
@@ -3060,14 +3032,15 @@ ruta();
   let FR, BG; try{ FR = JSON.parse(document.getElementById('pbFrejmovi').textContent); BG = JSON.parse(document.getElementById('pbBoje').textContent); }catch(_){ return; }
   const N = FR.length, cv = document.getElementById('pbPlatno'), cx = cv.getContext('2d');
   const faze = [...sec.querySelectorAll('.kp-faza')], stage = sec.querySelector('.kp-stage'), dalje = sec.querySelector('.kp-dalje');
-  const GR = [0, 21, 54, 81, 132, 171];   // prvi kadar svake faze
+  const GR = [0, 54, 132];   // prvi kadar svake faze
   const slike = new Array(N); let ucitano = false, cilj = 0, sad = 0, nacrtan = -1, radi = false, faza = -1;
   cv.style.backgroundImage = `url("${FR[0]}")`;
   const lum = h => { const n = parseInt(h.slice(1),16); return (.2126*(n>>16) + .7152*((n>>8)&255) + .0722*(n&255)) / 255; };
   function ucitaj(){
     if(ucitano) return; ucitano = true;
     const red = [], bio = new Set();
-    for(const k of [16,8,4,2,1]) for(let i=0;i<N;i+=k) if(!bio.has(i)){ bio.add(i); red.push(i); }
+    const KORAK = matchMedia('(max-width:760px)').matches ? 2 : 1;   // na telefonu svaki drugi kadar: upola manje preuzimanja
+    for(const k of [16,8,4,2,1].filter(k => k >= KORAK)) for(let i=0;i<N;i+=k) if(!bio.has(i)){ bio.add(i); red.push(i); }
     if(!bio.has(N-1)) red.splice(1,0,N-1);
     red.forEach(i => { const im = new Image(); im.decoding = 'async'; im.onload = () => { if(Math.abs(i - Math.round(sad)) < 24) crtaj(true); }; im.src = FR[i]; slike[i] = im; });
   }
@@ -3084,7 +3057,7 @@ ruta();
     const p = Math.max(0, Math.min(1, -r.top / dug));
     cilj = Math.min(N-1, p * 1.05 * (N-1));
     let k = 0; GR.forEach((g,i) => { if(cilj >= g - .5) k = i; });
-    if(k !== faza){ faza = k; faze.forEach((el,i) => el.classList.toggle('on', i === k)); }
+    if(k !== faza){ faza = k; faze.forEach((el,i) => el.classList.toggle('on', i === k)); sec.classList.toggle('posle', k > 0); }
     dalje.style.opacity = p > .02 ? 0 : 1;
     if(!radi){ radi = true; requestAnimationFrame(petlja); }
   }
@@ -3184,7 +3157,7 @@ ruta();
   const u = document.getElementById('uvod'); if(!u) return;
   const html = document.documentElement, v = document.getElementById('uvVideo');
   if(!html.classList.contains('uvod')){ u.remove(); return; }
-  try{ sessionStorage.setItem('uvod','1'); }catch(_){}
+  try{ sessionStorage.setItem('uvod','1'); localStorage.setItem('uvod','1'); }catch(_){}
   let gotovo = false, izlazi = false;
   const kraj = () => { if(gotovo) return; gotovo = true; html.classList.remove('uvod'); u.remove(); };
   const izlaz = (posle) => { if(izlazi) return; izlazi = true; setTimeout(() => { u.classList.add('izlaz'); setTimeout(kraj, 800); }, posle || 0); };
@@ -3204,65 +3177,20 @@ ruta();
   setTimeout(() => izlaz(0), 9000);
 })();
 
-/* ================= NAŠA PONUDA: velika slika + traka ================= */
+/* ================= NAŠA PONUDA: mreža sa filterima ================= */
 (() => {
-  const g = document.getElementById('galerija'); if(!g) return;
-  const A = document.getElementById('glA'), B = document.getElementById('glB'), info = g.querySelector('.gl-info');
-  const kat = document.getElementById('glKat'), ime = document.getElementById('glIme'), opis = document.getElementById('glOpis'), broj = document.getElementById('glBroj'), vr = document.getElementById('glVreme');
-  const traka = document.getElementById('glTraka');
-  const tiho = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  [].forEach((id,i) => { /* žužu sada ima prave fotografije */ const el = document.getElementById(id); if(el && typeof ilustracija === 'function') el.innerHTML = ilustracija('zuzu', i ? [] : ['sir']); });
-  let lista = [...traka.querySelectorAll('.gl-t')], i = 0, prednja = A, zadnja = B, tajmer = null, stalo = tiho, vidljivo = false;
-  const vidljive = () => lista.filter(t => !t.closest('li').hidden);
-  function prikazi(t, bez){
-    const v = vidljive(); i = Math.max(0, v.indexOf(t));
-    v.forEach(x => x.setAttribute('aria-current', String(x === t)));
-    broj.textContent = `${i+1} od ${v.length}`;
-    const sl = t.dataset.img;
-    if(prednja.getAttribute('src') !== sl){
-      zadnja.classList.add('skriven'); zadnja.classList.remove('zum');
-      zadnja.onload = () => {
-        zadnja.classList.remove('skriven'); if(!tiho) requestAnimationFrame(() => zadnja.classList.add('zum'));
-        prednja.classList.add('skriven'); prednja.setAttribute('aria-hidden','true'); prednja.alt = '';
-        zadnja.removeAttribute('aria-hidden'); zadnja.alt = t.dataset.n;
-        [prednja, zadnja] = [zadnja, prednja];
-      };
-      zadnja.src = sl;
-    }
-    if(bez){ kat.textContent = t.dataset.k; ime.textContent = t.dataset.n; opis.textContent = t.dataset.d; }
-    else { info.classList.add('menja'); setTimeout(() => { kat.textContent = t.dataset.k; ime.textContent = t.dataset.n; opis.textContent = t.dataset.d; info.classList.remove('menja'); }, 300); }
-    const li = t.closest('li'); traka.scrollTo({left: li.offsetLeft - traka.clientWidth/2 + li.offsetWidth/2, behavior: tiho ? 'auto' : 'smooth'});
-    tik();
-  }
-  const pomeri = d => { const v = vidljive(); prikazi(v[(i + d + v.length) % v.length]); };
-  function tik(){
-    clearTimeout(tajmer); vr.classList.remove('tece');
-    if(stalo || !vidljivo) return;
-    void vr.offsetWidth; vr.classList.add('tece');
-    tajmer = setTimeout(() => pomeri(1), 5000);
-  }
-  function stani(){ stalo = true; g.classList.add('stalo'); clearTimeout(tajmer); vr.classList.remove('tece'); }
-  if(tiho) g.classList.add('stalo');
-  traka.addEventListener('click', e => { const t = e.target.closest('.gl-t'); if(t){ stani(); prikazi(t); } });
-  document.getElementById('glPre').addEventListener('click', () => { stani(); pomeri(-1); });
-  document.getElementById('glSle').addEventListener('click', () => { stani(); pomeri(1); });
-  g.addEventListener('keydown', e => { if(e.key === 'ArrowRight'){ stani(); pomeri(1); } if(e.key === 'ArrowLeft'){ stani(); pomeri(-1); } });
-  ['touchstart','wheel'].forEach(ev => traka.addEventListener(ev, stani, {passive:true}));
-  g.addEventListener('pointerenter', () => { clearTimeout(tajmer); vr.classList.remove('tece'); });
-  g.addEventListener('pointerleave', () => tik());
-  // prevlačenje prstom preko velike slike
-  let x0 = null; const sl = g.querySelector('.gl-slika');
-  sl.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; stani(); }, {passive:true});
-  sl.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if(Math.abs(dx) > 40) pomeri(dx < 0 ? 1 : -1); x0 = null; });
-  const filtriraj = f => {
-    document.querySelectorAll('.vt-f').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === f)));
-    traka.querySelectorAll('li').forEach(li => { li.hidden = !(f === 'sve' || li.dataset.kat === f); });
-    prikazi(vidljive()[0]);
+  const m = document.getElementById('pnMreza'); if(!m) return;
+  const vw = document.getElementById('pnViseW');
+  let f = 'sve', sve = false;
+  const crtaj = () => {
+    m.querySelectorAll('li').forEach(li => { li.hidden = f === 'sve' ? (!sve && !li.hasAttribute('data-top')) : li.dataset.kat !== f; });
+    vw.hidden = !(f === 'sve' && !sve);
   };
-  document.querySelectorAll('.vt-f').forEach(b => b.addEventListener('click', () => { stani(); filtriraj(b.dataset.f); }));
-  document.querySelectorAll('[data-vt]').forEach(a => a.addEventListener('click', () => { stani(); filtriraj(a.dataset.vt); }));
-  new IntersectionObserver(([e]) => { vidljivo = e.isIntersecting; tik(); }, {threshold:.45}).observe(g);
-  prikazi(lista[0], true);
+  const filtriraj = x => { f = x || 'sve'; document.querySelectorAll('.vt-f').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === f))); crtaj(); };
+  document.querySelectorAll('.vt-f').forEach(b => b.addEventListener('click', () => filtriraj(b.dataset.f)));
+  document.querySelectorAll('[data-vt]').forEach(a => a.addEventListener('click', () => filtriraj(a.dataset.vt)));
+  document.getElementById('pnVise').addEventListener('click', () => { sve = true; crtaj(); });
+  crtaj();
 })();
 </script>
 </body>
