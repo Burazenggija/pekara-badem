@@ -194,16 +194,6 @@
   }
   @media (max-width:760px){ .kp-stage{height:calc(100vh - var(--hh,64px) - 64px);height:calc(100svh - var(--hh,64px) - 64px - env(safe-area-inset-bottom,0px))} }
   @media (prefers-reduced-motion:reduce){ .kp-faza{transition:none;transform:none} .kp-dalje svg{animation:none} }
-  /* ===== Priča o Bademu (skrol): peć vatra lepinja ponuda 8 pekara mapa ===== */
-  .kp.pb{height:900vh}
-  #o-nama.kp{height:330vh}
-  @media (max-width:760px){ #o-nama.kp{height:300vh} }
-  #o-nama.kp{background:var(--pbbg,#f4ebd8);transition:background-color .25s linear}
-  #o-nama .kp-slika canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:center/cover no-repeat;
-    -webkit-mask-image:radial-gradient(closest-side,#000 64%,rgba(0,0,0,.6) 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 64%,rgba(0,0,0,.6) 82%,transparent 100%)}
-  .kp-faza .god{display:block;font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--zelena-t);margin-bottom:4px}
-  .kp.tamno .kp-faza .god{color:#e8bf6e}
-  @media (max-width:860px){ .kp.pb{height:820vh} }
   .baner{background:var(--tamna);color:#fff;padding-block:0}
   .baner .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-block:70px}
   .baner .script{color:#bfe5bf}
@@ -1238,11 +1228,11 @@
               <div class="actions"><a href="#poruci" class="btn">Poručite kolač</a><a href="#slave" class="btn out">Pronađi svoju slavu</a></div></article>
           </div>
         </div>
-        <figure class="kp-slika"><canvas id="kpPlatno" width="1280" height="720" role="img" aria-label="Pekar mesi testo, oblikuje visok okrugao kolač sa režnjevima, rukom stavlja ukrase od testa, bure, klasje i cvet, i kolač se peče do zlatne boje"></canvas></figure>
+        <figure class="kp-slika"><canvas id="kpPlatno" width="1600" height="900" role="img" aria-label="Pekar mesi testo, oblikuje visok okrugao kolač sa režnjevima, rukom stavlja ukrase od testa, bure, klasje i cvet, i kolač se peče do zlatne boje"></canvas></figure>
       </div>
       <div class="kp-dalje" id="kpDalje" aria-hidden="true">Skrolujte <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
     </div>
-    <script type="application/json" id="kpFrejmovi">["assets/kolac3/001.webp", "assets/kolac3/002.webp", "assets/kolac3/003.webp", "assets/kolac3/004.webp", "assets/kolac3/005.webp", "assets/kolac3/006.webp", "assets/kolac3/007.webp", "assets/kolac3/008.webp", "assets/kolac3/009.webp", "assets/kolac3/010.webp", "assets/kolac3/011.webp", "assets/kolac3/012.webp", "assets/kolac3/013.webp", "assets/kolac3/014.webp", "assets/kolac3/015.webp", "assets/kolac3/016.webp", "assets/kolac3/017.webp", "assets/kolac3/018.webp", "assets/kolac3/019.webp", "assets/kolac3/020.webp", "assets/kolac3/021.webp", "assets/kolac3/022.webp", "assets/kolac3/023.webp", "assets/kolac3/024.webp", "assets/kolac3/025.webp", "assets/kolac3/026.webp", "assets/kolac3/027.webp", "assets/kolac3/028.webp", "assets/kolac3/029.webp", "assets/kolac3/030.webp", "assets/kolac3/031.webp", "assets/kolac3/032.webp", "assets/kolac3/033.webp", "assets/kolac3/034.webp", "assets/kolac3/035.webp", "assets/kolac3/036.webp", "assets/kolac3/037.webp", "assets/kolac3/038.webp", "assets/kolac3/039.webp", "assets/kolac3/040.webp", "assets/kolac3/041.webp", "assets/kolac3/042.webp", "assets/kolac3/043.webp", "assets/kolac3/044.webp", "assets/kolac3/045.webp", "assets/kolac3/046.webp", "assets/kolac3/047.webp", "assets/kolac3/048.webp", "assets/kolac3/049.webp", "assets/kolac3/050.webp", "assets/kolac3/051.webp", "assets/kolac3/052.webp", "assets/kolac3/053.webp", "assets/kolac3/054.webp", "assets/kolac3/055.webp", "assets/kolac3/056.webp", "assets/kolac3/057.webp", "assets/kolac3/058.webp", "assets/kolac3/059.webp", "assets/kolac3/060.webp", "assets/kolac3/061.webp", "assets/kolac3/062.webp", "assets/kolac3/063.webp", "assets/kolac3/064.webp", "assets/kolac3/065.webp", "assets/kolac3/066.webp", "assets/kolac3/067.webp", "assets/kolac3/068.webp", "assets/kolac3/069.webp", "assets/kolac3/070.webp", "assets/kolac3/071.webp", "assets/kolac3/072.webp", "assets/kolac3/073.webp", "assets/kolac3/074.webp", "assets/kolac3/075.webp", "assets/kolac3/076.webp", "assets/kolac3/077.webp", "assets/kolac3/078.webp", "assets/kolac3/079.webp", "assets/kolac3/080.webp", "assets/kolac3/081.webp", "assets/kolac3/082.webp", "assets/kolac3/083.webp", "assets/kolac3/084.webp", "assets/kolac3/085.webp", "assets/kolac3/086.webp", "assets/kolac3/087.webp", "assets/kolac3/088.webp", "assets/kolac3/089.webp", "assets/kolac3/090.webp", "assets/kolac3/091.webp", "assets/kolac3/092.webp", "assets/kolac3/093.webp", "assets/kolac3/094.webp", "assets/kolac3/095.webp", "assets/kolac3/096.webp", "assets/kolac3/097.webp", "assets/kolac3/098.webp", "assets/kolac3/099.webp", "assets/kolac3/100.webp", "assets/kolac3/101.webp", "assets/kolac3/102.webp", "assets/kolac3/103.webp", "assets/kolac3/104.webp", "assets/kolac3/105.webp", "assets/kolac3/106.webp", "assets/kolac3/107.webp", "assets/kolac3/108.webp", "assets/kolac3/109.webp", "assets/kolac3/110.webp", "assets/kolac3/111.webp", "assets/kolac3/112.webp", "assets/kolac3/113.webp", "assets/kolac3/114.webp", "assets/kolac3/115.webp", "assets/kolac3/116.webp", "assets/kolac3/117.webp", "assets/kolac3/118.webp", "assets/kolac3/119.webp", "assets/kolac3/120.webp", "assets/kolac3/121.webp", "assets/kolac3/122.webp", "assets/kolac3/123.webp", "assets/kolac3/124.webp", "assets/kolac3/125.webp", "assets/kolac3/126.webp", "assets/kolac3/127.webp", "assets/kolac3/128.webp", "assets/kolac3/129.webp", "assets/kolac3/130.webp", "assets/kolac3/131.webp", "assets/kolac3/132.webp", "assets/kolac3/133.webp", "assets/kolac3/134.webp", "assets/kolac3/135.webp", "assets/kolac3/136.webp", "assets/kolac3/137.webp", "assets/kolac3/138.webp", "assets/kolac3/139.webp", "assets/kolac3/140.webp", "assets/kolac3/141.webp", "assets/kolac3/142.webp", "assets/kolac3/143.webp", "assets/kolac3/144.webp", "assets/kolac3/145.webp", "assets/kolac3/146.webp", "assets/kolac3/147.webp", "assets/kolac3/148.webp", "assets/kolac3/149.webp", "assets/kolac3/150.webp", "assets/kolac3/151.webp", "assets/kolac3/152.webp", "assets/kolac3/153.webp", "assets/kolac3/154.webp", "assets/kolac3/155.webp", "assets/kolac3/156.webp", "assets/kolac3/157.webp", "assets/kolac3/158.webp", "assets/kolac3/159.webp", "assets/kolac3/160.webp", "assets/kolac3/161.webp", "assets/kolac3/162.webp", "assets/kolac3/163.webp", "assets/kolac3/164.webp", "assets/kolac3/165.webp", "assets/kolac3/166.webp", "assets/kolac3/167.webp", "assets/kolac3/168.webp", "assets/kolac3/169.webp", "assets/kolac3/170.webp", "assets/kolac3/171.webp", "assets/kolac3/172.webp", "assets/kolac3/173.webp", "assets/kolac3/174.webp", "assets/kolac3/175.webp", "assets/kolac3/176.webp", "assets/kolac3/177.webp", "assets/kolac3/178.webp", "assets/kolac3/179.webp", "assets/kolac3/180.webp"]</script>
+    <script type="application/json" id="kpFrejmovi">["assets/kolac4/001.webp", "assets/kolac4/002.webp", "assets/kolac4/003.webp", "assets/kolac4/004.webp", "assets/kolac4/005.webp", "assets/kolac4/006.webp", "assets/kolac4/007.webp", "assets/kolac4/008.webp", "assets/kolac4/009.webp", "assets/kolac4/010.webp", "assets/kolac4/011.webp", "assets/kolac4/012.webp", "assets/kolac4/013.webp", "assets/kolac4/014.webp", "assets/kolac4/015.webp", "assets/kolac4/016.webp", "assets/kolac4/017.webp", "assets/kolac4/018.webp", "assets/kolac4/019.webp", "assets/kolac4/020.webp", "assets/kolac4/021.webp", "assets/kolac4/022.webp", "assets/kolac4/023.webp", "assets/kolac4/024.webp", "assets/kolac4/025.webp", "assets/kolac4/026.webp", "assets/kolac4/027.webp", "assets/kolac4/028.webp", "assets/kolac4/029.webp", "assets/kolac4/030.webp", "assets/kolac4/031.webp", "assets/kolac4/032.webp", "assets/kolac4/033.webp", "assets/kolac4/034.webp", "assets/kolac4/035.webp", "assets/kolac4/036.webp", "assets/kolac4/037.webp", "assets/kolac4/038.webp", "assets/kolac4/039.webp", "assets/kolac4/040.webp", "assets/kolac4/041.webp", "assets/kolac4/042.webp", "assets/kolac4/043.webp", "assets/kolac4/044.webp", "assets/kolac4/045.webp", "assets/kolac4/046.webp", "assets/kolac4/047.webp", "assets/kolac4/048.webp", "assets/kolac4/049.webp", "assets/kolac4/050.webp", "assets/kolac4/051.webp", "assets/kolac4/052.webp", "assets/kolac4/053.webp", "assets/kolac4/054.webp", "assets/kolac4/055.webp", "assets/kolac4/056.webp", "assets/kolac4/057.webp", "assets/kolac4/058.webp", "assets/kolac4/059.webp", "assets/kolac4/060.webp", "assets/kolac4/061.webp", "assets/kolac4/062.webp", "assets/kolac4/063.webp", "assets/kolac4/064.webp", "assets/kolac4/065.webp", "assets/kolac4/066.webp", "assets/kolac4/067.webp", "assets/kolac4/068.webp", "assets/kolac4/069.webp", "assets/kolac4/070.webp", "assets/kolac4/071.webp", "assets/kolac4/072.webp", "assets/kolac4/073.webp", "assets/kolac4/074.webp", "assets/kolac4/075.webp", "assets/kolac4/076.webp", "assets/kolac4/077.webp", "assets/kolac4/078.webp", "assets/kolac4/079.webp", "assets/kolac4/080.webp", "assets/kolac4/081.webp", "assets/kolac4/082.webp", "assets/kolac4/083.webp", "assets/kolac4/084.webp", "assets/kolac4/085.webp", "assets/kolac4/086.webp", "assets/kolac4/087.webp", "assets/kolac4/088.webp", "assets/kolac4/089.webp", "assets/kolac4/090.webp", "assets/kolac4/091.webp", "assets/kolac4/092.webp", "assets/kolac4/093.webp", "assets/kolac4/094.webp", "assets/kolac4/095.webp", "assets/kolac4/096.webp", "assets/kolac4/097.webp", "assets/kolac4/098.webp", "assets/kolac4/099.webp", "assets/kolac4/100.webp", "assets/kolac4/101.webp", "assets/kolac4/102.webp", "assets/kolac4/103.webp", "assets/kolac4/104.webp", "assets/kolac4/105.webp", "assets/kolac4/106.webp", "assets/kolac4/107.webp", "assets/kolac4/108.webp", "assets/kolac4/109.webp", "assets/kolac4/110.webp", "assets/kolac4/111.webp", "assets/kolac4/112.webp", "assets/kolac4/113.webp", "assets/kolac4/114.webp", "assets/kolac4/115.webp", "assets/kolac4/116.webp", "assets/kolac4/117.webp", "assets/kolac4/118.webp", "assets/kolac4/119.webp", "assets/kolac4/120.webp", "assets/kolac4/121.webp", "assets/kolac4/122.webp", "assets/kolac4/123.webp", "assets/kolac4/124.webp", "assets/kolac4/125.webp", "assets/kolac4/126.webp", "assets/kolac4/127.webp", "assets/kolac4/128.webp", "assets/kolac4/129.webp", "assets/kolac4/130.webp", "assets/kolac4/131.webp", "assets/kolac4/132.webp", "assets/kolac4/133.webp", "assets/kolac4/134.webp", "assets/kolac4/135.webp", "assets/kolac4/136.webp", "assets/kolac4/137.webp", "assets/kolac4/138.webp", "assets/kolac4/139.webp", "assets/kolac4/140.webp", "assets/kolac4/141.webp", "assets/kolac4/142.webp", "assets/kolac4/143.webp", "assets/kolac4/144.webp", "assets/kolac4/145.webp", "assets/kolac4/146.webp", "assets/kolac4/147.webp", "assets/kolac4/148.webp", "assets/kolac4/149.webp", "assets/kolac4/150.webp", "assets/kolac4/151.webp", "assets/kolac4/152.webp", "assets/kolac4/153.webp", "assets/kolac4/154.webp", "assets/kolac4/155.webp", "assets/kolac4/156.webp", "assets/kolac4/157.webp", "assets/kolac4/158.webp", "assets/kolac4/159.webp", "assets/kolac4/160.webp", "assets/kolac4/161.webp", "assets/kolac4/162.webp", "assets/kolac4/163.webp", "assets/kolac4/164.webp", "assets/kolac4/165.webp", "assets/kolac4/166.webp", "assets/kolac4/167.webp", "assets/kolac4/168.webp", "assets/kolac4/169.webp", "assets/kolac4/170.webp", "assets/kolac4/171.webp", "assets/kolac4/172.webp", "assets/kolac4/173.webp", "assets/kolac4/174.webp", "assets/kolac4/175.webp", "assets/kolac4/176.webp", "assets/kolac4/177.webp", "assets/kolac4/178.webp", "assets/kolac4/179.webp", "assets/kolac4/180.webp"]</script>
     <script type="application/json" id="kpTama">[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</script>
   </section>
 
@@ -1277,28 +1267,7 @@
     </div>
   </section>
 
-  <section class="kp pb" id="o-nama" aria-labelledby="pbNaslov">
-    <div class="kp-stage">
-      <div class="kp-in">
-        <div class="kp-tekst">
-          <h2 class="script" id="pbNaslov">Priča o Bademu</h2>
-          <div class="kp-faze">
-            <article class="kp-faza on"><span class="god">1996.</span><h3>Sve je počelo od jedne peći</h3><p>Pekara Badem otvara vrata u Leskovcu, sa turskom peći i domaćim lepinjama. Vatra se i danas pali pre zore, da prva tura bude topla kad otvorimo vrata.</p></article>
-            <article class="kp-faza"><h3>Lepinja iz turske peći</h3><p>Hrskava kora i meka, šupljikava sredina. Zbog nje su Leskovčani počeli da svraćaju u Badem, a od 2010. uz lepinju pečemo i burek, pite, peciva i slavske kolače.</p>
-              <div class="actions"><a href="#ponuda" class="btn" data-vt="hleb">Pogledaj hleb i lepinje</a></div></article>
-            <article class="kp-faza"><span class="god">Danas</span><h3>Osam pekara, isti ukus</h3><p>Od centra grada do Bogojevca i Bošnjaca. Način rada se nije promenio.</p>
-              <div class="actions"><a href="#lokacije" class="btn">Lokacije i telefoni ↓</a></div></article>
-          </div>
-        </div>
-        <figure class="kp-slika"><canvas id="pbPlatno" width="880" height="495" role="img" aria-label="Turska peć se loži, iz nje izlazi lepinja, oko nje se pojavljuju burek, pita, peciva, sendvič i slavski kolač, a zatim se lepinja umnoži u osam, koliko danas ima naših pekara"></canvas></figure>
-      </div>
-      <div class="kp-dalje" aria-hidden="true">Skrolujte <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-    </div>
-    <script type="application/json" id="pbFrejmovi">["assets/badem/001.webp", "assets/badem/002.webp", "assets/badem/003.webp", "assets/badem/004.webp", "assets/badem/005.webp", "assets/badem/006.webp", "assets/badem/007.webp", "assets/badem/008.webp", "assets/badem/009.webp", "assets/badem/010.webp", "assets/badem/011.webp", "assets/badem/012.webp", "assets/badem/013.webp", "assets/badem/014.webp", "assets/badem/015.webp", "assets/badem/016.webp", "assets/badem/017.webp", "assets/badem/018.webp", "assets/badem/019.webp", "assets/badem/020.webp", "assets/badem/021.webp", "assets/badem/022.webp", "assets/badem/023.webp", "assets/badem/024.webp", "assets/badem/025.webp", "assets/badem/026.webp", "assets/badem/027.webp", "assets/badem/028.webp", "assets/badem/029.webp", "assets/badem/030.webp", "assets/badem/031.webp", "assets/badem/032.webp", "assets/badem/033.webp", "assets/badem/034.webp", "assets/badem/035.webp", "assets/badem/036.webp", "assets/badem/037.webp", "assets/badem/038.webp", "assets/badem/039.webp", "assets/badem/040.webp", "assets/badem/041.webp", "assets/badem/042.webp", "assets/badem/043.webp", "assets/badem/044.webp", "assets/badem/045.webp", "assets/badem/046.webp", "assets/badem/047.webp", "assets/badem/048.webp", "assets/badem/049.webp", "assets/badem/050.webp", "assets/badem/051.webp", "assets/badem/052.webp", "assets/badem/053.webp", "assets/badem/054.webp", "assets/badem/055.webp", "assets/badem/056.webp", "assets/badem/057.webp", "assets/badem/058.webp", "assets/badem/059.webp", "assets/badem/060.webp", "assets/badem/061.webp", "assets/badem/062.webp", "assets/badem/063.webp", "assets/badem/064.webp", "assets/badem/065.webp", "assets/badem/066.webp", "assets/badem/067.webp", "assets/badem/068.webp", "assets/badem/069.webp", "assets/badem/070.webp", "assets/badem/071.webp", "assets/badem/072.webp", "assets/badem/073.webp", "assets/badem/074.webp", "assets/badem/075.webp", "assets/badem/076.webp", "assets/badem/077.webp", "assets/badem/078.webp", "assets/badem/079.webp", "assets/badem/080.webp", "assets/badem/081.webp", "assets/badem/082.webp", "assets/badem/083.webp", "assets/badem/084.webp", "assets/badem/085.webp", "assets/badem/086.webp", "assets/badem/087.webp", "assets/badem/088.webp", "assets/badem/089.webp", "assets/badem/090.webp", "assets/badem/091.webp", "assets/badem/092.webp", "assets/badem/093.webp", "assets/badem/094.webp", "assets/badem/095.webp", "assets/badem/096.webp", "assets/badem/097.webp", "assets/badem/098.webp", "assets/badem/099.webp", "assets/badem/100.webp", "assets/badem/101.webp", "assets/badem/102.webp", "assets/badem/103.webp", "assets/badem/104.webp", "assets/badem/105.webp", "assets/badem/106.webp", "assets/badem/107.webp", "assets/badem/108.webp", "assets/badem/109.webp", "assets/badem/110.webp", "assets/badem/111.webp", "assets/badem/112.webp", "assets/badem/113.webp", "assets/badem/114.webp", "assets/badem/115.webp", "assets/badem/116.webp", "assets/badem/117.webp", "assets/badem/118.webp", "assets/badem/119.webp", "assets/badem/120.webp", "assets/badem/121.webp", "assets/badem/122.webp", "assets/badem/123.webp", "assets/badem/124.webp", "assets/badem/125.webp", "assets/badem/126.webp", "assets/badem/127.webp", "assets/badem/128.webp", "assets/badem/129.webp", "assets/badem/130.webp", "assets/badem/131.webp", "assets/badem/132.webp", "assets/badem/133.webp", "assets/badem/134.webp", "assets/badem/135.webp", "assets/badem/136.webp", "assets/badem/137.webp", "assets/badem/138.webp", "assets/badem/139.webp", "assets/badem/140.webp", "assets/badem/141.webp", "assets/badem/142.webp", "assets/badem/143.webp", "assets/badem/144.webp", "assets/badem/145.webp", "assets/badem/146.webp", "assets/badem/147.webp", "assets/badem/148.webp", "assets/badem/149.webp", "assets/badem/150.webp", "assets/badem/151.webp", "assets/badem/152.webp", "assets/badem/153.webp", "assets/badem/154.webp", "assets/badem/155.webp", "assets/badem/156.webp", "assets/badem/157.webp", "assets/badem/158.webp", "assets/badem/159.webp", "assets/badem/160.webp", "assets/badem/161.webp", "assets/badem/162.webp", "assets/badem/163.webp", "assets/badem/164.webp", "assets/badem/165.webp", "assets/badem/166.webp", "assets/badem/167.webp", "assets/badem/168.webp", "assets/badem/169.webp", "assets/badem/170.webp", "assets/badem/171.webp"]</script>
-    <script type="application/json" id="pbBoje">["#ddccb3","#ddccb3","#ddccb3","#ddccb3","#dccbb2","#dccbb2","#dbcbb1","#dbcab1","#dac9af","#d9c8ad","#d8c7ac","#d7c6ab","#d7c5aa","#d6c3a8","#d4c1a6","#d3c0a5","#d2c0a4","#d0bea1","#cebc9e","#cdba9d","#cbb89a","#c8b597","#c7b496","#c4b092","#c3ae90","#c1ac8e","#bea98a","#bba587","#b8a283","#b69f80","#b39b7c","#b09879","#ad9576","#aa9273","#a68e6f","#a38b6d","#a08769","#9d8467","#988063","#937c60","#90795d","#8b7459","#877156","#836d52","#7e694f","#7a654b","#766148","#725d44","#6f5a42","#69553d","#66523b","#614d38","#5d4934","#594531","#51412d","#473725","#3e301f","#36291a","#312316","#2c1f12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2a1c12","#2c1e13","#2d1f14","#322217","#36261a","#3d2c1f","#483525","#584331","#69543d","#7d674f","#967f63","#ac9578","#bfa88a","#cfb99a","#dac7a7","#e4d2b3","#e9d9bc","#ebddc2","#ebddc2","#ebddc3","#ebdec5","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ede0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#ece0c6","#eee3cb","#f1e7d1","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd8","#f1e8d4","#f0e5d1","#eee3ce","#ece1cb","#ebdfc8","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc9","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc8","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc7","#ebdfc6","#ebdec6","#ebdfc7","#ebdec6","#ebdfc6","#ebdec6","#ebdec6","#ebddc5","#eaddc5","#eaddc5","#eaddc5","#eaddc5","#ebe0c7","#f0e7d2","#f4ebd8","#f4ebd8","#f4ebd8","#f4ebd9","#f4ebd9"]</script>
-  </section>
-
-  <section class="od96" aria-labelledby="od96Naslov">
+  <section class="od96" id="o-nama" aria-labelledby="od96Naslov">
     <figure><img src="assets/posao/pekar.webp" alt="Pekar ubacuje lepinje u tursku peć" width="800" height="600" loading="lazy" decoding="async"></figure>
     <div class="tx">
       <span class="uspravno" aria-hidden="true">Pekara Badem · Leskovac</span>
@@ -2977,7 +2946,10 @@ ruta();
 (() => {
   const sec = document.getElementById('kolac-prica'); if(!sec) return;
   let FR; try{ FR = JSON.parse(document.getElementById('kpFrejmovi').textContent); }catch(_){ return; }
+  const MOB = matchMedia('(max-width:760px)').matches;   // telefon: manji kadrovi (960 px), računar: 1600 px
+  if(MOB) FR = FR.map(f => f.replace('/kolac4/', '/kolac4m/'));
   const N = FR.length, cv = document.getElementById('kpPlatno'), cx = cv.getContext('2d');
+  if(MOB){ cv.width = 960; cv.height = 540; }
   const faze = [...sec.querySelectorAll('.kp-faza')], stage = sec.querySelector('.kp-stage'), dalje = document.getElementById('kpDalje');
   const GR = [0, 51, 71, 106, 142, N-1];
   let T = []; try{ T = JSON.parse(document.getElementById('kpTama').textContent); }catch(_){}
@@ -3026,54 +2998,6 @@ ruta();
 })();
 </script>
 <script>
-/* ===== Priča o Bademu: kadrovi prate skrol ===== */
-(() => {
-  const sec = document.querySelector('.kp.pb'); if(!sec) return;
-  let FR, BG; try{ FR = JSON.parse(document.getElementById('pbFrejmovi').textContent); BG = JSON.parse(document.getElementById('pbBoje').textContent); }catch(_){ return; }
-  const N = FR.length, cv = document.getElementById('pbPlatno'), cx = cv.getContext('2d');
-  const faze = [...sec.querySelectorAll('.kp-faza')], stage = sec.querySelector('.kp-stage'), dalje = sec.querySelector('.kp-dalje');
-  const GR = [0, 54, 132];   // prvi kadar svake faze
-  const slike = new Array(N); let ucitano = false, cilj = 0, sad = 0, nacrtan = -1, radi = false, faza = -1;
-  cv.style.backgroundImage = `url("${FR[0]}")`;
-  const lum = h => { const n = parseInt(h.slice(1),16); return (.2126*(n>>16) + .7152*((n>>8)&255) + .0722*(n&255)) / 255; };
-  function ucitaj(){
-    if(ucitano) return; ucitano = true;
-    const red = [], bio = new Set();
-    const KORAK = matchMedia('(max-width:760px)').matches ? 2 : 1;   // na telefonu svaki drugi kadar: upola manje preuzimanja
-    for(const k of [16,8,4,2,1].filter(k => k >= KORAK)) for(let i=0;i<N;i+=k) if(!bio.has(i)){ bio.add(i); red.push(i); }
-    if(!bio.has(N-1)) red.splice(1,0,N-1);
-    red.forEach(i => { const im = new Image(); im.decoding = 'async'; im.onload = () => { if(Math.abs(i - Math.round(sad)) < 24) crtaj(true); }; im.src = FR[i]; slike[i] = im; });
-  }
-  const spremna = im => im && im.complete && im.naturalWidth > 0;
-  function najbliza(i){ for(let d=0; d<N; d++){ if(spremna(slike[i-d])) return i-d; if(spremna(slike[i+d])) return i+d; } return -1; }
-  function crtaj(sila){
-    const i = Math.max(0, Math.min(N-1, Math.round(sad))), j = najbliza(i);
-    if(j < 0 || (j === nacrtan && !sila)) return;
-    cx.drawImage(slike[j], 0, 0, cv.width, cv.height); nacrtan = j;
-    sec.style.setProperty('--pbbg', BG[j]); sec.classList.toggle('tamno', lum(BG[j]) < .58);
-  }
-  function izracunaj(){
-    const r = sec.getBoundingClientRect(), dug = Math.max(1, r.height - stage.offsetHeight);
-    const p = Math.max(0, Math.min(1, -r.top / dug));
-    cilj = Math.min(N-1, p * 1.05 * (N-1));
-    let k = 0; GR.forEach((g,i) => { if(cilj >= g - .5) k = i; });
-    if(k !== faza){ faza = k; faze.forEach((el,i) => el.classList.toggle('on', i === k)); sec.classList.toggle('posle', k > 0); }
-    dalje.style.opacity = p > .02 ? 0 : 1;
-    if(!radi){ radi = true; requestAnimationFrame(petlja); }
-  }
-  function petlja(){
-    sad += (cilj - sad) * .2; if(Math.abs(cilj - sad) < .3) sad = cilj;
-    crtaj(false);
-    if(sad !== cilj) requestAnimationFrame(petlja); else radi = false;
-  }
-  if('IntersectionObserver' in window){
-    new IntersectionObserver((e, o) => { if(e.some(x => x.isIntersecting)){ ucitaj(); o.disconnect(); } }, {rootMargin:'1500px 0px'}).observe(sec);
-  } else ucitaj();
-  addEventListener('scroll', izracunaj, {passive:true}); addEventListener('resize', izracunaj, {passive:true});
-  addEventListener('hashchange', () => setTimeout(izracunaj, 60));
-  izracunaj();
-})();
-
 /* ================= POSAO: prijava ================= */
 (() => {
   const f = document.getElementById('psForma'); if(!f) return;
